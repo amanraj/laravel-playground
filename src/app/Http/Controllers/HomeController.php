@@ -1,15 +1,14 @@
 <?php namespace App\Http\Controllers;
-
+use Session;
 class HomeController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Home Controller
+	| College Controller
 	|--------------------------------------------------------------------------
 	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
+	| This controller renders the views and php for the college application and
+	| fetches data from the database to display
 	|
 	*/
 
@@ -20,17 +19,19 @@ class HomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
+		$this->middleware('guest');
 	}
 
 	/**
-	 * Show the application dashboard to the user.
+	 * Show the application welcome screen to the user.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		return view('home');
+		
+		return view('/dashboard/home');
 	}
+	
 
 }

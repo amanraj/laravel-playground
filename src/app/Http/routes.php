@@ -17,6 +17,7 @@ Route::post('/register','RegisterConttroller@register_user');
 Route::get('/dashboard', 'HomeController@index');
 Route::get('/college','CollegeController@index');
 Route::get('/course','CourseController@index');
+Route::get('/dashboard','HomeController@index');
 Route::get('/ambassador','AmbassadorController@index');
 
 Route::get('home', 'HomeController@index');

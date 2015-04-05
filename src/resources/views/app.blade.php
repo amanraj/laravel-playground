@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="{{ asset('/css/find-college.css') }}">
 	<link rel="stylesheet" href="{{ asset('/css/bootstrap-select.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('/css/ambassdors.css')}}">
+	<link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
+	<link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}">
+	<link rel="stylesheet" href="{{ asset('/css/owl.transitions.css') }}">
 	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script> 
 	<style type="text/css">
 	</style>
