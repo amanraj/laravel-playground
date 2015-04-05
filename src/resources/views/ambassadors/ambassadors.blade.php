@@ -1,4 +1,12 @@
 @extends('app')
+@section('title')
+PICKPRIME - Your College Picker
+@stop
+
+@section('head')
+<link rel="stylesheet" href="{{ asset('/css/ambassdors.css')}}">
+@stop
+
 @section('content')
 
 <div class="container">

@@ -1,4 +1,17 @@
 @extends('app')
+
+@section('title')
+PICKPRIME - Your College Picker
+@stop
+
+@section('head')
+<link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/owl.transitions.css') }}">
+<script src="{{ asset('/js/owl.carousel.min.js') }}"></script>
+@stop
+
+
 @section('content')
 
 <div class="row visible-sm visible-xs" style="margin-top:50px;" >
@@ -141,7 +154,7 @@
 </footer>		
 
 <!-- JS   -->
-<script src="{{ asset('/js/owl.carousel.min.js') }}"></script>
+
 <script>
 $(document).ready(function() {
  

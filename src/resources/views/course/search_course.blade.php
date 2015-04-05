@@ -1,4 +1,18 @@
 @extends('app')
+
+@section('title')
+PICKPRIME - Your College Picker
+@stop
+
+@section('head')
+<link rel="stylesheet" href="{{ asset('/css/college.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/find-college.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/bootstrap-select.min.css') }}">
+<script src="{{ asset('/js/bootstrap-select.min.js') }}"></script>
+@stop
+
+
+
 @section('content')
 
 <div class="container">

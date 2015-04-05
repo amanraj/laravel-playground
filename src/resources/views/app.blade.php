@@ -4,33 +4,26 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome | PickPrime</title>
-
+	<!--Including the title-->
+	<title>@yield('title')</title>
+	
+	<!--===============================
+	Including the head consisting of css and js files
+	=================================-->
+	@yield('head')
+	
+	<!--Common CSS Files-->
 	<link rel="stylesheet/less" href="{{ asset('/css/style.less') }}">
-	<link rel="stylesheet" href="{{ asset('/css/college.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/landing_css.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/find-college.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/bootstrap-select.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/ambassdors.css')}}">
-	<link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}">
-	<link rel="stylesheet" href="{{ asset('/css/owl.transitions.css') }}">
+	<!--Common JS Scripts -->
 	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script> 
-	<style type="text/css">
-	</style>
-	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="{{ asset('/js/bootstrap-select.min.js') }}"></script>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body>
+<!--===============================
+Including the Header body
+===============================-->
 	<header>
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
@@ -114,9 +107,14 @@
 	</header>
 	
 
-
+	<!--===============================
+	Including the Main Body
+	===============================-->
 	@yield('content')
 
+<!--===============================
+Including the Profile body
+===============================-->
 <div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-sm">
 	  	
@@ -155,7 +153,9 @@
 	    </div>
 	  </div>
 	</div>
-
+<!--===============================
+Including the Notification body
+===============================-->
 <div class="modal fade" id="notifications-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-notifications">
 	  	
