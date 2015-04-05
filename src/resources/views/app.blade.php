@@ -11,10 +11,14 @@
 	<link rel="stylesheet" href="{{ asset('/css/landing_css.css') }}">
 	<link rel="stylesheet" href="{{ asset('/css/find-college.css') }}">
 	<link rel="stylesheet" href="{{ asset('/css/bootstrap-select.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('/css/ambassdors.css')}}">
 	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script> 
 	<style type="text/css">
 	</style>
-
+	<!-- Scripts -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="{{ asset('/js/bootstrap-select.min.js') }}"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -215,10 +219,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="{{ asset('/js/bootstrap-select.min.js') }}"></script>
+	
 
 </body>
 </html>
