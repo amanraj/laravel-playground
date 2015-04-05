@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://demo.avviorete.com/laravel',
+	'url' => 'http://localhost/laravel/src/',
 
 	/*
 	|--------------------------------------------------------------------------
