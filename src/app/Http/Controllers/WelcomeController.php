@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use Session;
 class WelcomeController extends Controller {
 
 	/*
@@ -30,6 +30,10 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+		if (Session::has('id'))
+		{
+		    return Redirect::to('dashboard');
+		}
 		return view('welcome');
 	}
 	

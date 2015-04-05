@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::post('/login','RegisterConttroller@register_user');
+Route::post('/register','RegisterConttroller@register_user');
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
