@@ -225,7 +225,7 @@ function logout() {
 	</div>
 	
 	<div class="siform2">
-		<form id="login_form" action="login" method ="POST">
+		<form id="login_form" action="{{ url('/login') }}" method ="POST">
 
 			<p><b>Email-ID:</b>&nbsp;&nbsp;&nbsp;<input type="text" name="email" value="" />
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Password:</b>&nbsp;&nbsp;&nbsp; <input type="password" name="password" value="" /></p>
