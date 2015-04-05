@@ -18,6 +18,7 @@ Route::get('/dashboard', 'HomeController@index');
 Route::get('/college','CollegeController@index');
 Route::get('/course','CourseController@index');
 Route::get('/dashboard','HomeController@index');
+Route::get('/forum','ForumController@index');
 Route::get('/ambassador','AmbassadorController@index');
 
 Route::get('home', 'HomeController@index');
