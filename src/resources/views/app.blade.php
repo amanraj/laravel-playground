@@ -6,19 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--Including the title-->
 	<title>@yield('title')</title>
-	
+
+
+	<!--Common CSS Files-->
+	<link rel="stylesheet/less" href="{{ asset('/css/style.less') }}">
+	<!--Common JS Scripts -->	
+	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script>
+	<script src="{{ asset('/js/jquery.js') }}"></script> 
+	<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+
+
 	<!--===============================
 	Including the head consisting of css and js files
 	=================================-->
 	@yield('head')
 	
-	<!--Common CSS Files-->
-	<link rel="stylesheet/less" href="{{ asset('/css/style.less') }}">
-	<!--Common JS Scripts -->
-	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script> 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <!--===============================
