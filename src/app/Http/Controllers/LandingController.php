@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Session;
-class WelcomeController extends Controller {
+class LandingController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------

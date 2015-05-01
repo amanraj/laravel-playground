@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Session;
-class HomeController extends Controller {
+class DashboardController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------

@@ -11,17 +11,57 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::post('/login','RegisterConttroller@register_user');
-Route::post('/register','RegisterConttroller@register_user');
-Route::get('/dashboard', 'HomeController@index');
-Route::get('/college','CollegeController@index');
-Route::get('/course','CourseController@index');
-Route::get('/dashboard','HomeController@index');
-Route::get('/forum','ForumController@index');
-Route::get('/ambassador','AmbassadorController@index');
+Route::get('/landing', 'LandingController@index');
 
-Route::get('home', 'HomeController@index');
+
+/*Route::post('/login','RegisterController@register_user');
+Route::post('/register','RegisterController@register_user'); */
+
+
+Route::get('/dashboard', 'DashboardController@viewDashboard');
+Route::get('/', 'DashboardController@viewDashboard');
+
+
+Route::get('/notes/{id}/view', 'NotesController@viewNotes');
+Route::patch('/notes/{note_id}/edit', 'NotesController@edit');
+Route::delete('/notes/{note_id}/delete', 'NotesController@delete');
+Route::get('/colleges/{college_id}/add-notes', 'NotesController@add');
+Route::get('/courses/{course_id}/add-notes', 'NotesController@add');
+
+
+Route::get('/colleges','CollegeController@viewColleges');
+Route::get('/colleges/{college_id}','CollegeController@college');
+Route::get('/colleges/{college_id}/overview','CollegeController@overview');
+Route::get('/colleges/{college_id}/college-reviews','CollegeController@collegeReviews');
+Route::get('/colleges/{college_id}/course-reviews','CollegeController@courseReviews');
+
+
+Route::get('/courses','CourseController@viewCourses');
+Route::get('/courses/{course_id}','CourseController@course');
+Route::get('/courses/{course_id}/general','CourseController@general');
+Route::get('/courses/{course_id}/course-reviews','CourseController@reviews');
+
+
+Route::get('/forum','ForumController@viewForum');
+Route::get('/forum/threads/{thread_id}','ForumController@viewThread');
+Route::post('/forum/threads/{thread_id}/reply','ForumController@reply');
+Route::patch('/forum/threads/{thread_id}/{post_id}/edit','ForumController@editPost');
+Route::delete('/forum/threads/{thread_id}/{post_id}/delete','ForumController@deletePost');
+Route::post('/forum/threads/{thread_id}/{post_id}/upvote','ForumController@upVote');
+Route::post('/forum/threads/{thread_id}/{post_id}/downvote','ForumController@downVote');
+Route::get('/forum/threads/{thread_id}/','ForumController@');
+
+
+Route::get('/ambassador','AmbassadorController@index');
+Route::get('/ambassador/{ambassador_id}','AmbassadorController@ambassador');
+
+
+Routes::get('/notifications','UserController@notification');
+Routes::get('/profile','UserController@profile');
+Routes::patch('profile/edit','UserController@editProfile');
+Routes::get('/settings','UserController@settings');
+Routes::patch('/settings/edit','UserController@editSettings');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
