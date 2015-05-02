@@ -14,16 +14,6 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-<div class="row visible-sm visible-xs" style="margin-top:50px;" >
-		<div class="col-sm-12">
-			<div class="input-group input-group-lg">
-			      <input id="xs-md-input" type="text" class="form-control" placeholder="Search the site..">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button" id="search-go-btn">Go!</button>
-			      </span>
-			    </div>
-		</div>
-	</div>
 
 	<div class="container" style="margin-top:50px;">
 		<div class="page-header">

@@ -10,10 +10,11 @@
 
 	<!--Common CSS Files-->
 	<link rel="stylesheet/less" href="{{ asset('/css/style.less') }}">
+	<link rel="stylesheet/less" href="{{ asset('/materialize/css/materialize.min.css') }}">
 	<!--Common JS Scripts -->	
 	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script>
 	<script src="{{ asset('/js/jquery.js') }}"></script> 
-	<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('/materialize/js/materialize.min.js') }}"></script>
 
 
 	<!--===============================
@@ -26,87 +27,122 @@
 <!--===============================
 Including the Header body
 ===============================-->
-	<header>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
+<header>
+<ul id="search-menu" class="dropdown-content">
+  <li>
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" placeholder="Search..." required>
+          <label for="search"><i class="mdi-action-search right"></i></label>
+          <i class="mdi-navigation-close"></i>
+        </div>
+      </form>
+  </li>
+</ul>
 
-				<a class="navbar-brand" href="#"><img src="{{asset('/images/logo.png') }}" /></a>
+<ul id="browse-menu" class="dropdown-content">
+    <li><a href="#!">Colleges</a></li>
+    <li><a href="#!">Courses</a></li>
+    <li><a href="#!">Appetite Hunt</a></li>
+    <li><a href="#!">Ambassadors</a></li>
+</ul>
 
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<div class="collapse navbar-collapse navHeaderCollapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active" id="home-gly"><a href="http://localhost/laravel/src/public/dashboard"><span class="glyphicon glyphicon-home"></span></a></li>
-						<!-- <li class="active" id="search-gly"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
-						
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span> Search <strong class="caret"></strong></a>
-							
-							<div class=" dropdown-menu search-menu">
-								<div class="row search-row">
-									<div class="menu-div">
-										<form method="get" action="/index.php">
-											<input type="text" name="s" placeholder="Enter search terms" required="">
-											<button type="submit" value="Search" id="searchsubmit" name="submit" class="submit"><span class="glyphicon glyphicon-search"></span></button>
-										</form>
-									</div>
-								</div>
-							</div>
-						</li>
+<ul id="my-account" class="dropdown-content">
+  <li><a href="#!">Notifications</a></li>
+  <li><a href="#!">Profile</a></li>
+  <li><a href="#!">Settings</a></li>
+  <li><a href="#!">Sign Out</a></li>
+</ul>
 
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-folder-open"></span> Browse <strong class="caret"></strong></a>
-							
-							<ul class="dropdown-menu">
-								
-								<li><a href="http://localhost/laravel/src/public/college"><span class="glyphicon glyphicon-flag pull-right"></span> Colleges</a></li>
-								<li><a href="http://localhost/laravel/src/public/course"><span class="glyphicon glyphicon-book pull-right"></span> Courses</a></li>
-								<li class="divider"></li>
-								<li><a href="#"><span class="glyphicon glyphicon-flash pull-right"></span> AppetiteHunt</a></li>
-								<li><a href="http://localhost/laravel/src/public/ambassador"><span class="glyphicon glyphicon-briefcase pull-right"></span> Ambassdor</a></li>
-								
-							</ul>
-						</li>
-						<!--
-						
-						-->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account<strong class="caret"></strong></a>
-							
-							<ul class="dropdown-menu">
-								
-								<li>
-									<a href="#notifications-modal" data-toggle="modal"><span class="glyphicon glyphicon-bell pull-right"></span> Notifications
-										 <span class="badge">42</span>
-									</a>
-								</li>
-								
-								<li >
-									<a href="#profile-modal" data-toggle="modal"><span class="glyphicon glyphicon-refresh  pull-right"></span> Profile</a>
-								</li>
+<nav>
+    <div class="nav-wrapper">
 
-								
-								
-								<li>
-									<a href="#"><span class="glyphicon glyphicon-wrench pull-right"></span> Settings</a>
-								</li>
+        <a href="#!" class="brand-logo"><img class="responsive-img" src="{{ asset('/images/logo.png') }}"></a>
+        <!--Mobile Sidebar button-->
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <!--================================
+        Menu for Desktops
+        =================================-->
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" placeholder="Search..." required>
+                        <label for="search"><i class="mdi-action-search right"></i></label>
+                        <i class="mdi-navigation-close"></i>
+                    </div>
+                </form>
+            </li>
+            <li><a href="#"><i class="mdi-action-home"></i></a></li>
+            <li><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+            <li><a class="dropdown-account" href="#!" data-activates="my-account"><b>My Account</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+        </ul>
+        <!--================================
+        Menu for Mobile and Tablets
+        =================================-->
+        <ul class="side-nav" id="mobile-menu">
+            <li><a href="#"><b>Home</b></a></li>
+            <li class="divider"></li>
+            <li>
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" placeholder="Search..." required>
+                        <label for="search"><i class="mdi-action-search right"></i></label>
+                        <i class="mdi-navigation-close"></i>
+                    </div>
+                </form>
+            </li>
+            <li class="divider"></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <a class="collapsible-header">Browse<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="#!">College</a></li>
+                      <li><a href="#!">Course</a></li>
+                      <li><a href="#!">Appetite Hunt</a></li>
+                      <li><a href="#!">Ambassadors</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <a class="collapsible-header">My Account<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="#!">Notification</a></li>
+                      <li><a href="#!">Profile</a></li>
+                      <li><a href="#!">Settings</a></li>
+                      <li><a href="#!">Sign Out</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-								<li class="divider"></li>
-								
-								<li>
-									<a href="http://localhost/laravel/src/public/logout"><span class="glyphicon glyphicon-off pull-right"></span> Sign out</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        //dropdown code
+        $(".dropdown-browse").dropdown({ hover: false });
+        $(".dropdown-account").dropdown({ hover: false });
+        $(".button-collapse").sideNav({
+            menuWidth: 300, // Default is 240
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        });
+    });
+
+</script>
+
+</header>
 	
 
 	<!--===============================

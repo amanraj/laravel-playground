@@ -10,6 +10,8 @@ PICKPRIME - Your College Picker
 <link rel="stylesheet" href="{{ asset('/css/bootstrap-select.min.css') }}">
 <script src="{{ asset('/js/search_college_js.js') }}"></script>
 <script src="{{ asset('/js/bootstrap-select.min.js') }}"></script>
+
+
 @stop
 
 
