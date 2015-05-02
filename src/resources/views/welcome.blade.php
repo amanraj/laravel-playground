@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="card col s12">
 				<div class="col s6">
-				<p><img class="responsive-img" src="images/colleges/iit_kgp.jpg" alt="iit_kgp" width="100%"></p>
+				<p><img class="responsive-img" src="{{ asset('images/colleges/iit_kgp.jpg') }}" alt="iit_kgp" width="100%"></p>
 				</div>	
 					<div class="card">
 						<div class="card-content center-align">
