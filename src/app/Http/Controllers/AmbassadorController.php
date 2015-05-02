@@ -27,10 +27,16 @@ class AmbassadorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function viewAmbassadors()
 	{
 		
 		return view('/ambassadors/ambassadors');
+	}
+
+	public function ambassador($ambassador_id)
+	{
+		
+		return view('/ambassadors/ambassador')->with('ambassador_id', $ambassador_id);
 	}
 	
 

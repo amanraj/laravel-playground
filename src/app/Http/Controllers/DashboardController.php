@@ -27,7 +27,7 @@ class DashboardController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function viewDashboard()
 	{
 		
 		return view('/dashboard/home');

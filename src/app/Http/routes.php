@@ -22,11 +22,11 @@ Route::get('/dashboard', 'DashboardController@viewDashboard');
 Route::get('/', 'DashboardController@viewDashboard');
 
 
-Route::get('/notes/{id}/view', 'NotesController@viewNotes');
+Route::get('/notes/{note_id}/view', 'NotesController@viewNotes');
 Route::patch('/notes/{note_id}/edit', 'NotesController@edit');
 Route::delete('/notes/{note_id}/delete', 'NotesController@delete');
-Route::get('/colleges/{college_id}/add-notes', 'NotesController@add');
-Route::get('/courses/{course_id}/add-notes', 'NotesController@add');
+Route::get('/colleges/{college_id}/add-notes', 'NotesController@addCollegeNotes');
+Route::get('/courses/{course_id}/add-notes', 'NotesController@addCourseNotes');
 
 
 Route::get('/colleges','CollegeController@viewColleges');
@@ -49,18 +49,17 @@ Route::patch('/forum/threads/{thread_id}/{post_id}/edit','ForumController@editPo
 Route::delete('/forum/threads/{thread_id}/{post_id}/delete','ForumController@deletePost');
 Route::post('/forum/threads/{thread_id}/{post_id}/upvote','ForumController@upVote');
 Route::post('/forum/threads/{thread_id}/{post_id}/downvote','ForumController@downVote');
-Route::get('/forum/threads/{thread_id}/','ForumController@');
 
 
-Route::get('/ambassador','AmbassadorController@index');
+Route::get('/ambassador','AmbassadorController@viewAmbassadors');
 Route::get('/ambassador/{ambassador_id}','AmbassadorController@ambassador');
 
 
-Routes::get('/notifications','UserController@notification');
-Routes::get('/profile','UserController@profile');
-Routes::patch('profile/edit','UserController@editProfile');
-Routes::get('/settings','UserController@settings');
-Routes::patch('/settings/edit','UserController@editSettings');
+Route::get('/notifications','UserController@notification');
+Route::get('/profile','UserController@profile');
+Route::patch('profile/edit','UserController@editProfile');
+Route::get('/settings','UserController@settings');
+Route::patch('/settings/edit','UserController@editSettings');
 
 
 Route::controllers([

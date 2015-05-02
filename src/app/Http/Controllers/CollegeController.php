@@ -27,10 +27,34 @@ class CollegeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function viewColleges()
 	{
 		
 		return view('/college/search_college');
+	}
+
+	public function college($college_id)
+	{
+		
+		return view('/college/college')->with('college_id',$college_id);
+	}
+
+	public function overview($college_id)
+	{
+		
+		return view('/college/overview')->with('college_id',$college_id);
+	}
+
+	public function collegeReviews($college_id)
+	{
+		
+		return view('/college/college_reviews')->with('college_id',$college_id);
+	}
+
+	public function courseReviews($college_id)
+	{
+		
+		return view('/college/course_reviews')->with('college_id',$college_id);
 	}
 	
 

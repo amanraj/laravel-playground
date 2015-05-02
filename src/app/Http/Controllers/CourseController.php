@@ -27,10 +27,28 @@ class CourseController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function viewCourses()
 	{
 		
 		return view('/course/search_course');
+	}
+
+	public function course($course_id)
+	{
+		
+		return view('/course/course')->with('course_id',$course_id);
+	}
+
+	public function general($course_id)
+	{
+		
+		return view('/course/general')->with('course_id',$course_id);
+	}
+
+	public function reviews($course_id)
+	{
+		
+		return view('/course/reviews')->with('course_id',$course_id);
 	}
 	
 

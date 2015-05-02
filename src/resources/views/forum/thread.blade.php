@@ -15,6 +15,6 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-	<br><br><h1>Mian Forum Page</h1>
+	<br><br><h1>This a Thread Page {{ $thread_id }}</h1>
 
 @stop

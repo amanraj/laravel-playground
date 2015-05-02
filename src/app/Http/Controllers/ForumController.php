@@ -27,7 +27,43 @@ class ForumController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function viewForum()
+	{
+		
+		return view('/forum/forum');
+	}
+
+	public function viewThread($thread_id)
+	{
+		
+		return view('/forum/thread')->with('thread_id', $thread_id);
+	}
+
+	public function reply()
+	{
+		
+		return view('/forum/forum');
+	}
+
+	public function editPost()
+	{
+		
+		return view('/forum/forum');
+	}
+
+	public function deletePost()
+	{
+		
+		return view('/forum/forum');
+	}
+
+	public function upVote()
+	{
+		
+		return view('/forum/forum');
+	}
+
+	public function downVote()
 	{
 		
 		return view('/forum/forum');
