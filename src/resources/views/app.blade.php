@@ -9,11 +9,11 @@
 
 
 	<!--Common CSS Files-->
-	<link rel="stylesheet/less" href="{{ asset('/css/style.less') }}">
+	
 	<link rel="stylesheet/less" href="{{ asset('/materialize/css/materialize.min.css') }}">
 	<!--Common JS Scripts -->	
 	<script src="{{ asset('/js/less-1.6.1.min.js') }}"></script>
-	<script src="{{ asset('/js/jquery.js') }}"></script> 
+	<script src="{{ asset('/js/jquery-1.9.1.min.js') }}"></script> 
 	<script src="{{ asset('/materialize/js/materialize.min.js') }}"></script>
 
 
