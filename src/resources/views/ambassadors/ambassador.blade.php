@@ -18,8 +18,8 @@ PICKPRIME - Your College Picker
         <div class="row">
             <div class="card s12">
                 <div class="col s4">
-                <p><img class="responsive-img" src="{{ asset('images/ambassdors/candice.jpg') }}" width="100%"></p>
-                <span >Ambs one<br/>Campus Ambassador,<br/>College Name</span>
+                <p><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
+                <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
                 </div>
                 <div class="card grey lighten-2">
                     <div class="col s12">
@@ -27,13 +27,7 @@ PICKPRIME - Your College Picker
                         <div class="ambs_speaks">
                         <p><b>Campus Ambassador Speaks....</b></p>
                         <p>
-                        Hi everyone! Welcome to pickprime. This is Candice Swanepoel, Campus Ambassador of IIT Kharagpur. I am a third year student of the department of Computer Science studying in BIT MESRA.
-                        </p>
-                        <p>
-                        Well, IIT Kgp is a very nice place to spend your college life. It has at par facilities and excellent infrastructure. Most relaxing part of iit kgp is very less number of rules and regulations are here so you will your new found freedom here. It has has its unique culture and senior-junior interaction is very healthy.Well you may be overwhelmed by the amount of funda you wll get here.
-                        </p>
-                        <p>
-                        I will be helping you clear your doubts about IIT Kharagpur. You can drop your doubts here. I will try my best to reply asap. Below are the topics related to IIT Kharagpur which have been asked by users. Feel free to browse them.
+                        {{  $result['0']->ambassadors_intro }}
                         </p>
                         </div>
                     </div>
@@ -72,6 +66,12 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
+                    <ul class="collection with-header">
+                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @foreach ($general_question as $general)
+                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text">{{ $general->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        @endforeach
+                    </ul>
                 </div>
                 <div id="admission_related" class="col s12">
                     <form class="col s12">
@@ -95,6 +95,12 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
+                    <ul class="collection with-header">
+                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @foreach ($admission_question as $admission)
+                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text">{{ $admission->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        @endforeach
+                    </ul>
                 </div>
                 <div id="campus_related" class="col s12">
                     <form class="col s12">
@@ -118,6 +124,12 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
+                    <ul class="collection with-header">
+                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @foreach ($campus_question as $campus)
+                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text">{{ $campus->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        @endforeach
+                    </ul>
                 </div>
                 <div id="placement_related" class="col s12">
                     <form class="col s12">
@@ -141,14 +153,14 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
+                    <ul class="collection with-header">
+                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @foreach ($placement_question as $placement)
+                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text">{{ $placement->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        @endforeach
+                    </ul>
                 </div>
-                <ul class="collection with-header">
-                    <li class="collection-header"><h4>Recent Questions</h4></li>
-                    <li class="collection-item"><div><a href="#" class="blue-text">question 1</a><br/><span class="grey-text">5 minutes ago</span><a href="#!" class="secondary-content grey-text">by User 1 <i class="mdi-social-person"></i></a></div></li>
-                    <li class="collection-item"><div><a href="#" class="blue-text">question 2</a><br/><span class="grey-text">15 minutes ago</span><a href="#!" class="secondary-content grey-text">by User 2 <i class="mdi-social-person"></i></a></div></li>
-                    <li class="collection-item"><div><a href="#" class="blue-text">question 3</a><br/><span class="grey-text">25 minutes ago</span><a href="#!" class="secondary-content grey-text">by User 3 <i class="mdi-social-person"></i></a></div></li>
-                    <li class="collection-item"><div><a href="#" class="blue-text">question 4</a><br/><span class="grey-text">35 minutes ago</span><a href="#!" class="secondary-content grey-text">by User 4 <i class="mdi-social-person"></i></a></div></li>
-                </ul>
+                
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('/css/ambassdors.css')}}">
+
 @stop
 
 @section('content')
@@ -19,7 +19,7 @@ PICKPRIME - Your College Picker
                 </div>
                 <div class="col s8">
                     <p>
-                    <img src="{{ asset('images/colleges/iit_kgp_lg_2.jpg') }}" alt="iit kgp lg" width="100%">                    
+                    	<img src="{{ asset('images/colleges/iit_kgp_lg_2.jpg') }}" alt="iit kgp lg" width="100%">                    
                     </p>
                 </div>
             </div>
