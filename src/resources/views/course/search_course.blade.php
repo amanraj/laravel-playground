@@ -16,72 +16,27 @@ PICKPRIME - Your College Picker
 @section('content')
 
 	<div class="container center-align">
-	<div class="row">	
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img class="responsive-img" alt="course" src="{{ asset('images/colleges/iit_kgp.jpg') }}">
+	<div class="row">
+        <div class="card col s12">
+            @foreach ($result as $results)
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-image">
+                  <img class="responsive-img" alt="course" src="{{ asset( $results->course_image_1 ) }}">
+                </div>
+                <div class="card-content">
+                  <p>
+                    {{ $results->course_content }}
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#">{{ $results->course_name }}</a>
+                </div>
+              </div>
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">COURSE NAME</a>
-            </div>
-          </div>
+        @endforeach 
         </div>
-
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img class="responsive-img" alt="course" src="{{ asset('images/colleges/iit_kgp.jpg') }}">
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">COURSE NAME</a>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img class="responsive-img" alt="course" src="{{ asset('images/colleges/iit_kgp.jpg') }}">
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">COURSE NAME</a>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img class="responsive-img" alt="course" src="{{ asset('images/colleges/iit_kgp.jpg') }}">
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">COURSE NAME</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    </div>
 	</div>
-
-
+    
 @stop
