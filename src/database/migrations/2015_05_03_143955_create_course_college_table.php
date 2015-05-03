@@ -14,10 +14,10 @@ class CreateCourseCollegeTable extends Migration {
 	{
 		Schema::create('course_college', function(Blueprint $table)
 		{
-			$table->interger('course_reference_id');
-			$table->interger('college_reference_id');
+			$table->integer('course_reference_id');
+			$table->integer('college_reference_id');
 			
-		})
+		});
 	}
 
 	/**

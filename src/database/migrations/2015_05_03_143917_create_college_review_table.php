@@ -15,7 +15,7 @@ class CreateCollegeReviewTable extends Migration {
 		Schema::create('college_review', function(Blueprint $table)
 		{
 			$table->increments('college_review_id');
-			$table->interger('college_reference_id');
+			$table->integer('college_reference_id');
 			$table->string('reviewer_name');
 			$table->string('reviewer_college');
 			$table->string('reviewer_description');

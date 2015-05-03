@@ -20,7 +20,7 @@ class CreateCollegeForumQuestionsTable extends Migration {
 			$table->string('question_type');
 			$table->string('question_title');
 			$table->mediumText('question_description');
-			$table->interger('want_answer');
+			$table->integer('want_answer');
 			$table->dateTime('date');			
 		});
 	}
