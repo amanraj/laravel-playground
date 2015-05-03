@@ -31,7 +31,7 @@ class CourseController extends Controller {
 	public function viewCourses()
 	{
 		$results = DB::select('select * from course');
-		return view('/course/search_course')->with (array(
+		return view('/course/search_course')->with (array (
 			'result' => $results
 			));
 		
@@ -39,8 +39,12 @@ class CourseController extends Controller {
 
 	public function course($course_id)
 	{
-		
-		return view('/course/course')->with('course_id',$course_id);
+		$results = DB::select('select * from course inner join course_review on course.course_id=course_review.course_reference_id where course.course_id=?' , [$course_id]);        
+			return view('/course/course')->with (array (
+			'result' => $results ,
+						));
+
+
 	}
 
 	public function general($course_id)
@@ -54,6 +58,4 @@ class CourseController extends Controller {
 		
 		return view('/course/reviews')->with('course_id',$course_id);
 	}
-	
-
 }

@@ -13,13 +13,13 @@ PICKPRIME - Your College Picker
             <div class="card col s12">
                 <div class="col s4">
                     <p>
-                    <img src="{{ asset('images/colleges/iit_kgp.jpg') }}" alt="iit kgp" width="100%">
+                    <img src="{{ asset( $result['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
                     </p>
-                    <p>Course 1</p>
+                    <p>{{ $result['0']->course_name }}</p>
                 </div>
                 <div class="col s8">
                     <p>
-                    	<img src="{{ asset('images/colleges/iit_kgp_lg_2.jpg') }}" alt="iit kgp lg" width="100%">                    
+                    	<img src="{{ asset( $result['0']->course_image_3 ) }}" alt="iit kgp lg" width="100%">                    
                     </p>
                 </div>
             </div>
@@ -36,51 +36,42 @@ PICKPRIME - Your College Picker
                         <ul class="collapsible" data-collapsible="accordion">
                         <li>
                             <div class="collapsible-header">Course Content</div>
-                            <div class="collapsible-body"><p>Sample funda 1</p></div>
+                            <div class="collapsible-body"><p>{{ $result['0']->course_content }}</p></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Future Scope</div>
-                            <div class="collapsible-body"><p>Sample funda 2</p></div>
+                            <div class="collapsible-body"><p>{{ $result['0']->future_scope }}</p></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Job Place Work</div>
-                            <div class="collapsible-body"><p>Sample funda 3</p></div>
+                            <div class="collapsible-body"><p>{{ $result['0']->job_place_work }}</p></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Top Institutes</div>
-                            <div class="collapsible-body"><p>Sample funda 4</p></div>
+                            <div class="collapsible-body"><p>{{ $result['0']->top_institute }}</p></div>
                         </li>
                         </ul>
                     </div>
                     <div id="course_desc" class="col s12">
                         <ul class="collapsible" data-collapsible="accordion">
                         <li>
-                            <div class="collapsible-header">Course Content</div>
+                            <div class="collapsible-header">Course Review</div>
                                 <div class="collapsible-body">
+                                @foreach ($result as $results)
                                 <p>
-                                    <div class="card col s10 grey lighten-2">
-                                    <p>Anonymous Final Year Student</p>
+                                    <div class="card col s10 grey lighten-2 ">
+                                    {{ $results->reviewer_name }} , {{ $results->reviewer_college }}<br/>
+                                    {{ $results->reviewer_description }}<br/>
+                                    Reviewer Rating - {{ $results->reviewer_rating }}
                                     <p>
-                                    I worked at Mahindra Satyam full time for 3 years.
-                                    </p>
-                                    <p>
-                                    Yaha funde bahut milte hain.Dimag kharab ho jaega funde sun sun kar.Jise dekho funda deta h.Outside campus everywhere are slums and villages.Entries into societies are controlled.And hell lot of politics is prevalent.
+                                    {{ $results->review }}
                                     </p>    
                                     </div>
                                 </p>
-                                <p>
-                                    <div class="card col s10 right grey lighten-2">
-                                    <p>Anonymous Final Year Student</p>
-                                    <p>
-                                    I worked at Mahindra Satyam full time for 3 years.
-                                    </p>
-                                    <p>
-                                    Yaha funde bahut milte hain.Dimag kharab ho jaega funde sun sun kar.Jise dekho funda deta h.Outside campus everywhere are slums and villages.Entries into societies are controlled.And hell lot of politics is prevalent.
-                                    </p>    
-                                    </div>
-                                </p>
+                                @endforeach
                                 </div>
-                        </li>
+                        </li>        
+                        <!-- Changed Style of Page   
                         <li>
                             <div class="collapsible-header">Future Scope</div>
                                 <div class="collapsible-body">
@@ -126,7 +117,7 @@ PICKPRIME - Your College Picker
                                 </p>
                                 </div>
                             </div>
-                        </li>
+                        </li> !-->
                         </ul>
                     </div>
             </div>
