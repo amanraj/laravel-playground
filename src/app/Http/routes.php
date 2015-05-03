@@ -55,6 +55,8 @@ Route::get('/ambassador','AmbassadorController@viewAmbassadors');
 Route::get('/ambassador/{ambassador_id}','AmbassadorController@ambassador');
 
 
+Route::post('/login','UserController@login');
+Route::post('/register','UserController@register');
 Route::get('/notifications','UserController@notification');
 Route::get('/profile','UserController@profile');
 Route::patch('profile/edit','UserController@editProfile');

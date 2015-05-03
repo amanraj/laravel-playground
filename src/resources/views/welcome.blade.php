@@ -14,17 +14,17 @@
 					<div class="card">
 						<div class="card-content center-align">
 						<span class="card-title black-text">Sign In</span>
-								<form class="sigin col s12 center-align">
+								{!! Form::open(['url' => 'login', 'method' => 'POST']) !!}
 				<p>
 									<div class="input-field col s6">
-          							<input id="email" type="text" class="validate">
+          							<input id="email" name="email" type="email" class="validate" required>
          							<label for="email">Email-ID</label>
        								</div>
        			</p>
 
 				<p>
 									<div class="input-field col s6">
-          							<input id="password" type="password" class="validate">
+          							<input id="password" name="password" type="password" class="validate" required>
           							<label for="password">Password</label>
         							</div>
         		</p>
@@ -32,7 +32,7 @@
         							<button class="btn waves-effect waves-light " type="submit" name="action">Sign In</button>
         							<button class="btn waves-effect waves-light " type="submit" name="action">Facebook</button>
         							</div>
-        						</form>
+        						{!! Form::close() !!}
         	
         				</div>
         			</div>
@@ -40,47 +40,47 @@
 					<div class="card">
 						<div class="card-content center-align">
 						<span class="card-title black-text center-align">Register</span>
-        					<form class="reg col s12">
+        					{!! Form::open(['url' => 'register', 'method' => 'POST']) !!}
         						<div class="row">
         		<p>
         							<div class="input-field col s6">
-          							<input id="fname" type="text" class="validate">
-         							<label for="fname">First Name</label>
+          							<input id="first_name" name="first_name" type="text" class="validate" required>
+         							<label for="first_name">First Name</label>
        								</div>
        			</p>
         		
         		<p>
         							<div class="input-field col s6">
-          							<input id="reg_email" type="text" class="validate">
-         							<label for="reg_email">Email-ID</label>
+          							<input id="email" name="email" type="email" class="validate" required>
+         							<label for="email">Email-ID</label>
        								</div>
        			</p>
 								</div>
 								<div class="row">
         		<p>
         							<div class="input-field col s6">
-          							<input id="lname" type="text" class="validate">
-         							<label for="lname">Last Name</label>
+          							<input id="last_name" name="last_name" type="text" class="validate" required>
+         							<label for="last_name">Last Name</label>
        								</div>
        			</p>
 
        			<p>
        								<div class="input-field col s6">
-          							<input id="reg_password" type="password" class="validate">
-          							<label for="reg_password">Password</label>
+          							<input id="password" name="password" type="password" class="validate" required>
+          							<label for="password">Password</label>
         							</div>
         		</p>
        							</div>
 								<div class="row">
         		<p>
         							<div class="input-field col s6">
-          							<input id="mobile" type="text" class="validate">
+          							<input id="mobile" name="mobile" type="text" class="validate" required>
          							<label for="mobile">Mobile No.</label>
        								</div>
        			</p>
         							<button class="btn  waves-effect waves-light" type="submit" name="action">Register Now!</button>
        							</div>
-        					</form>
+        					{!! Form::close() !!}
         				</div>
         			</div>
         	</p>

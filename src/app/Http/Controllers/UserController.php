@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Session;
+use Illuminate\Http\Request;
 class UserController extends Controller {
 
 	/*
@@ -28,6 +29,24 @@ class UserController extends Controller {
 	 *
 	 * @return Response
 	 */
+	public function login(Request $request)
+	{
+		$email = $request->input('email');
+		$password = $request->input('password');
+		echo $email, $password;
+	}
+
+	public function register(Request $request)
+	{
+		$email = $request->input('email');
+		$f_name = $request->input('first_name');
+		$l_name = $request->input('last_name');		
+		$name = $f_name.' '.$l_name;
+		$password = $request->input('password');
+		$mobile = $request->input('mobile');
+		
+	}
+
 	public function notification()
 	{
 		
