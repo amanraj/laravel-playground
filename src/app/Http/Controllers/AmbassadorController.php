@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Session;
+use DB;
 class AmbassadorController extends Controller {
 
 	/*
@@ -35,8 +36,18 @@ class AmbassadorController extends Controller {
 
 	public function ambassador($ambassador_id)
 	{
-		
-		return view('/ambassadors/ambassador')->with('ambassador_id', $ambassador_id);
+		$results = DB::select('select * from ambassadors where ambassadors_id = ?', [$ambassador_id]);
+		$general_question = DB::select('select * from college_forum_questions where question_type = ?',['general']);
+		$admission_question = DB::select('select * from college_forum_questions where question_type = ?',['admission']);
+		$campus_question = DB::select('select * from college_forum_questions where question_type = ?',['campus']);
+		$placement_question = DB::select('select * from college_forum_questions where question_type = ?',['placement']);
+		return view('/ambassadors/ambassador')->with(array(
+			'result' => $results,
+			'general_question' => $general_question,
+			'admission_question' => $admission_question,
+			'campus_question' => $campus_question,
+			'placement_question' => $placement_question
+			));
 	}
 	
 
