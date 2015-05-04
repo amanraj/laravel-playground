@@ -13,7 +13,7 @@ PICKPRIME - Your College Picker
             <div class="card col s12">
                 <div class="col s4">
                     <p>
-                    <img src="{{ asset( $result['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
+                        <img src="{{ asset( $result['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
                     </p>
                     <p>{{ $result['0']->course_name }}</p>
                 </div>

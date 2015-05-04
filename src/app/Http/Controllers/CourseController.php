@@ -40,9 +40,9 @@ class CourseController extends Controller {
 	public function course($course_id)
 	{
 		$results = DB::select('select * from course inner join course_review on course.course_id=course_review.course_reference_id where course.course_id=?' , [$course_id]);        
-			return view('/course/course')->with (array (
-			'result' => $results ,
-						));
+		return view('/course/course')->with (array(
+				'result' => $results
+				));
 
 
 	}

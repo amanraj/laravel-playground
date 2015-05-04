@@ -5,10 +5,6 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('/css/college.css') }}">
-<link rel="stylesheet" href="{{ asset('/css/find-college.css') }}">
-<link rel="stylesheet" href="{{ asset('/css/bootstrap-select.min.css') }}">
-<script src="{{ asset('/js/bootstrap-select.min.js') }}"></script>
 @stop
 
 
@@ -25,12 +21,12 @@ PICKPRIME - Your College Picker
                   <img class="responsive-img" alt="course" src="{{ asset( $results->course_image_1 ) }}">
                 </div>
                 <div class="card-content">
-                  <p>
+                  <p class="truncate">
                     {{ $results->course_content }}
                   </p>
                 </div>
                 <div class="card-action">
-                  <a href="#">{{ $results->course_name }}</a>
+                  <a href="courses/{{ $results->course_id }}">{{ $results->course_name }}</a>
                 </div>
               </div>
             </div>
