@@ -13,13 +13,13 @@ PICKPRIME - Your College Picker
             <div class="card col s12">
                 <div class="col s4">
                     <p>
-                        <img src="{{ asset( $result['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
+                        <img src="{{ asset( $result_1['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
                     </p>
-                    <p>{{ $result['0']->course_name }}</p>
+                    <p>{{ $result_1['0']->course_name }}</p>
                 </div>
                 <div class="col s8">
                     <p>
-                    	<img src="{{ asset( $result['0']->course_image_3 ) }}" alt="iit kgp lg" width="100%">                    
+                    	<img src="{{ asset( $result_1['0']->course_image_3 ) }}" alt="iit kgp lg" width="100%">                    
                     </p>
                 </div>
             </div>
@@ -36,19 +36,19 @@ PICKPRIME - Your College Picker
                         <ul class="collapsible" data-collapsible="accordion">
                         <li>
                             <div class="collapsible-header">Course Content</div>
-                            <div class="collapsible-body"><p>{{ $result['0']->course_content }}</p></div>
+                            <div class="collapsible-body"><p>{{ $result_1['0']->course_content }}</p></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Future Scope</div>
-                            <div class="collapsible-body"><p>{{ $result['0']->future_scope }}</p></div>
+                            <div class="collapsible-body"><p>{{ $result_1['0']->future_scope }}</p></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Job Place Work</div>
-                            <div class="collapsible-body"><p>{{ $result['0']->job_place_work }}</p></div>
+                            <div class="collapsible-body"><p>{{ $result_1['0']->job_place_work }}</p></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Top Institutes</div>
-                            <div class="collapsible-body"><p>{{ $result['0']->top_institute }}</p></div>
+                            <div class="collapsible-body"><p>{{ $result_1['0']->top_institute }}</p></div>
                         </li>
                         </ul>
                     </div>
@@ -57,14 +57,14 @@ PICKPRIME - Your College Picker
                         <li>
                             <div class="collapsible-header">Course Review</div>
                                 <div class="collapsible-body">
-                                @foreach ($result as $results)
+                                @foreach ($result_2 as $results_2)
                                 <p>
                                     <div class="card col s10 grey lighten-2 ">
-                                    {{ $results->reviewer_name }} , {{ $results->reviewer_college }}<br/>
-                                    {{ $results->reviewer_description }}<br/>
-                                    Reviewer Rating - {{ $results->reviewer_rating }}
+                                    {{ $results_2->reviewer_name }} , {{ $results_2->reviewer_college }}<br/>
+                                    {{ $results_2->reviewer_description }}<br/>
+                                    Reviewer Rating - {{ $results_2->reviewer_rating }}
                                     <p>
-                                    {{ $results->review }}
+                                    {{ $results_2->review }}
                                     </p>    
                                     </div>
                                 </p>
