@@ -57,6 +57,15 @@ PICKPRIME - Your College Picker
                         <li>
                             <div class="collapsible-header">Course Review</div>
                                 <div class="collapsible-body">
+                                @if ( count($result_2)==0 )
+
+                                    <p>
+                                    <div class="card col s10 grey lighten-2 ">
+                                    <p>No reviews yet.</p>
+                                    </div>
+                                    </p>
+                                @else
+                                   
                                 @foreach ($result_2 as $results_2)
                                 <p>
                                     <div class="card col s10 grey lighten-2 ">
@@ -69,6 +78,7 @@ PICKPRIME - Your College Picker
                                     </div>
                                 </p>
                                 @endforeach
+                                @endif
                                 </div>
                         </li>        
                         <!-- Changed Style of Page   

@@ -68,9 +68,16 @@ PICKPRIME - Your College Picker
                     </form>
                     <ul class="collection with-header">
                         <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @if ( count($general_question) == 0 )
+                         
+                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                        @else
+                            
                         @foreach ($general_question as $general)
                             <li class="collection-item"><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text">{{ $general->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
                         @endforeach
+                        
+                        @endif
                     </ul>
                 </div>
                 <div id="admission_related" class="col s12">
@@ -97,9 +104,16 @@ PICKPRIME - Your College Picker
                     </form>
                     <ul class="collection with-header">
                         <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @if ( count($admission_question) == 0 )
+                         
+                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                        @else
+                            
                         @foreach ($admission_question as $admission)
                             <li class="collection-item"><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text">{{ $admission->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
                         @endforeach
+
+                        @endif
                     </ul>
                 </div>
                 <div id="campus_related" class="col s12">
@@ -126,9 +140,16 @@ PICKPRIME - Your College Picker
                     </form>
                     <ul class="collection with-header">
                         <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @if ( count($campus_question) == 0 )
+                         
+                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                        @else
+                            
                         @foreach ($campus_question as $campus)
                             <li class="collection-item"><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text">{{ $campus->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
                         @endforeach
+
+                        @endif
                     </ul>
                 </div>
                 <div id="placement_related" class="col s12">
@@ -155,9 +176,16 @@ PICKPRIME - Your College Picker
                     </form>
                     <ul class="collection with-header">
                         <li class="collection-header"><h4>Recent Questions</h4></li>
+                        @if ( count($placement_question) == 0 )
+                         
+                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                        @else
+                            
                         @foreach ($placement_question as $placement)
                             <li class="collection-item"><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text">{{ $placement->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
                         @endforeach
+
+                        @endif
                     </ul>
                 </div>
                 
