@@ -30,8 +30,11 @@ class AmbassadorController extends Controller {
 	 */
 	public function viewAmbassadors()
 	{
+		$results = DB::select('select * from ambassadors');
 		
-		return view('/ambassadors/ambassadors');
+		return view('/ambassadors/ambassadors')->with(array(
+			'result' => $results
+			));
 	}
 
 	public function ambassador($ambassador_id)

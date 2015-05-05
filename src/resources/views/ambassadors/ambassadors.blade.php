@@ -20,111 +20,23 @@ PICKPRIME - Your College Picker
                     </ul>
                 </div>
             </div>
+             @foreach ($result as $results)
             <div class="card col s3">
                 <div class="col s12">
                     <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                        <img src="{{asset( $results->profile_pic ) }}" alt="profile picture">
                     </div>
                     <div class="card-content">
                         <div class="col s12 ">
                             <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
+                                <a href="#">{{ $results->ambassadors_name }}</a><br><br>
+                                <a href='#'>{{ $results->ambassadors_college_id }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>    
-            <div class="card col s3">
-              <div class="col s12">
-                    <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                    </div>
-                    <div class="card-content">
-                        <div class="col s12 ">
-                            <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col s3">
-              <div class="col s12">
-                    <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                    </div>
-                    <div class="card-content">
-                        <div class="col s12 ">
-                            <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col s3">
-              <div class="col s12">
-                    <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                    </div>
-                    <div class="card-content">
-                        <div class="col s12 ">
-                            <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col s3">
-              <div class="col s12">
-                    <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                    </div>
-                    <div class="card-content">
-                        <div class="col s12 ">
-                            <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col s3">
-              <div class="col s12">
-                    <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                    </div>
-                    <div class="card-content">
-                        <div class="col s12 ">
-                            <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col s3">
-              <div class="col s12">
-                    <div class="card-image">
-                        <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                    </div>
-                    <div class="card-content">
-                        <div class="col s12 ">
-                            <div class="center-align">
-                                <a href="#">Ambs One</a><br><br>
-                                <a href='#'>IIT Kharagpur</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>            
