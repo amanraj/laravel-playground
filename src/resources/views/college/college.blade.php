@@ -8,89 +8,89 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('content')
+
 <div class="container">
-	
 	<div class="row">
 		<!--====================================
 		College Image Name and Location
 		=====================================-->
-     	 <div class="col s12 m12 l6">
-        	<div class="card-panel grey lighten-2">
-          
-				<h5>College Name, ID = {{ $college_id }}, Location</h5><br>
-				<img class="responsive-img" width="100%" src="{{ asset('images/colleges/iit_kgp.jpg') }}">
-			
-        	</div>
+     	 <div class="col s12 m12 l8">
+        	<div class="card-panel grey lighten-2">          
+				<h5>
+				{{ $result_2['0']->college_name }},
+				{{ $result_2['0']->college_location }}
+				ID = {{ $result_2['0']->college_id }}</h5>
+				<br>
+				<img class="responsive-img" style="width:100%;height:300px;" src="{{ asset( $result_2['0']->college_image_1 ) }}">
+	    	</div>
       	</div>
       	<!--====================================
       	College Ratings and Options
       	=====================================-->
-       	<div class="col s12 m12 l6">
+       	<div class="col s12 m12 l4">
         	<div class="card-panel grey lighten-2">
           		<table class="striped responsive-table">
 					<tr>
-						<td><b>PPR</b></td>
-						<td>
+						<td style="padding:2px 5px;">PPR</td>
+						<td style="padding:2px 5px;">
 							##########
   						</td>
-						<td>5.8</td>
+						<td style="padding:2px 5px;">5.8</td>
 					</tr>
 					<tr>
-						<td><b>Overall Rating</b></td>
-						<td>
+						<td style="padding:2px 5px;">Overall Rating</td>
+						<td style="padding:2px 5px;">
 							<div class="progress">
       							<div class="determinate" style="width: 70%"></div>
   							</div>
-  						</td>
-						<td>4.0</td>
+  						</td style="padding:2px 5px;">
+						<td>{{ $result_1['0']->college_overall_rating }}</td>
 					</tr>
 					<tr>
-						<td><b>Campus Life</b></td>
-						<td>
+						<td style="padding:2px 5px;">Campus Life</td>
+						<td style="padding:2px 5px;">
 							<div class="progress">
       							<div class="determinate" style="width: 50%"></div>
   							</div>
   						</td>
-						<td>4.0</td>
+						<td style="padding:2px 5px;">{{ $result_1['0']->college_campuslife_rating }}</td>
 					</tr>
 					<tr>
-						<td><b>Hostel Life</b></td>
-						<td>
+						<td style="padding:2px 5px;">Hostel Life</td>
+						<td style="padding:2px 5px;">
 							<div class="progress">
       							<div class="determinate" style="width: 90%"></div>
   							</div>
   						</td>
-						<td>4.0</td>
+						<td style="padding:2px 5px;">{{ $result_1['0']->college_hostel_rating }}</td>
 					</tr>
 					<tr>
-						<td><b>Location</b></td>
-						<td>
+						<td style="padding:2px 5px;">Location</td>
+						<td style="padding:2px 5px;">
 							<div class="progress">
       							<div class="determinate" style="width: 20%"></div>
   							</div>
   						</td>
-						<td>4.0</td>
+						<td style="padding:2px 5px;">{{ $result_1['0']->college_location_rating }}</td>
 					</tr>
 					<tr>
-						<td><b>Facilities</b></td>
-						<td>
+						<td style="padding:2px 5px;">Facilities</td>
+						<td style="padding:2px 5px;">
 							<div class="progress">
       							<div class="determinate" style="width: 50%"></div>
   							</div>
   						</td>
-						<td>4.0</td>
+						<td style="padding:2px 5px;">{{ $result_1['0']->college_facilities_rating }}</td>
 					</tr>
+					<tr class="grey lighten-2">
+						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
+						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
+						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
+					</tr>	
 				</table>
-				<div class="center-align">
-					<a class="btn waves-effect waves-light">Notes</a>
-					<a class="btn waves-effect waves-light">Take Test</a>
-					<a class="btn waves-effect waves-light">Add</a>
-				</div>
         	</div>
       	</div>
-    </div>
-
-
+    </div>       
     <div class="row">
     	<!--====================================
     	Tabs
@@ -110,31 +110,31 @@ PICKPRIME - Your College Picker
 			<ul class="collapsible" data-collapsible="expandable">
 				<li>
 					<div class="collapsible-header active"><i class="mdi-image-filter-drama"></i><b>General Information</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_overview }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-maps-place"></i><b>Fee</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_fees }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Exams/Admission Procedure</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_entrance_exam }}<br/>{{ $result_2['0']->college_addmision_process }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Hostels</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_hostels }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Fests</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_fests }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Other Facilites</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_other_facilities }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Placements</b></div>
-					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					<div class="collapsible-body"><p>{{ $result_2['0']->college_placement }}</p></div>
 				</li>
 			</ul>
 	    </div>
@@ -142,36 +142,56 @@ PICKPRIME - Your College Picker
 	    college Review Tab
 	    =====================================-->
 	    <div id="college-review" class="col s12 ">
+	    	@if ( count($result)==0 )
 	    	<div class="card  valign-wraper medium grey lighten-2">
 		    	<div class="row">
 		    		<div class="col s3 ">
 		    			<ul class="collection valign">
-		    				<li class="collection-item">
+		    				<li class="collection-item" style="padding: 5px 25px;">
+				    			Nothing here yet.
+				    		</li>
+				    	</ul>
+				    </div>
+				</div>
+			</div>
+			@else	    		
+	    	@foreach ( $result_1 as $results_1 )
+	    	<div class="card  valign-wraper medium grey lighten-2">
+		    	<div class="row">
+		    		<div class="col s3 ">
+		    			<ul class="collection valign">
+		    				<li class="collection-item" style="padding: 5px 25px;">
 				    			May 2, 2015
 				    		</li>
-				    		<li class="collection-item">
+				    		<li class="collection-item" style="padding: 5px 25px;">
 								#############
 							</li>
-							<li class="collection-item">
-								Overall Rating
+							<li class="collection-item" style="padding: 5px 25px;">
+								Overall Rating : {{ $results_1->college_overall_rating }}
 								<div class="progress">
 			      					<div class="determinate" style="width: 50%"></div>
 			  					</div>
 			  				</li>
-			  				<li class="collection-item">
-			  					Hostel Life
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Hostel Life : {{ $results_1->college_hostel_rating }}
 								<div class="progress">
 			      					<div class="determinate" style="width: 50%"></div>
 			  					</div>
 			  				</li>
-			  				<li class="collection-item">
-			  					Fests (if any)
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Campus Life : {{ $results_1->college_campuslife_rating }}
 								<div class="progress">
 			      					<div class="determinate" style="width: 50%"></div>
 			  					</div>
 			  				</li>
-			  				<li class="collection-item">
-			  					Facilities
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Location : {{ $results_1->college_location_rating }}
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Facilities : {{ $results_1->college_facilities_rating }}
 								<div class="progress">
 			      					<div class="determinate" style="width: 50%"></div>
 			  					</div>
@@ -180,63 +200,17 @@ PICKPRIME - Your College Picker
 		    		</div>
 		    		<div class="col s9">
 		    			<p>
-		    			<b>Reviewer Name, Description</b><br><br>
-		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
-		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
-		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
-		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
+		    				<b>{{ $results_1->reviewer_name }},<br/>{{ $results_1->reviewer_college }}</b>
 		    			</p>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	<div class="card  valign-wraper medium grey lighten-2">
-		    	<div class="row">
-		    		<div class="col s3 ">
-		    			<ul class="collection valign">
-		    				<li class="collection-item">
-				    			May 2, 2015
-				    		</li>
-				    		<li class="collection-item">
-								#############
-							</li>
-							<li class="collection-item">
-								Overall Rating
-								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-			  				<li class="collection-item">
-			  					Hostel Life
-								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-			  				<li class="collection-item">
-			  					Fests (if any)
-								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-			  				<li class="collection-item">
-			  					Facilities
-								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-	  					</ul>
-		    		</div>
-		    		<div class="col s9">
 		    			<p>
-		    			<b>Reviewer Name, Description</b><br><br>
-		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
-		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
-		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
-		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
+		    				{{ $results_1->review }}
 		    			</p>
 		    		</div>
 	    		</div>
 	    	</div>
-	    </div>
+	    	@endforeach
+	    	@endif
+	    </div>	
 	    <!--====================================
 	    Course Review Tab
 	    =====================================-->
@@ -302,26 +276,114 @@ PICKPRIME - Your College Picker
 						
 						<div>
 							<h4>User Reviews</h4>
-							<ul class="collection">
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-							</ul>
+				@if ( count($result)==0 )
+		    	<div class="card  valign-wraper medium grey lighten-2">
+			    	<div class="row">
+			    		<div class="col s3 ">
+			    			<ul class="collection valign">
+			    				<li class="collection-item" style="padding: 5px 25px;">
+					    			Nothing here yet.
+					    		</li>
+					    	</ul>
+					    </div>
+					</div>
+				</div>
+				@else	    					
+				<div class="card  valign-wraper medium grey lighten-2">
+		    	<div class="row">
+		    		<div class="col s3 ">
+		    			<ul class="collection valign">
+		    				<li class="collection-item" style="padding: 5px 25px;">
+				    			May 2, 2015
+				    		</li>
+				    		<li class="collection-item" style="padding: 5px 25px;">
+								#############
+							</li>
+							<li class="collection-item" style="padding: 5px 25px;">
+								Course Content
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Placements
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Future Scope
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Faculty
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+	  					</ul>
+		    		</div>
+		    		<div class="col s9">
+		    			<p>
+		    			<b>Reviewer Name, Description</b><br><br>
+		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
+		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
+		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
+		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
+		    			</p>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div class="card  valign-wraper medium grey lighten-2">
+		    	<div class="row">
+		    		<div class="col s3 ">
+		    			<ul class="collection valign">
+		    				<li class="collection-item" style="padding: 5px 25px;">
+				    			May 2, 2015
+				    		</li>
+				    		<li class="collection-item" style="padding: 5px 25px;">
+								#############
+							</li>
+							<li class="collection-item" style="padding: 5px 25px;">
+								Course Content
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Placements
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Future Scope
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Faculty
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+	  					</ul>
+		    		</div>
+		    		<div class="col s9">
+		    			<p>
+		    			<b>Reviewer Name, Description</b><br><br>
+		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
+		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
+		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
+		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
+		    			</p>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	@endif
 						</div>
 					</div>
 				</li>
@@ -385,26 +447,53 @@ PICKPRIME - Your College Picker
 						
 						<div>
 							<h4>User Reviews</h4>
-							<ul class="collection">
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-							</ul>
+							<div class="card  valign-wraper medium grey lighten-2">
+		    	<div class="row">
+		    		<div class="col s3 ">
+		    			<ul class="collection valign">
+		    				<li class="collection-item" style="padding: 5px 25px;">
+				    			May 2, 2015
+				    		</li>
+				    		<li class="collection-item" style="padding: 5px 25px;">
+								#############
+							</li>
+							<li class="collection-item" style="padding: 5px 25px;">
+								Course Content
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Placements
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Future Scope
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Faculty
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+	  					</ul>
+		    		</div>
+		    		<div class="col s9">
+		    			<p>
+		    			<b>Reviewer Name, Description</b><br><br>
+		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
+		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
+		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
+		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
+		    			</p>
+		    		</div>
+	    		</div>
+	    	</div>
 						</div>
 					</div>
 				</li>
@@ -468,26 +557,53 @@ PICKPRIME - Your College Picker
 						
 						<div>
 							<h4>User Reviews</h4>
-							<ul class="collection">
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-								<li class="collection-item">
-									<div>
-										<b>User Name, Description</b>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis fugiat praesentium consequuntur, deserunt autem. Est commodi in, iste tenetur fugiat ducimus voluptates sequi quia, minus cum maxime. Vel, rem.</p>
-									</div>
-								</li>
-							</ul>
+							<div class="card  valign-wraper medium grey lighten-2">
+		    	<div class="row">
+		    		<div class="col s3 ">
+		    			<ul class="collection valign">
+		    				<li class="collection-item" style="padding: 5px 25px;">
+				    			May 2, 2015
+				    		</li>
+				    		<li class="collection-item" style="padding: 5px 25px;">
+								#############
+							</li>
+							<li class="collection-item" style="padding: 5px 25px;">
+								Course Content
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Placements
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Future Scope
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Faculty
+								<div class="progress">
+			      					<div class="determinate" style="width: 50%"></div>
+			  					</div>
+			  				</li>
+	  					</ul>
+		    		</div>
+		    		<div class="col s9">
+		    			<p>
+		    			<b>Reviewer Name, Description</b><br><br>
+		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
+		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
+		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
+		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
+		    			</p>
+		    		</div>
+	    		</div>
+	    	</div>
 						</div>
 					</div>
 				</li>
@@ -497,151 +613,165 @@ PICKPRIME - Your College Picker
 	    forum Tab
 	    =====================================-->
 	    <div id="forum" class="col s12">
-	    	<form>
-		    	<div class="col s10">	    		
-					<div class="row">
-						<div class="input-field col s9">
-							<input id="question_title" type="text" class="validate" required>
-							<label for="question_title">Got a question? Please ask.</label>
-						</div>
-						<div class="input-field col s3">
-							<select class="browser-default">
-								<option value="general" selected>General</option>
-								<option value="addmision">Addmission Related</option>
-								<option value="placement">Placement Related</option>
-								<option value="campus">Campus Related</option>
-							</select>
-						</div>
-					</div>
-					<div class="input-field col s12">
-						<textarea id="question_description" class="materialize-textarea"></textarea>
-          				<label for="textarea1">Question Description</label>
-					</div>
-		    	</div>	
-		    	<div class="col s2 valign-wrapper">
-		    		<a href="#!" class="btn valign">Ask ?</a>
-		    	</div>
-	    	</form>
-	    	<!--====================================
-	    	Sub Tabs for Forum
-	    	=====================================-->
+	    <div class="row">
+            <div class="col s4">
+            <h5>{{ $result['0']->ambassadors_college_id }} Forum</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card s12">
+                <div class="col s4">
+                <p><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
+                <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
+                </div>
+                <div class="card grey lighten-2">
+                    <div class="col s12">
+                        
+                        <div class="ambs_speaks">
+                        <p><b>Campus Ambassador Speaks....</b></p>
+                        <p>
+                        {{  $result['0']->ambassadors_intro }}
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	    	<div class="row">
-		    	<!--====================================
-		    	Tabs
-		    	=====================================-->
-			    <div class="col s12">
-					<ul id="forum-subtab" class="tabs">
-						<li class="tab col s3 grey lighten-2"><a class="active" href="#general">General</a></li>
-						<li class="tab col s3 grey lighten-2"><a href="#addmission">Addmission Related</a></li>
-						<li class="tab col s3 grey lighten-2"><a href="#campus">Campus Related</a></li>
-						<li class="tab col s3 grey lighten-2"><a href="#placement">Placement Related</a></li>
-					</ul>
-					<!--====================================
-					general tab content
-					=====================================-->
-					<div id="general" class="col s12"> 
-						<h5>Recent Questions</h5>
-						<div class="col s12">
-							<ul class="collection">
-								<li class="collection-item">
-									<a href="#">This is a General question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a General question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a General question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
+            <div class="card">
+                <div class="col s12">
+                    <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#general">General</a></li>
+                    <li class="tab col s3"><a href="#admission_related">Admission Related</a></li>
+                    <li class="tab col s3"><a href="#campus_related">Campus Related</a></li>
+                    <li class="tab col s3"><a href="#placement_related">Placement Related</a></li>
+                    </ul>
+                </div>
+                <div id="general" class="col s12">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s9">
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            </div>
+                            <div class="right col s3">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
+                        @if ( count($general_question) == 0 )
+                         <tr>
+                            <td><div><a href="#" class="blue-text">No questions here yet.</a></div></td>
+                        </tr>
+                        @else
+                            
+                        @foreach ($general_question as $general)
+                            <td><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        @endforeach
+                        
+                        @endif
+                    </table>
+                </div>
+                <div id="admission_related" class="col s12">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s9">
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            </div>
+                            <div class="right col s3">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
+                        @if ( count($admission_question) == 0 )
+                            <tr>
+                                <td><div><a href="#" class="blue-text">No questions here yet.</a></div></li></td>
+                            </tr>
+                        @else
+                            
+                        @foreach ($admission_question as $admission)
+                        <tr>
+                            <td><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text"><small>{{ $admission->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        </tr>
+                        @endforeach
 
-							</ul>
-						</div>
-					</div>
-					<!--====================================
-					general tab content
-					=====================================-->
-					<div id="addmission" class="col s12"> 
-						<h5>Recent Questions</h5>
-						<div class="col s12">
-							<ul class="collection">
-								<li class="collection-item">
-									<a href="#">This is a Admission Related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a Admission Related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a Admission Related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
+                        @endif
+                    </table>
+                </div>
+                <div id="campus_related" class="col s12">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s9">
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            </div>
+                            <div class="right col s3">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
+                        @if ( count($campus_question) == 0 )
+                            <tr>
+                                <td><div><a href="#" class="blue-text">No questions here yet.</a></div></li></td>
+                            </tr>
+                        @else
+                            
+                        @foreach ($campus_question as $campus)
+                        <tr>
+                            <td><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text"><small>{{ $campus->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        </tr>
+                        @endforeach
 
-							</ul>
-						</div>
-					</div>
-					<!--====================================
-					general tab content
-					=====================================-->
-					<div id="campus" class="col s12"> 
-						<h5>Recent Questions</h5>
-						<div class="col s12">
-							<ul class="collection">
-								<li class="collection-item">
-									<a href="#">This is a Campus related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a Campus related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a Campus related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
+                        @endif
+                    </table>
+                </div>
+                <div id="placement_related" class="col s12">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s9">
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            </div>
+                            <div class="right col s3">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
+                        @if ( count($placement_question) == 0 )
+                        <tr>
+                            <td><div><a href="#" class="blue-text">No questions here yet.</a></div></td>
+                        </tr>
+                        @else
+                            
+                        @foreach ($placement_question as $placement)
+                        <tr>
+                            <td><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text"><small>{{ $placement->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        </tr>
+                        @endforeach
 
-							</ul>
-						</div>
-					</div>
-					<!--====================================
-					general tab content
-					=====================================-->
-					<div id="placement" class="col s12"> 
-						<h5>Recent Questions</h5>
-						<div class="col s12">
-							<ul class="collection">
-								<li class="collection-item">
-									<a href="#">This is a Placement related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a Placement related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-								<li class="collection-item">
-									<a href="#">This is a Placement related question?</a>
-									<span class="badge">by <b >User Name</b></span>
-									<p>posted 10mins ago</p>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-			    </div>
-			</div>
+                        @endif
+                    </table>
+                </div>
+                
+            </div>
+        </div>
 	    </div>
     </div>
 </div>
