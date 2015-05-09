@@ -23,8 +23,8 @@ PICKPRIME - Your College Picker
             <div id="colleges">
              @foreach ($result as $results)
              @if( $results->ambassadors_type == 'college' )
-            <div class="card col s3">
-                <div class="col s12">
+            <div class="col s3">
+                <div class="card">
                     <div class="card-image">
                         <img src="{{asset( $results->profile_pic ) }}" alt="profile picture">
                     </div>
@@ -44,8 +44,8 @@ PICKPRIME - Your College Picker
             <div id="courses">
              @foreach ($result as $results)
              @if( $results->ambassadors_type == 'course' )
-            <div class="card col s3">
-                <div class="col s12">
+            <div class="col s3">
+                <div class="card">
                     <div class="card-image">
                         <img src="{{asset( $results->profile_pic ) }}" alt="profile picture">
                     </div>
