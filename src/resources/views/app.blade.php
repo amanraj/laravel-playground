@@ -49,7 +49,7 @@ Including the Header body
 
 <ul id="my-account" class="dropdown-content">
   <li><a href="#!" class="black-text">Notifications</a></li>
-  <li><a href="#!" class="black-text">Profile</a></li>
+  <li><a href="/profile" class=" modal-target black-text">Profile</a></li>
   <li><a href="#!" class="black-text">Settings</a></li>
   <li><a href="#!" class="black-text">Sign Out</a></li>
 </ul>
