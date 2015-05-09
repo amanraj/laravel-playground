@@ -40,7 +40,7 @@ class CourseController extends Controller {
 	public function course($course_id)
 	{
 		$results_1 = DB::select('select * from course where course_id = ?' , [$course_id] );
-		$results_2 = DB::select('select * from course_review where course_reference_id = ?' , [$course_id] );
+		$results_2 = DB::select('select * from course_college_review where course_refference_id = ?' , [$course_id] );
 		return view('/course/course')->with (array(
 				'result_1' => $results_1 , 
 				'result_2' => $results_2
