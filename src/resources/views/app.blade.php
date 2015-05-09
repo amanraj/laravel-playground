@@ -49,7 +49,7 @@ Including the Header body
 
 <ul id="my-account" class="dropdown-content">
   <li><a href="#!" class="black-text">Notifications</a></li>
-  <li><a href="/profile" class=" modal-target black-text">Profile</a></li>
+  <li><a href="/profile" class=" modal-trigger black-text">Profile</a></li>
   <li><a href="#!" class="black-text">Settings</a></li>
   <li><a href="#!" class="black-text">Sign Out</a></li>
 </ul>
@@ -140,6 +140,13 @@ Including the Header body
         });
     });
 
+</script>
+
+<script>
+            $(document).ready(function() {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal-trigger').leanModal();
+            });
 </script>
 
 </header>
