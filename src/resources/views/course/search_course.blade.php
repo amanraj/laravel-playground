@@ -11,17 +11,21 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-	<div class="container center-align">
-	<div class="row">
+    <div class="container center-align">
+    <div class="row">
         <div class="card col s12">
             <ul class="tabs">
             <li class="tab col s3"><a href="#engineering">Engineering</a></li>
-            <li class="tab col s3"><a href="#law">Law</a></li>
-            <li class="tab col s3"><a href="#commerce">Commerce</a></li>
-            <li class="tab col s3"><a href="#arts">Arts</a></li>
+            <li class="tab col s3"><a href="#law">Medical</a></li>
+            <li class="tab col s3"><a href="#commerce">Law</a></li>
+            <li class="tab col s3"><a href="#arts">Management</a></li>
             </ul>
                 <div id="engineering" class="col s12">
                 @foreach ($result as $results)
+                @if ( $results->course_stream == 'Engineering')
+                @if ( ($results->course_id)%3 == 1 )
+                <div class="row">
+                @endif
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
@@ -37,10 +41,18 @@ PICKPRIME - Your College Picker
                         </div>
                     </div>
                 </div>
-            @endforeach
+                @if ( ($results->course_id)%3 == 0 )
+                </div>
+                @endif  
+                @endif             
+                @endforeach
             </div>
-            <div id="law" class="col s12">
+            <div id="Medical" class="col s12">
                 @foreach ($result as $results)
+                @if ( $results->course_stream == 'Medical' )
+                @if ( ($results->course_id)%3 == 1 )
+                <div class="row">
+                @endif             
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
@@ -55,11 +67,19 @@ PICKPRIME - Your College Picker
                             <a href="courses/{{ $results->course_id }}">{{ $results->course_name }}</a>
                         </div>
                     </div>
+                </div> 
+                @if ( ($results->course_id)%3 == 0 )
                 </div>
-            @endforeach
+                @endif  
+                @endif               
+                @endforeach
             </div> 
-            <div id="commerce" class="col s12">
+            <div id="Law" class="col s12">
                 @foreach ($result as $results)
+                @if ( $results->course_stream == 'Law')
+                @if ( ($results->course_id)%3 == 1 )
+                <div class="row">
+                @endif               
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
@@ -74,11 +94,19 @@ PICKPRIME - Your College Picker
                             <a href="courses/{{ $results->course_id }}">{{ $results->course_name }}</a>
                         </div>
                     </div>
+                </div>  
+                @if ( ($results->course_id)%3 == 0 )
                 </div>
-            @endforeach
+                @endif    
+                @endif            
+                @endforeach
             </div> 
-            <div id="arts" class="col s12">
-                @foreach ($result as $results)
+            <div id="Management" class="col s12">
+                @foreach ($result as $results) 
+                @if ( $results->course_stream == 'Management') 
+                @if ( ($results->course_id)%3 == 1 )
+                <div class="row">
+                @endif              
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
@@ -93,10 +121,14 @@ PICKPRIME - Your College Picker
                             <a href="courses/{{ $results->course_id }}">{{ $results->course_name }}</a>
                         </div>
                     </div>
+                </div>   
+                @if ( ($results->course_id)%3 == 0 )
                 </div>
-            @endforeach
+                @endif      
+                @endif         
+                @endforeach
             </div>  
         </div>
     </div>
-	</div>
+    </div>
 @stop
