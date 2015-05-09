@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Session;
+use DB;
 class CollegeController extends Controller {
 
 	/*
@@ -29,8 +30,13 @@ class CollegeController extends Controller {
 	 */
 	public function viewColleges()
 	{
+		$results = DB::select( 'select * from college' );
 		
-		return view('/college/search_college');
+		return view('/college/search_college')->with ( array (
+
+			'result' => $results
+
+			));
 	}
 
 	public function college($college_id)
