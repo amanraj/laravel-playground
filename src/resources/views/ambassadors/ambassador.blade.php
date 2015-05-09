@@ -12,7 +12,7 @@ PICKPRIME - Your College Picker
 <div class="container">
         <div class="row">
             <div class="col s4">
-            <h5>IIT Kharagpur Forum</h5>
+            <h5>{{ $result['0']->ambassadors_college_id }} Forum</h5>
             </div>
         </div>
         <div class="row">
@@ -50,14 +50,6 @@ PICKPRIME - Your College Picker
                             <div class="input-field col s6">
                             <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
-                            <div class="col s3">
-                                <select class="browser-default">
-                                    <option value="1" selected>General</option>
-                                    <option value="2">Admission Related</option>
-                                    <option value="3">Campus Related</option>
-                                    <option value="4">Placement Related</option>
-                                </select>
-                            </div>
                             <div class="input-field col s9">
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
@@ -66,19 +58,20 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
                         @if ( count($general_question) == 0 )
-                         
-                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                         <tr>
+                            <td><div><a href="#" class="blue-text">No questions here yet.</a></div></td>
+                        </tr>
                         @else
                             
                         @foreach ($general_question as $general)
-                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text">{{ $general->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                            <td><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         @endforeach
                         
                         @endif
-                    </ul>
+                    </table>
                 </div>
                 <div id="admission_related" class="col s12">
                     <form class="col s12">
@@ -86,14 +79,6 @@ PICKPRIME - Your College Picker
                             <div class="input-field col s6">
                             <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
-                            <div class="col s3">
-                                <select class="browser-default">
-                                    <option value="1">General</option>
-                                    <option value="2" selected>Admission Related</option>
-                                    <option value="3">Campus Related</option>
-                                    <option value="4">Placement Related</option>
-                                </select>
-                            </div>
                             <div class="input-field col s9">
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
@@ -102,19 +87,22 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
                         @if ( count($admission_question) == 0 )
-                         
-                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                            <tr>
+                                <td><div><a href="#" class="blue-text">No questions here yet.</a></div></li></td>
+                            </tr>
                         @else
                             
                         @foreach ($admission_question as $admission)
-                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text">{{ $admission->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        <tr>
+                            <td><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text"><small>{{ $admission->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        </tr>
                         @endforeach
 
                         @endif
-                    </ul>
+                    </table>
                 </div>
                 <div id="campus_related" class="col s12">
                     <form class="col s12">
@@ -122,14 +110,6 @@ PICKPRIME - Your College Picker
                             <div class="input-field col s6">
                             <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
-                            <div class="col s3">
-                                <select class="browser-default">
-                                    <option value="1">General</option>
-                                    <option value="2">Admission Related</option>
-                                    <option value="3" selected>Campus Related</option>
-                                    <option value="4">Placement Related</option>
-                                </select>
-                            </div>
                             <div class="input-field col s9">
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
@@ -138,19 +118,22 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
                         @if ( count($campus_question) == 0 )
-                         
-                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                            <tr>
+                                <td><div><a href="#" class="blue-text">No questions here yet.</a></div></li></td>
+                            </tr>
                         @else
                             
                         @foreach ($campus_question as $campus)
-                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text">{{ $campus->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        <tr>
+                            <td><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text"><small>{{ $campus->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        </tr>
                         @endforeach
 
                         @endif
-                    </ul>
+                    </table>
                 </div>
                 <div id="placement_related" class="col s12">
                     <form class="col s12">
@@ -158,14 +141,6 @@ PICKPRIME - Your College Picker
                             <div class="input-field col s6">
                             <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
-                            <div class="col s3">
-                                <select class="browser-default">
-                                    <option value="1">General</option>
-                                    <option value="2">Admission Related</option>
-                                    <option value="3">Campus Related</option>
-                                    <option value="4" selected>Placement Related</option>
-                                </select>
-                            </div>
                             <div class="input-field col s9">
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
@@ -174,19 +149,22 @@ PICKPRIME - Your College Picker
                             </div>
                         </div>
                     </form>
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h4>Recent Questions</h4></li>
+                    <h4>Recent Questions</h4>
+                    <table class="bordered striped">
                         @if ( count($placement_question) == 0 )
-                         
-                            <li class="collection-item"><div><a href="#" class="blue-text">No questions here yet.</a></div></li>
+                        <tr>
+                            <td><div><a href="#" class="blue-text">No questions here yet.</a></div></td>
+                        </tr>>
                         @else
                             
                         @foreach ($placement_question as $placement)
-                            <li class="collection-item"><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text">{{ $placement->date }}</span><a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></li>
+                        <tr>
+                            <td><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text"><small>{{ $placement->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        </tr>
                         @endforeach
 
                         @endif
-                    </ul>
+                    </table>
                 </div>
                 
             </div>
