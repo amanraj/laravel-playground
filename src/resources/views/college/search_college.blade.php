@@ -18,130 +18,254 @@ PICKPRIME - Your College Picker
 @section('content')
 
 <div class="container">
-		<div id="find-main-panel" class="panel panel-default panel-top-find">
-		  <div class="panel-body">
-		  	<div class="row">
-		  		<div class="col-sm-3">
-		  			
+            <div class="row">
+                
+                    <div class="card col s12">
+                        <div class="col s3">                   
+                                    <p>Select Stream</p>
+                                    <!-- Dropdown Trigger -->
+                                    <a class="btn dropdown-button" href="#!" data-activates="dropdown1"><small>Nothing Selected</a></small>
 
-		  			<div class="panel panel-default">
-		  				<div class="panel-body">
-		  					<form role="form">
-		  					  <div class="form-group">
-		  					    <label for="stream">Select Stream</label>
-		  					    <select class="form-control selectpicker" id="stream" multiple="multiple">
-									<option value="Engineering">Engineering</option>
-									<option value="Management">Management</option>
-									<option value="Medical">Medical</option>
-									<option value="Law">Law</option>
-		  					    </select>
-		  					  </div>
-		  					  
-		  					</form>
-		  				</div>
-		  			</div>
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Engineering</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Management</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Medical</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Law</small></a></li> 
+                                    </ul>                             
+                                    <p >Select Location</p>
+                                    <!-- Dropdown Trigger -->
+                                    <a class="btn dropdown-button" href="#!" data-activates="dropdown2"><small>Nothing Selected</small></a>
 
-					<div class="panel panel-default">
-		  				<div class="panel-body">
-		  					<form role="form">
-		  					  <div class="form-group">
-		  					    <label for="location">Location</label>
-		  					    <select class="form-control selectpicker" id="location" multiple="multiple">
-									<option value="Maharashtra">Maharashtra</option>
-									<option value="Delhi">Delhi</option>
-									<option value="Uttar Pradesh">Uttar Pradesh</option>
-									<option value="Andhra Pradesh">Andhra Pradesh</option>
-									<option value="West Bengal">West Bengal</option>
-									<option value="Rajasthan">Rajasthan</option>
-		  					    </select>
-		  					  </div>
-		  					  
-		  					</form>
-		  				</div>
-		  			</div>
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown2' class='dropdown-content'>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Maharashtra</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Delhi</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Uttar Pradesh</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Andhra Pradesh</small></a></li> 
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>West Bengal</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Rajasthan</small></a></li>
+                                    </ul>
+                                
+                            
+                            
+                                
+                                    <p >Select Exam</p>
+                                    <!-- Dropdown Trigger -->
+                                    <a class="btn dropdown-button" href="#!" data-activates="dropdown3"><small>Nothing Selected</small></a>
 
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown3' class='dropdown-content'>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>IIT Mains</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>IIT Advanced</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>UPTU</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>BITS</small></a></li> 
+                                    </ul>
+                                
+                            
+                            
+                                
+                                    <p >Select Fees</p>
+                                    <!-- Dropdown Trigger -->
+                                    <a class="btn dropdown-button" href="#!" data-activates="dropdown4"><small>Nothing Selected</small></a>
 
-		  			<div class="panel panel-default">
-		  				<div class="panel-body">
-		  					<form role="form">
-		  					  <div class="form-group">
-		  					    <label for="exam">Exam</label>
-		  					    <select class="form-control selectpicker" id="exam" multiple="multiple">
-									<option value="IIT Mains">IIT Mains</option>
-									<option value="IIT Advanced">IIT Advanced</option>
-									<option value="UPTU">UPTU</option>
-									<option value="BITS Pilani">BITS Pilani</option>
-		  					    </select>
-		  					  </div>
-		  					  
-		  					</form>
-		  				</div>
-		  			</div>
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown4' class='dropdown-content'>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Below Rs. 50,000 per semester</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Rs 50,000 to Rs 1  Lakh per semester</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Rs 1  Lakh to Rs 1.5  Lakh per semester</small></a></li>
+                                        <li><a href="#!" style="padding: 5px 15px;"><small>Above Rs. 1.5  Lakh</small></a></li> 
+                                    </ul>
+                        </div>
+                            
+                        
+                        <div class="col s9">
+                        <div class="col offset-s7">
+                        <p ><small><b>Sort By</b></small> 
+                                    <!-- Dropdown Trigger -->
+                                    <a class="btn dropdown-button" href="#!" data-activates="dropdown5"><small>Popularity</small><i class="mdi-navigation-arrow-drop-down right"></i></a>
 
-		  			<div class="panel panel-default">
-		  				<div class="panel-body">
-		  					<form role="form">
-		  					  <div class="form-group">
-		  					    <label for="fees">Fees</label>
-		  					    <select class="form-control selectpicker" id="fees" multiple="multiple">
-									<option value="23000','10000">Below Rs. 50,000 per semester</option>
-									<option value="50000','65000">Rs 50,000 to Rs 1  Lakh per semester</option>
-									<option value="110000','134000">Rs 1  Lakh to Rs 1.5  Lakh per semester</option>
-									<option value="167000">Above Rs. 1.5  Lakh</option>
-		  					    </select>
-		  					  </div>
-		  					  
-		  					</form>
-		  				</div>
-		  			</div>
-
-		  		</div>
-		  		<div class="col-sm-9 data_div">
-				<div class="row">
-		  				<div class="col-sm-8">
-		  					<ul class="nav nav-tabs college-tabs">
-								
-							</ul>
-		  				</div>
-		  				<div class="col-sm-4 pull-right">
-		  					<form class="form-horizontal pull-right" role="form">
-		  					  
-		  					  <div class="form-group">
-		  					    <label for="sortby" class="col-sm-4 control-label" style="padding-right:0px;">Sort By</label>
-		  					    <div class="col-sm-8">
-		  					      <select class="form-control" id="sortby">
-		  					      	<option value="">Popularity</option>
-		  					      	<option value="">Fee</option>
-		  					      	<option value="">Alphabetically</option>
-		  					      </select>
-		  					    </div>
-		  					  </div>
-		  					  
-		  					</form>
-		  				</div>
-		  			</div>
-					
-					<div class="row separator mbot15"></div>
-						<div class="tab-content">
-						<div class="tab-pane active page_div" id="1">
-							
-						</div>
-						</div>
-		  		</div>
-		  	</div>
-		  </div>
-		</div>
-	</div>
-	<form class="college_target" style="display:none;" method="POST" action="college.php">
-		<input type="text" class="college_info" name="id" value="" />
-	</form>
-
-
-<script>
-$(document).ready(function(){
-	$('.selectpicker').selectpicker();
-	
-});
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown5' class='dropdown-content'>
+                                        <li><a href="#!"><small>random1</small></a></li>
+                                        <li><a href="#!"><small>random2</small></a></li>
+                                    </ul></p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="card col s4">
+                                <div class="card-image">
+                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                                </div>
+                                <li class="divider"></li>
+                                <div class="card-content">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td class="center-align" colspan="2"><a href='#'>IIT Kharagpur</a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td class="left-align ">Stream:</td>
+                                            <td>Engineering</td>
+                                        </tr>
+                                        <tr >
+                                            <td class="left-align ">Location:</td>
+                                            <td>West Bengal</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Exam:</td>
+                                            <td>IIT Advanced</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
+                                            <td >Rs 50,000</td>
+                                        </tr> 
+                                        <tr>
+                                            <td colspan="2"><a href='#'>Reviews</a></td>
+                                        </tr> 
+                                    </table>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="card col s4">
+                                <div class="card-image">
+                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                                </div>
+                                <li class="divider"></li>
+                                <div class="card-content">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td class="center-align" colspan="2"><a href='#'>IIT Delhi</a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td class="left-align ">Stream:</td>
+                                            <td>Engineering</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left-align ">Location:</td>
+                                            <td>Delhi</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Exam:</td>
+                                            <td>IIT Advanced</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
+                                            <td >Rs 75,000</td>
+                                        </tr> 
+                                        <tr>
+                                            <td colspan="2"><a href='#'>Reviews</a></td>
+                                        </tr> 
+                                    </table>
+                                </div>
+                            </div>
+                        
+                         
+                                <div class="card col s4">
+                                <div class="card-image">
+                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                                </div>
+                                <li class="divider"></li>
+                                <div class="card-content">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td class="center-align" colspan="2"><a href='#'>NIT Trichi</a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td class="left-align ">Stream:</td>
+                                            <td>Engineering</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left-align ">Location:</td>
+                                            <td>Tamil Nadu</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Exam:</td>
+                                            <td>IIT Mains</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
+                                            <td >Rs 45,000</td>
+                                        </tr> 
+                                        <tr>
+                                            <td colspan="2"><a href='#'>Reviews</a></td>
+                                        </tr> 
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                        <div class="row">
+                            <div class="card col s4">
+                                <div class="card-image">
+                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                                </div>
+                                <li class="divider"></li>
+                                <div class="card-content">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td class="center-align" colspan="2"><a href='#'>IIT Kharagpur</a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td class="left-align ">Stream:</td>
+                                            <td>Engineering</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left-align ">Location:</td>
+                                            <td>West Bengal</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Exam:</td>
+                                            <td>IIT Advanced</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
+                                            <td >Rs 75,000</td>
+                                        </tr> 
+                                        <tr>
+                                            <td colspan="2"><a href='#'>Reviews</a></td>
+                                        </tr> 
+                                    </table>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="card col s4">
+                                <div class="card-image">
+                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                                </div>
+                                <li class="divider"></li>
+                                <div class="card-content">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td class="center-align" colspan="2"><a href='#'>IIT Kharagpur</a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td class="left-align ">Stream:</td>
+                                            <td>Engineering</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left-align ">Location:</td>
+                                            <td>West Bengal</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Exam:</td>
+                                            <td>IIT Advanced</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
+                                            <td >Rs 75,000</td>
+                                        </tr> 
+                                        <tr>
+                                            <td colspan="2"><a href='#'>Reviews</a></td>
+                                        </tr> 
+                                    </table>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>               
+            </div>
+        </div>
 </script>
 
 
