@@ -41,27 +41,27 @@ Including the Header body
 </ul>
 
 <ul id="browse-menu" class="dropdown-content">
-    <li><a href="#!">Colleges</a></li>
-    <li><a href="#!">Courses</a></li>
-    <li><a href="#!">Appetite Hunt</a></li>
-    <li><a href="#!">Ambassadors</a></li>
+    <li><a href="#!" class="black-text">Colleges</a></li>
+    <li><a href="#!" class="black-text">Courses</a></li>
+    <li><a href="#!" class="black-text">Appetite Hunt</a></li>
+    <li><a href="#!" class="black-text">Ambassadors</a></li>
 </ul>
 
 <ul id="my-account" class="dropdown-content">
-  <li><a href="#!">Notifications</a></li>
-  <li><a href="#!">Profile</a></li>
-  <li><a href="#!">Settings</a></li>
-  <li><a href="#!">Sign Out</a></li>
+  <li><a href="#!" class="black-text">Notifications</a></li>
+  <li><a href="#!" class="black-text">Profile</a></li>
+  <li><a href="#!" class="black-text">Settings</a></li>
+  <li><a href="#!" class="black-text">Sign Out</a></li>
 </ul>
 
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper   grey darken-3">
 
         <a href="#!" class="brand-logo"><img class="responsive-img" src="{{ asset('/images/logo.png') }}"></a>
         <!--Mobile Sidebar button-->
         <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <!--================================
-        Menu for Desktops
+        Menu for Desktops purple
         =================================-->
         <ul class="right hide-on-med-and-down">
             <li>
