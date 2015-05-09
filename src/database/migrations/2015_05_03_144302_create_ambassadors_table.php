@@ -22,6 +22,7 @@ class CreateAmbassadorsTable extends Migration {
 			$table->string('profile_pic');
 			$table->integer('ambassadors_college_id');
 			$table->string('branch');
+			$table->string('ambassadors_type');
 			$table->longText('ambassadors_intro');
 			$table->string('ip_address',20);
 			$table->rememberToken();

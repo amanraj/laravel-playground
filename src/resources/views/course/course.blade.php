@@ -39,6 +39,10 @@ PICKPRIME - Your College Picker
                             <div class="collapsible-body"><p>{{ $result_1['0']->course_content }}</p></div>
                         </li>
                         <li>
+                         <li>
+                            <div class="collapsible-header">Top Institutes</div>
+                            <div class="collapsible-body"><p>{{ $result_1['0']->top_institute }}</p></div>
+                        </li>
                             <div class="collapsible-header">Future Scope</div>
                             <div class="collapsible-body"><p>{{ $result_1['0']->future_scope }}</p></div>
                         </li>
@@ -46,88 +50,134 @@ PICKPRIME - Your College Picker
                             <div class="collapsible-header">Job Place Work</div>
                             <div class="collapsible-body"><p>{{ $result_1['0']->job_place_work }}</p></div>
                         </li>
-                        <li>
-                            <div class="collapsible-header">Top Institutes</div>
-                            <div class="collapsible-body"><p>{{ $result_1['0']->top_institute }}</p></div>
-                        </li>
                         </ul>
                     </div>
                     <div id="course_desc" class="col s12">
                         <ul class="collapsible" data-collapsible="accordion">
                         <li>
-                            <div class="collapsible-header">Course Review</div>
+                            <div class="collapsible-header">Course Content</div>
                                 <div class="collapsible-body">
-                                @if ( count($result_2)==0 )
+                                @if ( count($result_2)== 0 )
 
                                     <p>
                                     <div class="card col s10 grey lighten-2 ">
-                                    <p>No reviews yet.</p>
+                                    <p>No content yet.</p>
                                     </div>
                                     </p>
                                 @else
                                    
                                 @foreach ($result_2 as $results_2)
                                 <p>
-                                    <div class="card col s10 grey lighten-2 ">
+                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    <div class="card col s10 grey lighten-2 left-align">
+                                    @else
+                                    <div class="card col s10 grey lighten-2 right-align">
+                                    @endif
                                     {{ $results_2->reviewer_name }} , {{ $results_2->reviewer_college }}<br/>
                                     {{ $results_2->reviewer_description }}<br/>
                                     Reviewer Rating - {{ $results_2->reviewer_rating }}
                                     <p>
-                                    {{ $results_2->review }}
+                                    {{ $results_2-course_content }}
                                     </p>    
                                     </div>
                                 </p>
                                 @endforeach
                                 @endif
                                 </div>
-                        </li>        
-                        <!-- Changed Style of Page   
-                        <li>
-                            <div class="collapsible-header">Future Scope</div>
-                                <div class="collapsible-body">
-                                <p>
-                                    <div class="card col s10 grey lighten-2">
-                                    Sample description 2a
-                                    </div>
-                                </p>
-                                <p>    
-                                    <div class="card col s10 right grey lighten-2">
-                                    Sample description 2b
-                                    </div>
-                                </p>
-                                </div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header">Job Place Work</div>
-                                <div class="collapsible-body">
-                                <p>
-                                    <div class="card col s10 grey lighten-2">
-                                    Sample description 3a
-                                    </div>
-                                </p>
-                                <p>    
-                                    <div class="card col s10 right grey lighten-2">
-                                    Sample description 3b
-                                    </div>
-                                </p>
-                                </div>                           
-                        </li>
+                        </li>    
                         <li>
                             <div class="collapsible-header">Top Institutes</div>
                                 <div class="collapsible-body">
+                                @if ( count($result_2)==0 )
+
+                                    <p>
+                                    <div class="card col s10 grey lighten-2 ">
+                                    <p>Nothing here yet.</p>
+                                    </div>
+                                    </p>
+                                @else
+                                   
+                                @foreach ($result_2 as $results_2)
                                 <p>
-                                    <div class="card col s10 grey lighten-2">
-                                    Sample description 4a
+                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    <div class="card col s10 grey lighten-2 left-align">
+                                    @else
+                                    <div class="card col s10 grey lighten-2 right-align">
+                                    @endif
+                                    {{ $results_2->reviewer_name }} , {{ $results_2->reviewer_college }}<br/>
+                                    {{ $results_2->reviewer_description }}<br/>
+                                    Reviewer Rating - {{ $results_2->reviewer_rating }}
+                                    <p>
+                                    {{ $results_2->top_institutes }}
+                                    </p>    
                                     </div>
                                 </p>
-                                <p>
-                                    <div class="card col s10 right grey lighten-2">
-                                    Sample description 4b
-                                    </div>
-                                </p>
+                                @endforeach
+                                @endif
                                 </div>
-                            </div>
-                        </li> !-->
+                        </li>    
+                        <li>
+                            <div class="collapsible-header">Future Scope</div>
+                                <div class="collapsible-body">
+                                @if ( count($result_2)==0 )
+
+                                    <p>
+                                    <div class="card col s10 grey lighten-2 ">
+                                    <p>Nothing here yet.</p>
+                                    </div>
+                                    </p>
+                                @else
+                                   
+                                @foreach ($result_2 as $results_2)
+                                <p>
+                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    <div class="card col s10 grey lighten-2 left-align">
+                                    @else
+                                    <div class="card col s10 grey lighten-2 right-align">
+                                    @endif
+                                    {{ $results_2->reviewer_name }} , {{ $results_2->reviewer_college }}<br/>
+                                    {{ $results_2->reviewer_description }}<br/>
+                                    Reviewer Rating - {{ $results_2->reviewer_rating }}
+                                    <p>
+                                    {{ $results_2->future_scope }}
+                                    </p>    
+                                    </div>
+                                </p>
+                                @endforeach
+                                @endif
+                                </div>
+                        </li>    
+                        <li>
+                            <div class="collapsible-header">Job Place Work</div>
+                                <div class="collapsible-body">
+                                @if ( count($result_2)==0 )
+
+                                    <p>
+                                    <div class="card col s10 grey lighten-2 ">
+                                    <p>Nothing here yet.</p>
+                                    </div>
+                                    </p>
+                                @else
+                                   
+                                @foreach ($result_2 as $results_2)
+                                <p>
+                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    <div class="card col s10 grey lighten-2 left-align">
+                                    @else
+                                    <div class="card col s10 grey lighten-2 right-align">
+                                    @endif
+                                    {{ $results_2->reviewer_name }} , {{ $results_2->reviewer_college }}<br/>
+                                    {{ $results_2->reviewer_description }}<br/>
+                                    Reviewer Rating - {{ $results_2->reviewer_rating }}
+                                    <p>
+                                    {{ $results_2->job_place_work }}
+                                    </p>    
+                                    </div>
+                                </p>
+                                @endforeach
+                                @endif
+                                </div>
+                        </li>    
                         </ul>
                     </div>
             </div>

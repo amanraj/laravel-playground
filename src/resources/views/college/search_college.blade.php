@@ -91,33 +91,35 @@ PICKPRIME - Your College Picker
                                         <li><a href="#!"><small>random2</small></a></li>
                                     </ul></p>
                         </div>
-                        
+                        @foreach( $result as $results )
+                        @if ( ($results->college_id)%3 == 1 )
                         <div class="row">
+                        @endif
                             <div class="card col s4">
                                 <div class="card-image">
-                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+                                    <img src="{{ asset( $results->college_image_1 ) }}" alt="college image">
                                 </div>
                                 <li class="divider"></li>
                                 <div class="card-content">
                                     <table class="bordered">
                                         <tr>
-                                            <td class="center-align" colspan="2"><a href='#'>IIT Kharagpur</a></td>
+                                            <td class="center-align" colspan="2"><a href='#'>{{ $results->college_name }}</a></td>
                                         </tr>    
                                         <tr>
                                             <td class="left-align ">Stream:</td>
-                                            <td>Engineering</td>
+                                            <td>{{ $results->college_type }}</td>
                                         </tr>
                                         <tr >
                                             <td class="left-align ">Location:</td>
-                                            <td>West Bengal</td>
+                                            <td>{{ $results->college_location }}</td>
                                         </tr>                                        
                                         <tr>
                                             <td class="left-align ">Exam:</td>
-                                            <td>IIT Advanced</td>
+                                            <td>{{ $results->college_entrance_exam }}</td>
                                         </tr>                                        
                                         <tr>
                                             <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
-                                            <td >Rs 50,000</td>
+                                            <td >{{ $results->college_fees }}</td>
                                         </tr> 
                                         <tr>
                                             <td colspan="2"><a href='#'>Reviews</a></td>
@@ -125,143 +127,10 @@ PICKPRIME - Your College Picker
                                     </table>
                                 </div>
                             </div>
-                        
-                        
-                            <div class="card col s4">
-                                <div class="card-image">
-                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                                </div>
-                                <li class="divider"></li>
-                                <div class="card-content">
-                                    <table class="bordered">
-                                        <tr>
-                                            <td class="center-align" colspan="2"><a href='#'>IIT Delhi</a></td>
-                                        </tr>    
-                                        <tr>
-                                            <td class="left-align ">Stream:</td>
-                                            <td>Engineering</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="left-align ">Location:</td>
-                                            <td>Delhi</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Exam:</td>
-                                            <td>IIT Advanced</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
-                                            <td >Rs 75,000</td>
-                                        </tr> 
-                                        <tr>
-                                            <td colspan="2"><a href='#'>Reviews</a></td>
-                                        </tr> 
-                                    </table>
-                                </div>
-                            </div>
-                        
-                         
-                                <div class="card col s4">
-                                <div class="card-image">
-                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                                </div>
-                                <li class="divider"></li>
-                                <div class="card-content">
-                                    <table class="bordered">
-                                        <tr>
-                                            <td class="center-align" colspan="2"><a href='#'>NIT Trichi</a></td>
-                                        </tr>    
-                                        <tr>
-                                            <td class="left-align ">Stream:</td>
-                                            <td>Engineering</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="left-align ">Location:</td>
-                                            <td>Tamil Nadu</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Exam:</td>
-                                            <td>IIT Mains</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
-                                            <td >Rs 45,000</td>
-                                        </tr> 
-                                        <tr>
-                                            <td colspan="2"><a href='#'>Reviews</a></td>
-                                        </tr> 
-                                    </table>
-                                </div>
-                            </div>
-                       </div>
-                        <div class="row">
-                            <div class="card col s4">
-                                <div class="card-image">
-                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                                </div>
-                                <li class="divider"></li>
-                                <div class="card-content">
-                                    <table class="bordered">
-                                        <tr>
-                                            <td class="center-align" colspan="2"><a href='#'>IIT Kharagpur</a></td>
-                                        </tr>    
-                                        <tr>
-                                            <td class="left-align ">Stream:</td>
-                                            <td>Engineering</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="left-align ">Location:</td>
-                                            <td>West Bengal</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Exam:</td>
-                                            <td>IIT Advanced</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
-                                            <td >Rs 75,000</td>
-                                        </tr> 
-                                        <tr>
-                                            <td colspan="2"><a href='#'>Reviews</a></td>
-                                        </tr> 
-                                    </table>
-                                </div>
-                            </div>
-                        
-                            
-                            <div class="card col s4">
-                                <div class="card-image">
-                                    <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-                                </div>
-                                <li class="divider"></li>
-                                <div class="card-content">
-                                    <table class="bordered">
-                                        <tr>
-                                            <td class="center-align" colspan="2"><a href='#'>IIT Kharagpur</a></td>
-                                        </tr>    
-                                        <tr>
-                                            <td class="left-align ">Stream:</td>
-                                            <td>Engineering</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="left-align ">Location:</td>
-                                            <td>West Bengal</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Exam:</td>
-                                            <td>IIT Advanced</td>
-                                        </tr>                                        
-                                        <tr>
-                                            <td class="left-align ">Fees:<br/><small>(per semester)</small></td>
-                                            <td >Rs 75,000</td>
-                                        </tr> 
-                                        <tr>
-                                            <td colspan="2"><a href='#'>Reviews</a></td>
-                                        </tr> 
-                                    </table>
-                                </div>
-                            </div>
-                        </div>   
+                        @if ( ($results->college_id)%3 == 0 )    
+                        </div>    
+                        @endif
+                        @endforeach                     
                     </div>
                 </div>               
             </div>
