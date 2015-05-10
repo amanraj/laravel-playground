@@ -13,17 +13,25 @@ PICKPRIME - Your College Picker
         width: 150px;
         height: 20px;
     } 
-    #modal1.modal{
+    #profile.modal{
         width:250px; 
         border-radius: 5px; 
     }
          
-</style>    
+</style>
+<script type="text/javascript">
+    
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+       
+</script>    
 @stop
 
 @section('content')
 
-<div class="modal">
+<div id="profile" class="modal">
     <div class="modal-content center-align">
         <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
         <div class="center-align">

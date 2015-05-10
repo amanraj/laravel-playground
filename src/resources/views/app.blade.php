@@ -20,6 +20,13 @@
 	<!--===============================
 	Including the head consisting of css and js files
 	=================================-->
+	<script type="text/javascript">
+
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+       </script>
 	@yield('head')
 	
 </head>
@@ -41,17 +48,17 @@ Including the Header body
 </ul>
 
 <ul id="browse-menu" class="dropdown-content">
-    <li><a href="#!" class="black-text">Colleges</a></li>
-    <li><a href="#!" class="black-text">Courses</a></li>
+    <li><a href="colleges" class="black-text">Colleges</a></li>
+    <li><a href="courses" class="black-text">Courses</a></li>
     <li><a href="#!" class="black-text">Appetite Hunt</a></li>
-    <li><a href="#!" class="black-text">Ambassadors</a></li>
+    <li><a href="ambassador" class="black-text">Ambassadors</a></li>
 </ul>
 
 <ul id="my-account" class="dropdown-content">
-  <li><a href="#!" class="black-text">Notifications</a></li>
-  <li><a href="/profile" class=" modal-trigger black-text">Profile</a></li>
+  <li><a href="notification" class="black-text">Notifications</a></li>
+  <li><a href="profile" class=" modal-trigger black-text">Profile</a></li>
   <li><a href="#!" class="black-text">Settings</a></li>
-  <li><a href="#!" class="black-text">Sign Out</a></li>
+  <li><a href="home" class="black-text">Sign Out</a></li>
 </ul>
 
 <nav>

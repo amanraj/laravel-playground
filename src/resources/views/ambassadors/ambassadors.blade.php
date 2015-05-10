@@ -14,9 +14,9 @@ PICKPRIME - Your College Picker
         <div class="card col s12">
             <div class="row">
                 <div class="col s4">
-                    <ul class="tabs">
-                        <li class="tab col s2"><a href="#colleges">Colleges</a></li>
-                        <li class="tab col s2"><a href="#courses">Courses</a></li>
+                    <ul class="tabs light-blue-text text-darken-4">
+                        <li class="tab col s2"><a href="#colleges" class="light-blue-text text-darken-4">Colleges</a></li>
+                        <li class="tab col s2"><a href="#courses" class="light-blue-text text-darken-4">Courses</a></li>
                     </ul>
                 </div>
             </div>
