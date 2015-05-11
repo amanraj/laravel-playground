@@ -58,10 +58,10 @@ PICKPRIME - Your College Picker
               <span class="black-text">
                <table>
                 <tr  class="center-align">
-                  <td><b><a href="#" class=" grey-text text-darken-2 ">College Name</a></b></td>
+                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -72,12 +72,17 @@ PICKPRIME - Your College Picker
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
+
+
+
+
+
   
   <div class="item">
     
@@ -86,14 +91,14 @@ PICKPRIME - Your College Picker
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2 center-align">College Name</a></b></td></span>
+                <tr  class="center-align">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2 center-align" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -104,28 +109,28 @@ PICKPRIME - Your College Picker
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2 center-align" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
 
-  <div class="item">
+ <div class="item">
     
           <div class="card center-align">
             <div class="card-image">
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">College Name</a></b></td></span>
+                <tr  class="center-align">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -136,7 +141,7 @@ PICKPRIME - Your College Picker
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
@@ -149,14 +154,14 @@ PICKPRIME - Your College Picker
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">College Name</a></b></td></span>
+                <tr  class="center-align">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -167,7 +172,7 @@ PICKPRIME - Your College Picker
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
@@ -180,14 +185,14 @@ PICKPRIME - Your College Picker
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">College Name</a></b></td></span>
+                <tr  class="center-align">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -198,7 +203,7 @@ PICKPRIME - Your College Picker
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
@@ -211,14 +216,14 @@ PICKPRIME - Your College Picker
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">College Name</a></b></td></span>
+                <tr  class="center-align">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -229,7 +234,7 @@ PICKPRIME - Your College Picker
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
@@ -259,14 +264,14 @@ Course choices
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -277,27 +282,27 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-   <div class="item">
+    <div class="item">
     
           <div class="card center-align">
             <div class="card-image">
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -308,27 +313,27 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-   <div class="item">
+    <div class="item">
     
           <div class="card center-align">
             <div class="card-image">
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -339,7 +344,7 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
@@ -352,14 +357,14 @@ Course choices
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -370,27 +375,27 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-   <div class="item">
+    <div class="item">
     
           <div class="card center-align">
             <div class="card-image">
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -401,27 +406,27 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-   <div class="item">
+    <div class="item">
     
           <div class="card center-align">
             <div class="card-image">
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -432,27 +437,27 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
- <div class="item">
+  <div class="item">
     
           <div class="card center-align">
             <div class="card-image">
               <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
             </div>
            
-            <div class="card-action grey-text text-darken-1">
-              <span class="grey-text text-darken-1">
+            <div class="card-action ">
+              <span class="black-text ">
                <table>
-                <tr  class="text-center"><span class="blue-text text-darken-2">
-                  <td><b><a href="#" class=" grey-text text-darken-2">Course Name</a></b></td></span>
+                <tr  class="text-center">
+                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
                 </tr>
                 <tr >
-                  <td ><a class="grey-text text-darken-2" href="#" ><b>Notes</b></a></td>
+                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
                 </tr>
                 <tr>
                   <td>Users Rating</td>
@@ -463,12 +468,12 @@ Course choices
                   <td>5.0</td>
                 </tr>
                 <tr>
-                  <td><a class="grey-text text-darken-2" href="#"><b>Reviews (23)</b></a></td>
+                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
                 </tr>
               </table></span>
             </div>
           </div>
-  </div>>
+  </div>
 </div>
 </div>
 
