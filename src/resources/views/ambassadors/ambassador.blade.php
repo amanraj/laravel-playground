@@ -38,10 +38,10 @@ PICKPRIME - Your College Picker
             <div class="card">
                 <div class="col s12">
                     <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#general">General</a></li>
-                    <li class="tab col s3"><a href="#admission_related">Admission Related</a></li>
-                    <li class="tab col s3"><a href="#campus_related">Campus Related</a></li>
-                    <li class="tab col s3"><a href="#placement_related">Placement Related</a></li>
+                    <li class="tab col s3"><a class="active light-blue-text text-darken-4" href="#general">General</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#admission_related">Admission Related</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#campus_related">Campus Related</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#placement_related">Placement Related</a></li>
                     </ul>
                 </div>
                 <div id="general" class="col s12">
@@ -54,7 +54,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -83,7 +83,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -114,7 +114,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -145,7 +145,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>

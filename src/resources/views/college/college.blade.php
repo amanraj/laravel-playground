@@ -41,7 +41,7 @@ PICKPRIME - Your College Picker
 						<td style="padding:2px 5px;">Overall Rating</td>
 						<td style="padding:2px 5px;">
 							<div class="progress">
-      							<div class="determinate" style="width: 70%"></div>
+      							<div class="determinate light-blue darken-2" style="width: 70%"></div>
   							</div>
   						</td style="padding:2px 5px;">
 						<td>{{ $result_1['0']->college_overall_rating }}</td>
@@ -50,7 +50,7 @@ PICKPRIME - Your College Picker
 						<td style="padding:2px 5px;">Campus Life</td>
 						<td style="padding:2px 5px;">
 							<div class="progress">
-      							<div class="determinate" style="width: 50%"></div>
+      							<div class="determinate light-blue darken-2" style="width: 50%"></div>
   							</div>
   						</td>
 						<td style="padding:2px 5px;">{{ $result_1['0']->college_campuslife_rating }}</td>
@@ -59,7 +59,7 @@ PICKPRIME - Your College Picker
 						<td style="padding:2px 5px;">Hostel Life</td>
 						<td style="padding:2px 5px;">
 							<div class="progress">
-      							<div class="determinate" style="width: 90%"></div>
+      							<div class="determinate light-blue darken-2" style="width: 90%"></div>
   							</div>
   						</td>
 						<td style="padding:2px 5px;">{{ $result_1['0']->college_hostel_rating }}</td>
@@ -68,7 +68,7 @@ PICKPRIME - Your College Picker
 						<td style="padding:2px 5px;">Location</td>
 						<td style="padding:2px 5px;">
 							<div class="progress">
-      							<div class="determinate" style="width: 20%"></div>
+      							<div class="determinate light-blue darken-2" style="width: 20%"></div>
   							</div>
   						</td>
 						<td style="padding:2px 5px;">{{ $result_1['0']->college_location_rating }}</td>
@@ -77,15 +77,15 @@ PICKPRIME - Your College Picker
 						<td style="padding:2px 5px;">Facilities</td>
 						<td style="padding:2px 5px;">
 							<div class="progress">
-      							<div class="determinate" style="width: 50%"></div>
+      							<div class="determinate light-blue darken-2" style="width: 50%"></div>
   							</div>
   						</td>
 						<td style="padding:2px 5px;">{{ $result_1['0']->college_facilities_rating }}</td>
 					</tr>
 					<tr class="grey lighten-2">
-						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
-						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
-						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
+						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
+						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
+						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
 					</tr>	
 				</table>
         	</div>
@@ -95,12 +95,12 @@ PICKPRIME - Your College Picker
     	<!--====================================
     	Tabs
     	=====================================-->
-	    <div class="col s12">
-			<ul class="tabs">
-				<li class="tab col s3 grey darken-4"><a class="active" href="#overview">Overview</a></li>
-				<li class="tab col s3 grey darken-4"><a href="#college-review">College Review</a></li>
-				<li class="tab col s3 grey darken-4"><a href="#course-review">Course Review</a></li>
-				<li class="tab col s3 grey darken-4"><a href="#forum">Forum</a></li>
+	    <div class="col s12 light-blue-text text-darken-4">
+			<ul class="tabs ">
+				<li class="tab col s3 "><a class="active light-blue-text text-darken-4" href="#overview">Overview</a></li>
+				<li class="tab col s3 "><a class="light-blue-text text-darken-4" href="#college-review">College Review</a></li>
+				<li class="tab col s3 "><a class="light-blue-text text-darken-4" href="#course-review">Course Review</a></li>
+				<li class="tab col s3 "><a class="light-blue-text text-darken-4" href="#forum">Forum</a></li>
 			</ul>
 	    </div>
 	    <!--====================================
@@ -169,31 +169,31 @@ PICKPRIME - Your College Picker
 							<li class="collection-item" style="padding: 5px 25px;">
 								Overall Rating : {{ $results_1->college_overall_rating }}
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Hostel Life : {{ $results_1->college_hostel_rating }}
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Campus Life : {{ $results_1->college_campuslife_rating }}
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Location : {{ $results_1->college_location_rating }}
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Facilities : {{ $results_1->college_facilities_rating }}
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 	  					</ul>
@@ -228,7 +228,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -241,7 +241,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -254,7 +254,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -267,7 +267,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -302,25 +302,25 @@ PICKPRIME - Your College Picker
 							<li class="collection-item" style="padding: 5px 25px;">
 								Course Content
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Placements
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Future Scope
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Faculty
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 	  					</ul>
@@ -349,25 +349,25 @@ PICKPRIME - Your College Picker
 							<li class="collection-item" style="padding: 5px 25px;">
 								Course Content
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Placements
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Future Scope
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Faculty
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 	  					</ul>
@@ -399,7 +399,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -412,7 +412,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -425,7 +425,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -438,7 +438,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -460,25 +460,25 @@ PICKPRIME - Your College Picker
 							<li class="collection-item" style="padding: 5px 25px;">
 								Course Content
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Placements
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Future Scope
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Faculty
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 	  					</ul>
@@ -509,7 +509,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -522,7 +522,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -535,7 +535,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -548,7 +548,7 @@ PICKPRIME - Your College Picker
 									</tr>
 									<tr>
 										<div class="progress">
-			      							<div class="determinate" style="width: 50%"></div>											
+			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
 										</div>
 									</tr>
 								</table>
@@ -570,25 +570,25 @@ PICKPRIME - Your College Picker
 							<li class="collection-item" style="padding: 5px 25px;">
 								Course Content
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Placements
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Future Scope
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Faculty
 								<div class="progress">
-			      					<div class="determinate" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
 	  					</ul>
@@ -641,10 +641,10 @@ PICKPRIME - Your College Picker
             <div class="card">
                 <div class="col s12">
                     <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#general">General</a></li>
-                    <li class="tab col s3"><a href="#admission_related">Admission Related</a></li>
-                    <li class="tab col s3"><a href="#campus_related">Campus Related</a></li>
-                    <li class="tab col s3"><a href="#placement_related">Placement Related</a></li>
+                    <li class="tab col s3"><a class="active light-blue-text text-darken-4" href="#general">General</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#admission_related">Admission Related</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#campus_related">Campus Related</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#placement_related">Placement Related</a></li>
                     </ul>
                 </div>
                 <div id="general" class="col s12">
@@ -657,7 +657,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -686,7 +686,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -717,7 +717,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -748,7 +748,7 @@ PICKPRIME - Your College Picker
                             <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2  waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>

@@ -28,8 +28,8 @@ PICKPRIME - Your College Picker
             <div class="card s12">
                 <div class="col s12">
                     <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#general">General</a></li>
-                    <li class="tab col s3"><a href="#course_desc">Course Description</a></li>
+                    <li class="tab col s3"><a class="active light-blue-text text-darken-4 " href="#general">General</a></li>
+                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#course_desc">Course Description</a></li>
                     </ul>
                 </div>
                     <div id="general" class="col s12">
