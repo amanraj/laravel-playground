@@ -15,8 +15,8 @@ PICKPRIME - Your College Picker
             <div class="row">
                 <div class="col s4">
                     <ul class="tabs light-blue-text text-darken-4">
-                        <li class="tab col s2"><a href="#colleges" class="light-blue-text text-darken-4">Colleges</a></li>
-                        <li class="tab col s2"><a href="#courses" class="light-blue-text text-darken-4">Courses</a></li>
+                        <li class="tab col s2"><a href="#colleges" class="indigo-text text-darken-3">Colleges</a></li>
+                        <li class="tab col s2"><a href="#courses" class="indigo-text text-darken-3">Courses</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,8 +31,8 @@ PICKPRIME - Your College Picker
                     <div class="card-content">
                         <div class="col s12 ">
                             <div class="center-align">
-                                <a href="#">{{ $results->ambassadors_name }}</a><br><br>
-                                <a href='#'>{{ $results->ambassadors_college_id }}</a>
+                                <a href="#" class="light-blue-text text-darken-4">{{ $results->ambassadors_name }}</a><br><br>
+                                <a href='#' class="light-blue-text text-darken-4">{{ $results->ambassadors_college_id }}</a>
                             </div>
                         </div>
                     </div>

@@ -50,17 +50,19 @@ PICKPRIME - Your College Picker
 <div class="container center-align">
     <div class="row">                
         <div class="card col s12">
-            <div class="col s3">                   
+            <div class="col s3">
+            <p>      
+            <div class="card" style="height:545px">             
                 <p>
                 <b>Select Stream</b>
                     <!-- Dropdown Trigger -->
                 <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
                     <!-- Dropdown Structure -->
                     <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Engineering</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Management</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Medical</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Law</small></a></li> 
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Engineering</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Management</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Medical</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Law</small></a></li> 
                     </ul> 
                 </p>                                
                 <p>
@@ -69,12 +71,12 @@ PICKPRIME - Your College Picker
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown2' class='dropdown-content'>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Maharashtra</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Delhi</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Uttar Pradesh</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Andhra Pradesh</small></a></li> 
-                        <li><a href="#!" style="padding: 5px 15px;"><small>West Bengal</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Rajasthan</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Maharashtra</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Delhi</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Uttar Pradesh</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Andhra Pradesh</small></a></li> 
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>West Bengal</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rajasthan</small></a></li>
                     </ul>
                 </p>                                    
                 <p>
@@ -83,10 +85,10 @@ PICKPRIME - Your College Picker
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown3' class='dropdown-content'>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>IIT Mains</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>IIT Advanced</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>UPTU</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>BITS</small></a></li> 
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>IIT Mains</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>IIT Advanced</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>UPTU</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>BITS</small></a></li> 
                     </ul>
                 </p>                                 
                 <p>
@@ -95,13 +97,13 @@ PICKPRIME - Your College Picker
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown4' class='dropdown-content'>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Below Rs. 50,000 per semester</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Rs 50,000 to Rs 1  Lakh per semester</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Rs 1  Lakh to Rs 1.5  Lakh per semester</small></a></li>
-                        <li><a href="#!" style="padding: 5px 15px;"><small>Above Rs. 1.5  Lakh</small></a></li> 
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Below Rs. 50,000 per semester</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 50,000 to Rs 1  Lakh per semester</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 1  Lakh to Rs 1.5  Lakh per semester</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Above Rs. 1.5  Lakh</small></a></li> 
                     </ul>
                 </p>    
-            </div>                       
+            </div>        </div></p>               
             <div class="col s9">
                 <div class="col offset-s7">
                         <p >
@@ -110,8 +112,8 @@ PICKPRIME - Your College Picker
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown5"><small>Popularity</small><i class="mdi-navigation-arrow-drop-down right"></i></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown5' class='dropdown-content'>
-                        <li><a href="#!"><small>random1</small></a></li>
-                        <li><a href="#!"><small>random2</small></a></li>
+                        <li><a href="#!" class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>random1</small></a></li>
+                        <li><a href="#!" class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>random2</small></a></li>
                     </ul>
                         </p>
                 </div>
@@ -125,7 +127,7 @@ PICKPRIME - Your College Picker
                                     <img src="{{ asset( $results->college_image_1 ) }}" alt="college image">
                                 </div>
                                 <li class="divider"></li>
-                                <div class="card-content">
+                                <div class="card-content" style="height:280px">
                                     <table class="bordered">
                                         <tr>
                                             <td class="center-align" colspan="2"><a href='#' class="light-blue-text text-darken-4"><b>{{ $results->college_name }}</b></a></td>

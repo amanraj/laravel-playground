@@ -16,7 +16,7 @@ PICKPRIME - Your College Picker
 		=====================================-->
      	 <div class="col s12 m12 l8">
         	<div class="card-panel grey lighten-2">          
-				<h5>
+				<h5 class="light-blue-text text-darken-4">
 				{{ $result_2['0']->college_name }},
 				{{ $result_2['0']->college_location }}
 				ID = {{ $result_2['0']->college_id }}</h5>
@@ -97,10 +97,10 @@ PICKPRIME - Your College Picker
     	=====================================-->
 	    <div class="col s12 light-blue-text text-darken-4">
 			<ul class="tabs ">
-				<li class="tab col s3 "><a class="active light-blue-text text-darken-4" href="#overview">Overview</a></li>
-				<li class="tab col s3 "><a class="light-blue-text text-darken-4" href="#college-review">College Review</a></li>
-				<li class="tab col s3 "><a class="light-blue-text text-darken-4" href="#course-review">Course Review</a></li>
-				<li class="tab col s3 "><a class="light-blue-text text-darken-4" href="#forum">Forum</a></li>
+				<li class="tab col s3 "><a class="active indigo-text text-darken-3" href="#overview">Overview</a></li>
+				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#college-review">College Review</a></li>
+				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#course-review">Course Review</a></li>
+				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#forum">Forum</a></li>
 			</ul>
 	    </div>
 	    <!--====================================
@@ -615,20 +615,20 @@ PICKPRIME - Your College Picker
 	    <div id="forum" class="col s12">
 	    <div class="row">
             <div class="col s4">
-            <h5>{{ $result['0']->ambassadors_college_id }} Forum</h5>
+            <h5 class="light-blue-text text-darken-4">{{ $result['0']->ambassadors_college_id }} Forum</h5>
             </div>
         </div>
         <div class="row">
             <div class="card s12">
                 <div class="col s4">
-                <p><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
-                <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
+                <p ><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
+                <span class="light-blue-text text-darken-4"><b>{{ $result['0']->ambassadors_name }}</b><br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
                 </div>
                 <div class="card grey lighten-2">
                     <div class="col s12">
                         
                         <div class="ambs_speaks">
-                        <p><b>Campus Ambassador Speaks....</b></p>
+                        <p class="light-blue-text text-darken-4"><b>Campus Ambassador Speaks....</b></p>
                         <p>
                         {{  $result['0']->ambassadors_intro }}
                         </p>
@@ -641,10 +641,10 @@ PICKPRIME - Your College Picker
             <div class="card">
                 <div class="col s12">
                     <ul class="tabs">
-                    <li class="tab col s3"><a class="active light-blue-text text-darken-4" href="#general">General</a></li>
-                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#admission_related">Admission Related</a></li>
-                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#campus_related">Campus Related</a></li>
-                    <li class="tab col s3"><a class="light-blue-text text-darken-4" href="#placement_related">Placement Related</a></li>
+                    <li class="tab col s3"><a class="active indigo-text text-darken-3" href="#general">General</a></li>
+                    <li class="tab col s3"><a class="indigo-text text-darken-3" href="#admission_related">Admission Related</a></li>
+                    <li class="tab col s3"><a class="indigo-text text-darken-3" href="#campus_related">Campus Related</a></li>
+                    <li class="tab col s3"><a class="indigo-text text-darken-3" href="#placement_related">Placement Related</a></li>
                     </ul>
                 </div>
                 <div id="general" class="col s12">
@@ -670,7 +670,7 @@ PICKPRIME - Your College Picker
                         @else
                             
                         @foreach ($general_question as $general)
-                            <td><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            <td><div><a href="#" class="light-blue-text text-darken-4">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         @endforeach
                         
                         @endif

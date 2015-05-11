@@ -71,17 +71,17 @@ Including the Header body
 </ul>
 
 <ul id="browse-menu" class="dropdown-content">
-    <li><a href="colleges" class="black-text">Colleges</a></li>
-    <li><a href="courses" class="black-text">Courses</a></li>
-    <li><a href="#!" class="black-text">Appetite Hunt</a></li>
-    <li><a href="ambassador" class="black-text">Ambassadors</a></li>
+    <li><a href="colleges"  class="light-blue-text text-darken-4">Colleges</a></li>
+    <li><a href="courses"  class="light-blue-text text-darken-4">Courses</a></li>
+    <li><a href="#!"  class="light-blue-text text-darken-4">Appetite Hunt</a></li>
+    <li><a href="ambassador"  class="light-blue-text text-darken-4">Ambassadors</a></li>
 </ul>
 
 <ul id="my-account" class="dropdown-content">
-  <li><a data-target="notification" class=" modal-trigger black-text">Notifications</a></li>
-  <li><a data-target="profile" class=" modal-trigger black-text">Profile</a></li>
-  <li><a href="#!" class="black-text">Settings</a></li>
-  <li><a href="home" class="black-text">Sign Out</a></li>
+  <li><a data-target="notification"  class="modal-trigger light-blue-text text-darken-4">Notifications</a></li>
+  <li><a data-target="profile"  class="modal-trigger light-blue-text text-darken-4">Profile</a></li>
+  <li><a href="#!"  class="light-blue-text text-darken-4">Settings</a></li>
+  <li><a href="home"  class="light-blue-text text-darken-4">Sign Out</a></li>
 </ul>
 
 <nav>
@@ -202,8 +202,10 @@ Including the Profile body
         </div>  
     </div>
     <b>
-        <a href="#!" class="  modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:125px; border-radius:0px">Edit</a>
-        <a href="#!" class=" modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:125px; position:absolute; left:125px; border-radius:0px">Cancel</a>
+    <div class="row">
+      <div class="col s6 left-align"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:100%">Edit</a></div>
+      <div class="col s6 right-align"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:100%">Cancel</a></div>
+    </div>
     </b>
 </div> 
 <!--===============================
