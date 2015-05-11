@@ -56,7 +56,7 @@ Including the Header body
 
 <ul id="my-account" class="dropdown-content">
   <li><a href="notification" class="black-text">Notifications</a></li>
-  <li><a href="profile" class=" modal-trigger black-text">Profile</a></li>
+  <li><a data-target="profile" class=" modal-trigger black-text">Profile</a></li>
   <li><a href="#!" class="black-text">Settings</a></li>
   <li><a href="home" class="black-text">Sign Out</a></li>
 </ul>
@@ -167,44 +167,22 @@ Including the Header body
 <!--===============================
 Including the Profile body
 ===============================-->
-<div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-sm">
-	  	
-	    <div class="modal-content">
-	    	<div class="modal-header">
-	    	       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	    	</div>
-	    	<div class="modal-body">
-	    		<div class="row" style="margin-top:10px;">
-	    			<div class="col-sm-12">
-	    				<img src="{{ asset('/images/ambassdors/candice.jpg') }}" class="img-circle profile-img center-block">
-	    			</div>
-	    		</div>
-
-	    		<div class="row">
-	    			<div class="col-sm-12" id="profile-details">
-	    				<table class="table" id="profile-details-tbl">
-	    					<tr>
-	    						<td><div id="profile-name"><?php /*echo $profile['name']; */?></div></td>
-	    					</tr>
-	    					<tr>
-	    						<td><div id="profile-email"><span class="glyphicon glyphicon-envelope profile-glyph"></span><span class="email"><?php /*echo $profile['email']; */?></span></div></td>
-	    					</tr>
-	    					<tr>
-	    						<td><div id="profile-phone"><span class="glyphicon glyphicon-earphone profile-glyph"></span><span>  +91 <span class="mobile"><?php/* echo $profile['mobile_no']; */?></span></span></div></td>
-	    					</tr>
-	    				</table>
-	    			</div>	
-	    		</div>
-
-	    		<div class="row" id="profile-footer">
-	    			<div class="col-sm-6"><button class="btn-profile-footer edit" style="border-right:1px solid #142537;">Edit</button></div>
-	    			<div class="col-sm-6"><button class="btn-profile-footer close_down" data-dismiss="modal">Cancel</button></div>	
-	    		</div>
-	    	</div>
-	    </div>
-	  </div>
-	</div>
+<div id="profile" class="modal">
+    <div class="modal-content center-align">
+        <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
+        <div class="center-align">
+            <span class="blue-text text-darken-4">
+                <p><b>Karan Singh Grover</b></p>
+                <p><i class="mdi-communication-email"></i> karan_grover@abc.com</p>
+                <p><i class="mdi-communication-call"></i> 0123456789</p>
+            </span>
+        </div>  
+    </div>
+    <b>
+        <a href="#!" class="  modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:125px; border-radius:0px">Edit</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:125px; position:absolute; left:125px; border-radius:0px">Cancel</a>
+    </b>
+</div> 
 <!--===============================
 Including the Notification body
 ===============================-->
