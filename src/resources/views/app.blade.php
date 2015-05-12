@@ -27,6 +27,29 @@
     $('.modal-trigger').leanModal();
   });
        </script>
+       <style type="text/css">
+            #profile.modal img {
+                background-repeat: no-repeat;
+                background-position: 50%;
+                border-radius: 50%;
+                width:150px;
+                height: 150px;
+            } 
+            #profile.modal{
+                max-width:250px; 
+                border-radius: 5px; 
+            }
+            #notification.modal img{
+                width:100px;
+                height:100px;
+            } 
+            #notification.modal{
+                max-width:30%;
+                max-height: 60%;
+                border-radius: 5px;
+                box-shadow:0 3px 7px rgba(0,0,0,.25); 
+            }
+        </style>    
 	@yield('head')
 	
 </head>
@@ -55,7 +78,7 @@ Including the Header body
 </ul>
 
 <ul id="my-account" class="dropdown-content">
-  <li><a href="notification" class="black-text">Notifications</a></li>
+  <li><a data-target="notification" class=" modal-trigger black-text">Notifications</a></li>
   <li><a data-target="profile" class=" modal-trigger black-text">Profile</a></li>
   <li><a href="#!" class="black-text">Settings</a></li>
   <li><a href="home" class="black-text">Sign Out</a></li>
@@ -121,8 +144,8 @@ Including the Header body
                   <a class="collapsible-header">My Account<i class="mdi-navigation-arrow-drop-down"></i></a>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="#!">Notification</a></li>
-                      <li><a href="#!">Profile</a></li>
+                      <li><a data-target="notification" class=" modal-trigger black-text">Notification</a></li>
+                      <li><a data-target="profile" class=" modal-trigger black-text">Profile</a></li>
                       <li><a href="#!">Settings</a></li>
                       <li><a href="#!">Sign Out</a></li>
                     </ul>
@@ -186,72 +209,27 @@ Including the Profile body
 <!--===============================
 Including the Notification body
 ===============================-->
-<div class="modal fade" id="notifications-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-notifications">
-	  	
-	    <div class="modal-content">
-	    	<div class="modal-header">
-	    	       <button type="button" class="close close-notification" data-dismiss="modal" aria-hidden="true">&times;</button>
-	    	       <h4>NOTIFICATIONS</h4>
-	    	</div>
-	    	<div class="modal-body scroll-style-3">
-	    		<table class="table table-striped" id="notifications-tbl">
-	    			<tr>
-	    				<td><img src="{{ asset('/images/ambassdors/candice.jpg') }}" class="notifications-img"></td>
-	    				<td>
-	    					<div class="notifications-name">Candice Swanepoel</div>
-	    					<div class="notification-post">Campus Ambassdor, IIT KGP</div>
-	    					<div class="notification-msg">accepted your connection</div>
-	    				</td>
-	    			</tr>
-	    			<tr>
-	    				<td><img src="{{ asset('/images/ambassdors/candice.jpg') }}" class="notifications-img"></td>
-	    				<td>
-	    					<div class="notifications-name">Candice Swanepoel</div>
-	    					<div class="notification-post">Campus Ambassdor, IIT KGP</div>
-	    					<div class="notification-msg">accepted your connection</div>
-	    				</td>
-	    			</tr>
-	    			<tr>
-	    				<td><img src="{{ asset('/images/ambassdors/candice.jpg') }}" class="notifications-img"></td>
-	    				<td>
-	    					<div class="notifications-name">Candice Swanepoel</div>
-	    					<div class="notification-post">Campus Ambassdor, IIT KGP</div>
-	    					<div class="notification-msg">accepted your connection</div>
-	    				</td>
-	    			</tr>
-	    			<tr>
-	    				<td><img src="{{ asset('/images/ambassdors/candice.jpg') }}" class="notifications-img"></td>
-	    				<td>
-	    					<div class="notifications-name">Candice Swanepoel</div>
-	    					<div class="notification-post">Campus Ambassdor, IIT KGP</div>
-	    					<div class="notification-msg">accepted your connection</div>
-	    				</td>
-	    			</tr>
-	    		</table>
-	    	</div>
-	    </div>
-	  </div>
-	</div>
-
-	
-	<button class="error_trigger" data-toggle="modal" data-target="#myModal_error" style="display:none;"></button>
-	<div class="modal fade" id="myModal_error"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog" style="width:350px;">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h3 class="modal-title" id="myModalLabel">Alert!</h3>
-			</div>
-			<div class="modal-body error">
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
-			</div>
-			</form>
-			</div>
-		</div>
-	</div>
+<div id="notification" class="modal ">
+    <div class="modal-header blue darken-3" style=" padding:4px">
+        <h5 class="white-text" style="margin-left:20px">Notifications</h5>
+    </div>
+    <div class="modal-content ">
+        <table class="bordered striped responsive-table">
+            <tr >
+                <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
+                <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
+            </tr>
+            <tr>
+                <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
+                <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
+            </tr>
+            <tr>
+                <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
+                <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
+            </tr>
+        </table>    
+    </div>
+</div>                
 	
 
 </body>
