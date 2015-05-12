@@ -5,6 +5,19 @@ PICKPRIME - Your College Picker
 
 @section('head')
 
+<style>
+.progress{
+	
+	height: 10px;
+	border-radius: 5px;
+}
+a:active {
+	
+}
+
+
+</style>
+
 @stop
 
 @section('content')
@@ -21,7 +34,7 @@ PICKPRIME - Your College Picker
 				{{ $result_2['0']->college_location }}
 				ID = {{ $result_2['0']->college_id }}</h5>
 				<br>
-				<img class="responsive-img" style="width:100%;height:300px;" src="{{ asset( $result_2['0']->college_image_1 ) }}">
+				<img class="responsive-img" style="width:100%;height:260px;" src="{{ asset( $result_2['0']->college_image_1 ) }}">
 	    	</div>
       	</div>
       	<!--====================================
@@ -31,61 +44,61 @@ PICKPRIME - Your College Picker
         	<div class="card-panel grey lighten-2">
           		<table class="striped responsive-table">
 					<tr>
-						<td style="padding:2px 5px;">PPR</td>
-						<td style="padding:2px 5px;">
+						<td style="padding:5px 5px;">PPR</td>
+						<td style="padding:5px 5px;">
 							##########
   						</td>
-						<td style="padding:2px 5px;">5.8</td>
+						<td style="padding:5px 5px;">5.8</td>
 					</tr>
 					<tr>
-						<td style="padding:2px 5px;">Overall Rating</td>
-						<td style="padding:2px 5px;">
+						<td style="padding:5px 5px;">Overall Rating</td>
+						<td style="padding:5px 5px;">
 							<div class="progress">
       							<div class="determinate light-blue darken-2" style="width: 70%"></div>
   							</div>
-  						</td style="padding:2px 5px;">
+  						</td style="padding:5px 5px;">
 						<td>{{ $result_1['0']->college_overall_rating }}</td>
 					</tr>
 					<tr>
-						<td style="padding:2px 5px;">Campus Life</td>
-						<td style="padding:2px 5px;">
+						<td style="padding:5px 5px;">Campus Life</td>
+						<td style="padding:5px 5px;">
 							<div class="progress">
       							<div class="determinate light-blue darken-2" style="width: 50%"></div>
   							</div>
   						</td>
-						<td style="padding:2px 5px;">{{ $result_1['0']->college_campuslife_rating }}</td>
+						<td style="padding:5px 5px;">{{ $result_1['0']->college_campuslife_rating }}</td>
 					</tr>
 					<tr>
-						<td style="padding:2px 5px;">Hostel Life</td>
-						<td style="padding:2px 5px;">
+						<td style="padding:5px 5px;">Hostel Life</td>
+						<td style="padding:5px 5px;">
 							<div class="progress">
       							<div class="determinate light-blue darken-2" style="width: 90%"></div>
   							</div>
   						</td>
-						<td style="padding:2px 5px;">{{ $result_1['0']->college_hostel_rating }}</td>
+						<td style="padding:5px 5px;">{{ $result_1['0']->college_hostel_rating }}</td>
 					</tr>
 					<tr>
-						<td style="padding:2px 5px;">Location</td>
-						<td style="padding:2px 5px;">
+						<td style="padding:5px 5px;">Location</td>
+						<td style="padding:5px 5px;">
 							<div class="progress">
       							<div class="determinate light-blue darken-2" style="width: 20%"></div>
   							</div>
   						</td>
-						<td style="padding:2px 5px;">{{ $result_1['0']->college_location_rating }}</td>
+						<td style="padding:5px 5px;">{{ $result_1['0']->college_location_rating }}</td>
 					</tr>
 					<tr>
-						<td style="padding:2px 5px;">Facilities</td>
-						<td style="padding:2px 5px;">
+						<td style="padding:5px 5px;">Facilities</td>
+						<td style="padding:5px 5px;">
 							<div class="progress">
       							<div class="determinate light-blue darken-2" style="width: 50%"></div>
   							</div>
   						</td>
-						<td style="padding:2px 5px;">{{ $result_1['0']->college_facilities_rating }}</td>
+						<td style="padding:5px 5px;">{{ $result_1['0']->college_facilities_rating }}</td>
 					</tr>
 					<tr class="grey lighten-2">
-						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
-						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
-						<td style="padding:2px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
 					</tr>	
 				</table>
         	</div>
@@ -339,7 +352,7 @@ PICKPRIME - Your College Picker
 	    	<div class="card  valign-wraper medium grey lighten-2">
 		    	<div class="row">
 		    		<div class="col s3 ">
-		    			<ul class="collection valign">
+		    			<ul class="collection valign" >
 		    				<li class="collection-item" style="padding: 5px 25px;">
 				    			May 2, 2015
 				    		</li>
@@ -354,7 +367,7 @@ PICKPRIME - Your College Picker
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
 			  					Placements
-								<div class="progress">
+								<div class="progress" >
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
 			  				</li>
@@ -613,27 +626,23 @@ PICKPRIME - Your College Picker
 	    forum Tab
 	    =====================================-->
 	    <div id="forum" class="col s12">
-	    <div class="row">
-            <div class="col s4">
-            <h5 class="light-blue-text text-darken-4">{{ $result['0']->ambassadors_college_id }} Forum</h5>
-            </div>
-        </div>
         <div class="row">
             <div class="card s12">
                 <div class="col s4">
                 <p ><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
                 <span class="light-blue-text text-darken-4"><b>{{ $result['0']->ambassadors_name }}</b><br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
                 </div>
-                <div class="card grey lighten-2">
+                <div class="card grey lighten-2" style="width:600px;">
                     <div class="col s12">
-                        
-                        <div class="ambs_speaks">
+                     	<p>
+                        <div class="ambs_speaks" style="height:300px;padding:5px;">
                         <p class="light-blue-text text-darken-4"><b>Campus Ambassador Speaks....</b></p>
                         <p>
                         {{  $result['0']->ambassadors_intro }}
                         </p>
                         </div>
                     </div>
+                    	</p>
                 </div>
             </div>
         </div>
