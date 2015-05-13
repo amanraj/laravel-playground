@@ -11,9 +11,6 @@ PICKPRIME - Your College Picker
 	height: 10px;
 	border-radius: 5px;
 }
-a:active {
-	
-}
 
 
 </style>
@@ -303,102 +300,81 @@ a:active {
 				</div>
 				@else	    					
 				<div class="card  valign-wraper medium grey lighten-2">
+				<div class="col s12">
+				<div class="row"><p><b>Reviewer Name, Description</b></p></div>
 		    	<div class="row">
 		    		<div class="col s3 ">
-		    			<ul class="collection valign">
-		    				<li class="collection-item" style="padding: 5px 25px;">
-				    			May 2, 2015
-				    		</li>
-				    		<li class="collection-item" style="padding: 5px 25px;">
-								#############
-							</li>
-							<li class="collection-item" style="padding: 5px 25px;">
-								Course Content
+		    			<table>
+							<tr>
+								<td>Course Content</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Placements
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>	
+			  		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Placements</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Future Scope
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>		
+			  		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Future Scope</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Faculty
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>		
+		    		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Faculty</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-	  					</ul>
-		    		</div>
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>
+			  		</div>		
 		    		<div class="col s9">
-		    			<p>
-		    			<b>Reviewer Name, Description</b><br><br>
 		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
 		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
 		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
 		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    			</p>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	<div class="card  valign-wraper medium grey lighten-2">
-		    	<div class="row">
-		    		<div class="col s3 ">
-		    			<ul class="collection valign" >
-		    				<li class="collection-item" style="padding: 5px 25px;">
-				    			May 2, 2015
-				    		</li>
-				    		<li class="collection-item" style="padding: 5px 25px;">
-								#############
-							</li>
-							<li class="collection-item" style="padding: 5px 25px;">
-								Course Content
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Placements
-								<div class="progress" >
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Future Scope
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Faculty
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  				</li>
-	  					</ul>
-		    		</div>
-		    		<div class="col s9">
-		    			<p>
-		    			<b>Reviewer Name, Description</b><br><br>
-		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
-		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
-		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
-		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    			</p>
 		    		</div>
 	    		</div>
 	    	</div>
 	    	@endif
-						</div>
-					</div>
+		</div>
+		</div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Course Name</div>
@@ -460,55 +436,95 @@ a:active {
 						
 						<div>
 							<h4>User Reviews</h4>
-							<div class="card  valign-wraper medium grey lighten-2">
+				@if ( count($result)==0 )
+		    	<div class="card  valign-wraper medium grey lighten-2">
+			    	<div class="row">
+			    		<div class="col s3 ">
+			    			<ul class="collection valign">
+			    				<li class="collection-item" style="padding: 5px 25px;">
+					    			Nothing here yet.
+					    		</li>
+					    	</ul>
+					    </div>
+					</div>
+				</div>
+				@else	    					
+				<div class="card  valign-wraper medium grey lighten-2">
+				<div class="col s12">
+				<div class="row"><p><b>Reviewer Name, Description</b></p></div>
 		    	<div class="row">
 		    		<div class="col s3 ">
-		    			<ul class="collection valign">
-		    				<li class="collection-item" style="padding: 5px 25px;">
-				    			May 2, 2015
-				    		</li>
-				    		<li class="collection-item" style="padding: 5px 25px;">
-								#############
-							</li>
-							<li class="collection-item" style="padding: 5px 25px;">
-								Course Content
+		    			<table>
+							<tr>
+								<td>Course Content</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Placements
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>	
+			  		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Placements</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Future Scope
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>		
+			  		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Future Scope</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Faculty
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>		
+		    		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Faculty</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-	  					</ul>
-		    		</div>
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>
+			  		</div>		
 		    		<div class="col s9">
-		    			<p>
-		    			<b>Reviewer Name, Description</b><br><br>
 		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
 		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
 		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
 		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    			</p>
 		    		</div>
 	    		</div>
 	    	</div>
-						</div>
-					</div>
+	    	@endif
+		</div>
+		</div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Course Name</div>
@@ -570,55 +586,95 @@ a:active {
 						
 						<div>
 							<h4>User Reviews</h4>
-							<div class="card  valign-wraper medium grey lighten-2">
+				@if ( count($result)==0 )
+		    	<div class="card  valign-wraper medium grey lighten-2">
+			    	<div class="row">
+			    		<div class="col s3 ">
+			    			<ul class="collection valign">
+			    				<li class="collection-item" style="padding: 5px 25px;">
+					    			Nothing here yet.
+					    		</li>
+					    	</ul>
+					    </div>
+					</div>
+				</div>
+				@else	    					
+				<div class="card  valign-wraper medium grey lighten-2">
+				<div class="col s12">
+				<div class="row"><p><b>Reviewer Name, Description</b></p></div>
 		    	<div class="row">
 		    		<div class="col s3 ">
-		    			<ul class="collection valign">
-		    				<li class="collection-item" style="padding: 5px 25px;">
-				    			May 2, 2015
-				    		</li>
-				    		<li class="collection-item" style="padding: 5px 25px;">
-								#############
-							</li>
-							<li class="collection-item" style="padding: 5px 25px;">
-								Course Content
+		    			<table>
+							<tr>
+								<td>Course Content</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Placements
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>	
+			  		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Placements</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Future Scope
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>		
+			  		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Future Scope</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Faculty
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>		
+		    		<div class="col s3 ">
+		    			<table>
+							<tr>
+								<td>Faculty</td>
+								<td>4.5</td>
+							</tr>
+							<tr>	
+								<td>
 								<div class="progress">
 			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
 			  					</div>
-			  				</li>
-	  					</ul>
-		    		</div>
+			  					</td>
+			  				</tr>
+			  			</table>
+			  		</div>
+			  		</div>		
 		    		<div class="col s9">
-		    			<p>
-		    			<b>Reviewer Name, Description</b><br><br>
 		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
 		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
 		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
 		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    			</p>
 		    		</div>
 	    		</div>
 	    	</div>
-						</div>
-					</div>
+	    	@endif
+		</div>
+		</div>
 				</li>
 			</ul>
 	    </div>
