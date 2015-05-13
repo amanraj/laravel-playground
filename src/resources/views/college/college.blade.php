@@ -32,7 +32,7 @@ a:active {
 				<h5 class="light-blue-text text-darken-4">
 				{{ $result_2['0']->college_name }},
 				{{ $result_2['0']->college_location }}
-				ID = {{ $result_2['0']->college_id }}</h5>
+				</h5>
 				<br>
 				<img class="responsive-img" style="width:100%;height:260px;" src="{{ asset( $result_2['0']->college_image_1 ) }}">
 	    	</div>
@@ -679,7 +679,7 @@ a:active {
                         @else
                             
                         @foreach ($general_question as $general)
-                            <td><div><a href="#" class="light-blue-text text-darken-4">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            <td><div><a href="#" class="light-blue-text text-darken-4">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         @endforeach
                         
                         @endif
