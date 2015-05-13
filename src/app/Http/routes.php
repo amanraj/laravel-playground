@@ -63,7 +63,8 @@ Route::patch('profile/edit','UserController@editProfile');
 Route::get('/settings','UserController@settings');
 Route::patch('/settings/edit','UserController@editSettings');
 
-Route::get('/about_us','About_usContoller@view');
+Route::get('/team','footerController@team');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
