@@ -53,7 +53,7 @@ PICKPRIME - Your College Picker
             <div class="col s3">
             <p>      
             <div class="card" style="height:545px">             
-                <p>
+                <p style="margin-top:10px">
                 <b>Select Stream</b>
                     <!-- Dropdown Trigger -->
                 <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
@@ -65,7 +65,7 @@ PICKPRIME - Your College Picker
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Law</small></a></li> 
                     </ul> 
                 </p>                                
-                <p>
+                <p style="margin-top:30px">
                 <b>Select Location</b>
                         <!-- Dropdown Trigger -->
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
@@ -79,7 +79,7 @@ PICKPRIME - Your College Picker
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rajasthan</small></a></li>
                     </ul>
                 </p>                                    
-                <p>
+                <p style="margin-top:30px">
                 <b>Select Exam</b>
                         <!-- Dropdown Trigger -->
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
@@ -91,7 +91,7 @@ PICKPRIME - Your College Picker
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>BITS</small></a></li> 
                     </ul>
                 </p>                                 
-                <p>
+                <p style="margin-top:30px">
                 <b>Select Fees</b>
                         <!-- Dropdown Trigger -->
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
