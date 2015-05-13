@@ -31,14 +31,17 @@ PICKPRIME - Your College Picker
                         <div class="card-image">
                         <img class="responsive-img" alt="course" src="{{ asset( $results->course_image_1 ) }}">
                         </div>
+                        <p>
+                        <div class="card-header center-align" >
+                            <a href="courses/{{ $results->course_id }}" class="light-blue-text text-darken-4">{{ $results->course_name }}</a>
+                        </div>
+                        </p>
                         <div class="card-content" >
                         <p>
                             {{ $results->course_content }}
                         </p>
                         </div>
-                        <div class="card-action" style="position:absolute ;bottom:10px; text-align:center">
-                            <a href="courses/{{ $results->course_id }}" class="light-blue-text text-darken-4">{{ $results->course_name }}</a>
-                        </div>
+                        
                     </div>
                 </div>
                 @if ( ($results->course_id)%3 == 0 )

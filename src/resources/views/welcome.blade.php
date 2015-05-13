@@ -1,7 +1,23 @@
-@extends('app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Including the title-->
+    <title>@yield('title')</title>
 
-@section('head')
-  <script type="text/javascript">
+
+    <!--Common CSS Files-->
+    
+    <link rel="stylesheet/less" href="{{ asset('/materialize/css/materialize.min.css') }}">
+    <!--Common JS Scripts -->   
+    <script src="{{ asset('/js/less-1.6.1.min.js') }}"></script>
+    <script src="{{ asset('/js/jquery-1.9.1.min.js') }}"></script> 
+    <script src="{{ asset('/materialize/js/materialize.min.js') }}"></script>
+
+
+<script type="text/javascript">
             $(document).ready(function(){
                 // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
                 $('.modal-trigger').leanModal();
@@ -17,15 +33,14 @@
                });
             });
             
-        </script>
+</script>
 
-         <meta charset="UTF-8">
-        <style> 
-            body {
-                display: flex;
-                min-height: 100vh;
-                flex-direction: column;
-            }
+<style> 
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
             main {
                 flex: 1 0 auto;
@@ -86,10 +101,11 @@
                 color: #0288d1;
             }
         
-        </style>  
-@endsection
+        </style>
+     </head>     
 
-@section('content')
+
+<body>
 
         <!--===============================
         Including the Header body
@@ -138,8 +154,8 @@
                         </form>
                     </div>  
                    <div class="modal-footer ">
-                        <a href="https://www.facebook.com/"><img src="fb_log.png" ></a>
-                        <a href="https://twitter.com/"> <img src="twitter_log.png" ></a>
+                        <a href="https://www.facebook.com/"><img src="{{ asset('images/fb_log.png') }}" ></a>
+                        <a href="https://twitter.com/"> <img src="{{ asset('images/twitter_log.png') }}"></a>
                         <button class="modal-action modal-close btn waves-effect waves-light  blue darken-4" type="submit" name="action">Sign In</button>
                     </div>
                 </li>
@@ -285,7 +301,8 @@
                 </div>
             </footer>
             
+</body>
+</html>
 
 
 
-@endsection

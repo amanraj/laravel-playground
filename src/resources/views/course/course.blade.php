@@ -15,7 +15,7 @@ PICKPRIME - Your College Picker
                     <p>
                         <img src="{{ asset( $result_1['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
                     </p>
-                    <p class="light-blue-text text-darken-4"><b>{{ $result_1['0']->course_name }}</b></p>
+                    <p class="light-blue-text text-darken-4 center-align"><b>{{ $result_1['0']->course_name }}</b></p>
                 </div>
                 <div class="col s8">
                     <p>
