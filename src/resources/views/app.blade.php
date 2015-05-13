@@ -36,9 +36,11 @@
                 height: 150px;
             } 
             #profile.modal{
-                max-width:250px; 
+                max-width:230px;
                 border-radius: 5px; 
+                margin-bottom: 0px;
             }
+            #profile.modal-content{padding-bottom: 0px;}
             #notification.modal img{
                 width:100px;
                 height:100px;
@@ -203,8 +205,8 @@ Including the Profile body
     </div>
     <b>
     <div class="row">
-      <div class="col s6 left-align"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:100%">Edit</a></div>
-      <div class="col s6 right-align"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:100%">Cancel</a></div>
+      <div class="modal-footer style="margin-bottom:0px;padding-bottom:0px;"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Cancel</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Edit</a></div>
     </div>
     </b>
 </div> 
