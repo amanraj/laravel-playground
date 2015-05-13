@@ -201,7 +201,7 @@
             </ul>
 
                 <nav>
-                    <div class="nav-wrapper   grey darken-3">
+                    <div class="nav-wrapper grey darken-3">
 
                         <a href="#!" class="brand-logo"><img class="responsive-img" src="{{ asset('/images/logo.png') }}"></a>
                         <!--Mobile Sidebar button-->
@@ -285,7 +285,7 @@
             <main >
               
             </main>
-            <footer class="footer grey darken-3">
+            <footer class="footer grey darken-4">
                 <div  class="container"><table>
                     <tr>
                     

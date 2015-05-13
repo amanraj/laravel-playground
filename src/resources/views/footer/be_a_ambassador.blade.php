@@ -9,7 +9,8 @@ PICKPRIME - Your College Picker
 
 @section('content')
 <div class="container">
-            <div class="card">
+  <div class="row">
+            <div class="card col s12">
                 <div class="card-content">
                     <h3 class=" light-blue-text text-darken-4 ">Be A Ambassador!!!</h3> 
 
@@ -77,5 +78,5 @@ PICKPRIME - Your College Picker
                  </div></div>
 
 
-                 </div>
+                 </div></div>
 @stop

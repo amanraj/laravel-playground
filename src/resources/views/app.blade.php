@@ -51,11 +51,20 @@
                 border-radius: 5px;
                 box-shadow:0 3px 7px rgba(0,0,0,.25); 
             }
+              body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
         </style>    
 	@yield('head')
 	
 </head>
-<body>
+<body class="grey lighten-4">
 <!--===============================
 Including the Header body
 ===============================-->
@@ -233,8 +242,24 @@ Including the Notification body
             </tr>
         </table>    
     </div>
-</div>                
-	
+</div>                <main></main>
+	 <footer class="footer grey darken-4">
+                <div  class="container">
+                  
+                <table>
+                    <tr>
+                    
+                     <div style="font-size=4px">
+                    <td class="grey-text text-lighten-4 left" >© 2015<br>Copyrights Reserved</td>
+                    <td><a class="grey-text text-lighten-4 right" href="#!">Be a Ambassador</a></td>
+                    <td><a class="grey-text text-lighten-4 right" href="#!">Forms for Reviews</a></td>
+                    <td><a class="grey-text text-lighten-4 right" href="#!">Team</a></td>
+                    <td><a class="grey-text text-lighten-4 right" href="#!">Terms & Conditions</a></td>
+                    <td><a class="grey-text text-lighten-4 right" href="#!">Privacy Policy</a></td></div>
+                    </tr>
+                    </table>
+                </div>
+            </footer>
 
 </body>
 </html>
