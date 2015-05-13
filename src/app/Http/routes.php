@@ -64,6 +64,7 @@ Route::get('/settings','UserController@settings');
 Route::patch('/settings/edit','UserController@editSettings');
 
 Route::get('/team','footerController@team');
+Route::get('/be_a_ambassador','footerController@be_ambassador');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
