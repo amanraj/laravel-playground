@@ -44,35 +44,68 @@ PICKPRIME - Your College Picker
 @section('content')
 
 <div class="container">
-<h3>Your College Choices ( 6 )</h3>
-<div class="col s8 center-align">
-<div id="owl-college" class="owl-carousel owl-theme">
-  <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text">
-               <table>
-                <tr  class="center-align">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
-                </tr>
+    <h3>Your College Choices ( 6 )</h3>
+    <div class="col s8 center-align">
+        <div id="owl-college" class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card center-align">
+                    <div class="card-image">
+                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
+                    </div>
+                    <div class="card-action ">
+                        <span class="black-text">
+                            <table>
+                                <tr >
+                                    <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
+                                </tr>
+                                <tr >
+                                    <td ><a class=" center-align light-blue-text text-darken-4" href="#" ><b>Course Name</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Users Rating</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Notes</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
+                </div>
+                <div class="card center-align">
+                    <div class="card-content ">
+                        <span class="black-text ">
+                            <table class= "bordered">
+                               
                 <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
+                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
                 </tr>
                 <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
+                  <td  style="height:100px;text-align:vertical">zncg vc</td>
                 </tr>
                 <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
+                  <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
                 </tr>
               </table></span>
             </div>
@@ -85,163 +118,261 @@ PICKPRIME - Your College Picker
 
   
   <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text">
-               <table>
-                <tr  class="center-align">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
-                </tr>
+                <div class="card center-align">
+                    <div class="card-image">
+                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
+                    </div>
+                    <div class="card-action ">
+                        <span class="black-text">
+                            <table>
+                                <tr >
+                                    <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
+                                </tr>
+                                <tr >
+                                    <td ><a class=" center-align light-blue-text text-darken-4" href="#" ><b>Course Name</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Users Rating</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Notes</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
+                </div>
+                <div class="card center-align">
+                    <div class="card-content ">
+                        <span class="black-text ">
+                            <table class= "bordered">
+                               
                 <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
+                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
                 </tr>
                 <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
+                  <td  style="height:100px;text-align:vertical">zncg vc</td>
                 </tr>
                 <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
+                  <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-
- <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text">
-               <table>
-                <tr  class="center-align">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
+                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
                 </tr>
                 <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
+                  <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
                 </tr>
                 <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
+                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
                 </tr>
                 <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-  <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text">
-               <table>
-                <tr  class="center-align">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
+                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
                 </tr>
                 <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
+                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
                 </tr>
                 <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
- <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text">
-               <table>
-                <tr  class="center-align">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
 <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text">
-               <table>
-                <tr  class="center-align">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
-                </tr>
+                <div class="card center-align">
+                    <div class="card-image">
+                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
+                    </div>
+                    <div class="card-action ">
+                        <span class="black-text">
+                            <table>
+                                <tr >
+                                    <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
+                                </tr>
+                                <tr >
+                                    <td ><a class=" center-align light-blue-text text-darken-4" href="#" ><b>Course Name</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Users Rating</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Notes</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
+                </div>
+                <div class="card center-align">
+                    <div class="card-content ">
+                        <span class="black-text ">
+                            <table class= "bordered">
+                               
                 <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
+                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
                 </tr>
                 <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
+                  <td  style="height:100px;text-align:vertical">zncg vc</td>
                 </tr>
                 <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
+                  <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-  
-</div>
+ <div class="item">
+                <div class="card center-align">
+                    <div class="card-image">
+                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
+                    </div>
+                    <div class="card-action ">
+                        <span class="black-text">
+                            <table>
+                                <tr >
+                                    <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
+                                </tr>
+                                <tr >
+                                    <td ><a class=" center-align light-blue-text text-darken-4" href="#" ><b>Course Name</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Users Rating</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Notes</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
+                </div>
+                <div class="card center-align">
+                    <div class="card-content ">
+                        <span class="black-text ">
+                            <table class= "bordered">
+                               
+                <tr >
+                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">zncg vc</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">zznzgon</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                </tr>
+              </table></span>
+            </div>
+          </div>
+  </div>
+<div class="item">
+                <div class="card center-align">
+                    <div class="card-image">
+                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
+                    </div>
+                    <div class="card-action ">
+                        <span class="black-text">
+                            <table>
+                                <tr >
+                                    <td><b><a href="#" class=" light-blue-text text-darken-4 ">College Name</a></b></td>
+                                </tr>
+                                <tr >
+                                    <td ><a class=" center-align light-blue-text text-darken-4" href="#" ><b>Course Name</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Users Rating</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Notes</b></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
+                </div>
+                <div class="card center-align">
+                    <div class="card-content ">
+                        <span class="black-text ">
+                            <table class= "bordered">
+                               
+                <tr >
+                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">zncg vc</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">zznzgon</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                </tr>
+              </table></span>
+            </div>
+          </div>
+  </div>
 </div>
 
 <div class="customNavigation">
@@ -253,235 +384,7 @@ PICKPRIME - Your College Picker
 <!--=================================================
 Course choices
 =================================================-->
-<div class="container">
-<h3>Your Course DNA ( 7 )</h3>
-<div class="col s8 center-allign">
-<div id="owl-course" class="owl-carousel owl-theme">
-  <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-    <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-    <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-  <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-    <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-    <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-  <div class="item">
-    
-          <div class="card center-align">
-            <div class="card-image">
-              <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-            </div>
-           
-            <div class="card-action ">
-              <span class="black-text ">
-               <table>
-                <tr  class="text-center">
-                  <td><b><a href="#" class=" light-blue-text text-darken-4">Course Name</a></b></td>
-                </tr>
-                <tr >
-                  <td ><a class="light-blue-text text-darken-4" href="#" ><b>Notes</b></a></td>
-                </tr>
-                <tr>
-                  <td>Users Rating</td>
-                  <td>4.5</td>
-                </tr>
-                <tr>
-                  <td>Website Rating</td>
-                  <td>5.0</td>
-                </tr>
-                <tr>
-                  <td><a class="light-blue-text text-darken-4" href="#"><b>Reviews (23)</b></a></td>
-                </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
-</div>
-</div>
 
-<div class="customNavigation">
-  <a class="btn prev-course light-blue darken-2">Previous</a>
-  <a class="btn next-course light-blue darken-2">Next</a>
-</div>
-</div>
 
 <!--====================================
 Javascript files
