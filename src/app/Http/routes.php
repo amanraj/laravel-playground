@@ -62,6 +62,9 @@ Route::get('/profile','UserController@profile');
 Route::patch('profile/edit','UserController@editProfile');
 Route::get('/settings','UserController@settings');
 Route::patch('/settings/edit','UserController@editSettings');
+Route::get('signout','UserController@signout');
+
+Route::get('/search_results','SearchController@search');
 
 Route::get('/team','footerController@team');
 Route::get('/be_a_ambassador','footerController@be_ambassador');

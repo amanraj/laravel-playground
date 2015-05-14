@@ -77,5 +77,8 @@ class UserController extends Controller {
 		return view('user/settings');
 	}
 	
-
+	public function signout()
+	{
+		return view('auth/sign_out');
+	}
 }
