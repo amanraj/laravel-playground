@@ -124,10 +124,10 @@
             </ul>
 
             <ul id="browse-menu" class="dropdown-content">
-                <li><a href="#!" class="blue-text text-darken-4">Colleges</a></li>
-                <li><a href="#!" class="blue-text text-darken-4">Courses</a></li>
+                <li><a href="colleges" class="blue-text text-darken-4">Colleges</a></li>
+                <li><a href="courses" class="blue-text text-darken-4">Courses</a></li>
                 <li><a href="#!" class="blue-text text-darken-4">Appetite Hunt</a></li>
-                <li><a href="#!" class="blue-text text-darken-4">Ambassadors</a></li>
+                <li><a href="ambassador" class="blue-text text-darken-4">Ambassadors</a></li>
             </ul>
 
             <ul id="sign_in" class="modal">
@@ -297,12 +297,13 @@
 
 
 <td class="grey-text text-lighten-4 right-align">
-                    <ul><li style="display:inline">Be a Ambassador</li>
-                    <li style="display:inline;margin-left:20px">Form for Reviews</li>
-                    <li style="display:inline;margin-left:20px">About Us</li>
-                    <li style="display:inline;margin-left:20px">Privacy Policy</li>
-                    <li style="display:inline ;margin-left:20px">Terms & Conditions</li>
-                 
+                    <ul>
+                      <li style="display:inline"><a href="be_a_ambassador">Be a Ambassador</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="#">Form for Reviews</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="team">About Us</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="#">Privacy Policy</a></li>
+                      <li style="display:inline ;margin-left:20px"><a href="#">Terms & Conditions</a></li>
+                    </ul>
                 </td>
               </tr></table>
             </footer>

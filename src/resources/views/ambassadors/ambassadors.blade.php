@@ -31,7 +31,7 @@ PICKPRIME - Your College Picker
                     <div class="card-content">
                         <div class="col s12 ">
                             <div class="center-align">
-                                <a href="#" class="light-blue-text text-darken-4">{{ $results->ambassadors_name }}</a><br><br>
+                                <a href="ambassador/{{ $results->ambassadors_id }}" class="light-blue-text text-darken-4">{{ $results->ambassadors_name }}</a><br><br>
                                 <a href='#' class="light-blue-text text-darken-4">{{ $results->ambassadors_college_id }}</a>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ PICKPRIME - Your College Picker
                     <div class="card-content">
                         <div class="col s12 ">
                             <div class="center-align">
-                                <a href="#">{{ $results->ambassadors_name }}</a><br><br>
+                                <a href="ambassador/{{ $results->ambassadors_id }}">{{ $results->ambassadors_name }}</a><br><br>
                                 <a href='#'>{{ $results->ambassadors_college_id }}</a>
                             </div>
                         </div>

@@ -244,21 +244,26 @@ Including the Notification body
     </div>
 </div>                <main></main>
 	 <footer class="footer grey darken-4">
-                <div  class="container">
-                  
-                <table>
+                <table >
                     <tr>
                     
-                     <div style="font-size=4px">
-                    <td class="grey-text text-lighten-4 left" >© 2015<br>Copyrights Reserved</td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Be a Ambassador</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Forms for Reviews</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Team</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Terms & Conditions</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Privacy Policy</a></td></div>
-                    </tr>
-                    </table>
-                </div>
+                     <div style="font-size:4px">
+                    <td class="grey-text text-lighten-4 left" >
+
+
+                    <small>© 2015<br>Copyrights Reserved</small></td></div>
+
+
+<td class="grey-text text-lighten-4 right-align">
+                    <ul>
+                      <li style="display:inline"><a href="be_a_ambassador">Be a Ambassador</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="#">Form for Reviews</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="team">About Us</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="#">Privacy Policy</a></li>
+                      <li style="display:inline ;margin-left:20px"><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </td>
+              </tr></table>
             </footer>
 
 </body>

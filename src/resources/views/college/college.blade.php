@@ -691,7 +691,7 @@ PICKPRIME - Your College Picker
                 <div class="card grey lighten-2" style="width:600px;">
                     <div class="col s12">
                      	<p>
-                        <div class="ambs_speaks" style="height:300px;padding:5px;">
+                        <div class="ambs_speaks" style="height:300px;margin:10px;">
                         <p class="light-blue-text text-darken-4"><b>Campus Ambassador Speaks....</b></p>
                         <p>
                         {{  $result['0']->ambassadors_intro }}

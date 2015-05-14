@@ -21,7 +21,7 @@ PICKPRIME - Your College Picker
                 <p><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
                 <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
                 </div>
-                <div class="card grey lighten-2">
+                <div class="card grey lighten-2" style="height:300px;margin:10px;">
                     <div class="col s12">
                         
                         <div class="ambs_speaks">
