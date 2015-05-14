@@ -18,6 +18,9 @@ class CreateCourseCollegeReviewTable extends Migration {
 			$table->integer('course_refference_id');
 			$table->integer('college_refference_id');
 			$table->dateTime('review_date');
+			$table->text('course_content');
+			$table->text('top_institutes');
+			$table->text('future_scope');
 			$table->text('job_place_work');
 			$table->string('reviewer_name');
 			$table->string('reviewer_description');

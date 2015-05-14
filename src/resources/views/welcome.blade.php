@@ -124,7 +124,7 @@
             </ul>
 
             <ul id="browse-menu" class="dropdown-content">
-                <li><a href="colleges" class="blue-text text-darken-4">Colleges</a></li>
+                <li><a href="{{ action('CollegeController@viewColleges') }}" class="blue-text text-darken-4">Colleges</a></li>
                 <li><a href="courses" class="blue-text text-darken-4">Courses</a></li>
                 <li><a href="#!" class="blue-text text-darken-4">Appetite Hunt</a></li>
                 <li><a href="ambassador" class="blue-text text-darken-4">Ambassadors</a></li>
@@ -298,7 +298,7 @@
 
 <td class="grey-text text-lighten-4 right-align">
                     <ul>
-                      <li style="display:inline"><a href="be_a_ambassador">Be a Ambassador</a></li>
+                     <li style="display:inline"><a href="{{ action('footerController@be_ambassador') }}">Be a Ambassador</a></li>
                       <li style="display:inline;margin-left:20px"><a href="#">Form for Reviews</a></li>
                       <li style="display:inline;margin-left:20px"><a href="team">About Us</a></li>
                       <li style="display:inline;margin-left:20px"><a href="#">Privacy Policy</a></li>

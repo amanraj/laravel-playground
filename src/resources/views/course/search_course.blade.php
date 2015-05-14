@@ -33,7 +33,7 @@ PICKPRIME - Your College Picker
                         </div>
                         <p>
                         <div class="card-header center-align" >
-                            <a href="courses/{{ $results->course_id }}" class="light-blue-text text-darken-4">{{ $results->course_name }}</a>
+                            <a href="{{ action('CourseController@course' , [ $results->course_id ] ) }}" class="light-blue-text text-darken-4">{{ $results->course_name }}</a>
                         </div>
                         </p>
                         <div class="card-content" >

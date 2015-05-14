@@ -130,7 +130,7 @@ PICKPRIME - Your College Picker
                                 <div class="card-content" style="height:280px">
                                     <table class="bordered">
                                         <tr>
-                                            <td class="center-align" colspan="2"><a href='colleges/{{ $results->college_id }}' class="light-blue-text text-darken-4"><b>{{ $results->college_name }}</b></a></td>
+                                            <td class="center-align" colspan="2"><a href="{{ action('CollegeController@college' , [ $results->college_id ]) }}" class="light-blue-text text-darken-4"><b>{{ $results->college_name }}</b></a></td>
                                         </tr>    
                                         <tr>
                                             <td class="left-align ">Stream:</td>
