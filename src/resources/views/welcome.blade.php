@@ -285,20 +285,26 @@
             <main >
               
             </main>
-            <footer class="footer grey darken-4">
-                <div  class="container"><table>
+           <footer class="footer grey darken-4">
+                <table>
                     <tr>
                     
-                     <div style="font-size=4px">
-                    <td class="grey-text text-lighten-4 left" >© 2015<br>Copyrights Reserved</td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Be a Ambassador</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Forms for Reviews</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Team</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Terms & Conditions</a></td>
-                    <td><a class="grey-text text-lighten-4 right" href="#!">Privacy Policy</a></td></div>
-                    </tr>
-                    </table>
-                </div>
+                     <div style="font-size:4px">
+                    <td class="grey-text text-lighten-4 left" >
+
+
+                    <small>© 2015<br>Copyrights Reserved</small></td></div>
+
+
+<td class="grey-text text-lighten-4 right-align">
+                    <ul><li style="display:inline">Be a Ambassador</li>
+                    <li style="display:inline;margin-left:20px">Form for Reviews</li>
+                    <li style="display:inline;margin-left:20px">About Us</li>
+                    <li style="display:inline;margin-left:20px">Privacy Policy</li>
+                    <li style="display:inline ;margin-left:20px">Terms & Conditions</li>
+                 
+                </td>
+              </tr></table>
             </footer>
             
 </body>
