@@ -43,10 +43,54 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-<div class="container">
+<div style="margin-left:300px;margin-right:100px">
     <h3>Your College Choices ( 6 )</h3>
     <div class="col s8 center-align">
         <div id="owl-college" class="owl-carousel owl-theme">
+        <div class="item" style="position:fixed;left:-100px">
+                <div class="card center-align">
+                    <div class="card-image">
+                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
+                    </div>
+                   
+                </div>
+                <div class="card center-align">
+                    <div class="card-content ">
+                        <span class="black-text ">
+                            <table class= "bordered">
+                               
+                <tr >
+                  <td  style="height:100px;text-align:vertical">Campus Life</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Hostel Life</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Location</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Facilities </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Fees</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Course Content</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Faculty</td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Placement </td>
+                </tr>
+                <tr>
+                  <td  style="height:100px;text-align:vertical">Future Scope  </td>
+                </tr>
+              </table></span>
+            </div>
+          </div>
+  </div>
+
             <div class="item">
                 <div class="card center-align">
                     <div class="card-image">

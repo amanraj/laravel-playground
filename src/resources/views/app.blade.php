@@ -205,7 +205,7 @@ Including the Profile body
     </div>
     <b>
     <div class="row">
-      <div class="modal-footer style="margin-bottom:0px;padding-bottom:0px;"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Cancel</a>
+      <div class="modal-footer" style="margin-bottom:0px;padding-bottom:0px;"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Cancel</a>
       <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Edit</a></div>
     </div>
     </b>
@@ -213,7 +213,7 @@ Including the Profile body
 <!--===============================
 Including the Notification body
 ===============================-->
-<div id="notification" class="modal ">
+<div id="notification" class="modal" >
     <div class="modal-header blue darken-3" style=" padding:4px">
         <h5 class="white-text" style="margin-left:20px">Notifications</h5>
     </div>
