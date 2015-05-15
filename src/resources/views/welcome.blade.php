@@ -222,9 +222,9 @@
            
                             <li><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
 
-                            <li><a class=" modal-trigger " data-target="sign_in"><b>Sign In</b></a></li>
+                            <li><a class=" modal-trigger " data-target="sign_in" style="cursor:pointer"><b>Sign In</b></a></li>
     
-                            <li><a class="modal-trigger" data-target="sign_up"><b>Sign Up</b></a></li>
+                            <li><a class="modal-trigger" data-target="sign_up" style="cursor:pointer"><b>Sign Up</b></a></li>
                         </ul>
                         <!--================================
                         Menu for Mobile and Tablets
