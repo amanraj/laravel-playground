@@ -38,11 +38,11 @@ PICKPRIME - Your College Picker
                             <div class="collapsible-header">Course Content</div>
                             <div class="collapsible-body"><p>{{ $result_1['0']->course_content }}</p></div>
                         </li>
-                        <li>
-                         <li>
+                        <li>                        
                             <div class="collapsible-header">Top Institutes</div>
                             <div class="collapsible-body"><p>{{ $result_1['0']->top_institute }}</p></div>
                         </li>
+                        <li>
                             <div class="collapsible-header">Future Scope</div>
                             <div class="collapsible-body"><p>{{ $result_1['0']->future_scope }}</p></div>
                         </li>
@@ -68,7 +68,7 @@ PICKPRIME - Your College Picker
                                    
                                 @foreach ($result_2 as $results_2)
                                 <p>
-                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    @if ( ($results_2->course_review_id)%2 == 0 )
                                     <div class="card col s10 grey lighten-2 left-align">
                                     @else
                                     <div class="card col s10 grey lighten-2 right-align">
@@ -77,7 +77,7 @@ PICKPRIME - Your College Picker
                                     {{ $results_2->reviewer_description }}<br/>
                                     Reviewer Rating - {{ $results_2->reviewer_rating }}
                                     <p>
-                                    {{ $results_2-course_content }}
+                                    {{ $results_2->review }}
                                     </p>    
                                     </div>
                                 </p>
@@ -99,7 +99,7 @@ PICKPRIME - Your College Picker
                                    
                                 @foreach ($result_2 as $results_2)
                                 <p>
-                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    @if ( ($results_2->course_review_id)%2 == 0 )
                                     <div class="card col s10 grey lighten-2 left-align">
                                     @else
                                     <div class="card col s10 grey lighten-2 right-align">
@@ -108,7 +108,7 @@ PICKPRIME - Your College Picker
                                     {{ $results_2->reviewer_description }}<br/>
                                     Reviewer Rating - {{ $results_2->reviewer_rating }}
                                     <p>
-                                    {{ $results_2->top_institutes }}
+                                    {{ $results_2->review }}
                                     </p>    
                                     </div>
                                 </p>
@@ -130,7 +130,7 @@ PICKPRIME - Your College Picker
                                    
                                 @foreach ($result_2 as $results_2)
                                 <p>
-                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    @if ( ($results_2->course_review_id)%2 == 0 )
                                     <div class="card col s10 grey lighten-2 left-align">
                                     @else
                                     <div class="card col s10 grey lighten-2 right-align">
@@ -139,7 +139,7 @@ PICKPRIME - Your College Picker
                                     {{ $results_2->reviewer_description }}<br/>
                                     Reviewer Rating - {{ $results_2->reviewer_rating }}
                                     <p>
-                                    {{ $results_2->future_scope }}
+                                    {{ $results_2->review }}
                                     </p>    
                                     </div>
                                 </p>
@@ -161,7 +161,7 @@ PICKPRIME - Your College Picker
                                    
                                 @foreach ($result_2 as $results_2)
                                 <p>
-                                    @if ( ($results_2->course_college_review_id)%2 == 0 )
+                                    @if ( ($results_2->course_review_id)%2 == 0 )
                                     <div class="card col s10 grey lighten-2 left-align">
                                     @else
                                     <div class="card col s10 grey lighten-2 right-align">
@@ -170,7 +170,7 @@ PICKPRIME - Your College Picker
                                     {{ $results_2->reviewer_description }}<br/>
                                     Reviewer Rating - {{ $results_2->reviewer_rating }}
                                     <p>
-                                    {{ $results_2->job_place_work }}
+                                    {{ $results_2->review }}
                                     </p>    
                                     </div>
                                 </p>
