@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
+use DB;
 class UserController extends Controller {
 
 	/*
@@ -38,13 +39,13 @@ class UserController extends Controller {
 
 	public function register(Request $request)
 	{
+		
 		$email = $request->input('email');
-		$f_name = $request->input('first_name');
-		$l_name = $request->input('last_name');		
-		$name = $f_name.' '.$l_name;
+		$name = $request->input('name');
 		$password = $request->input('password');
 		$mobile = $request->input('mobile');
-		
+		DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number) VALUES(?,?,?,?)',[$name,$email,$password,$mobile]);
+		return redirect('/');
 	}
 
 	public function notification()

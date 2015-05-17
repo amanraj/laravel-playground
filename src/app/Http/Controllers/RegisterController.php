@@ -19,6 +19,11 @@ class RegisterController extends Controller {
 		
 		return "test";
 	}
+	public function register_ambasador()
+	{
+		
+		return "test";
+	}
 	
 
 }

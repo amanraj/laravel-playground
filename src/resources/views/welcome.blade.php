@@ -168,35 +168,39 @@
                     </div>
                     <div class="modal-content" style="margin-top:0px">
                         <div class="row">
-                            <form class="col s12">                         
+                            <form class="col s12" action="{{ url('/register') }}" method="post">                         
                                 <div class="row">
+                                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                     <div class="input-field col s12 m12 l6" >
                                         <i class="mdi-action-account-circle prefix"></i>
-                                        <input id="icon_prefix" type="text" class="validate">
+                                        <input id="icon_prefix" name="name" type="text" class="validate" required>
                                         <label for="icon_prefix"> Name</label>
                                     </div>
                                     <div class="input-field col s12 m12 l6 ">
                                         <i class="mdi-communication-phone prefix"></i>
-                                        <input id="icon_telephone" type="tel" class="validate ">
+                                        <input id="icon_telephone" name="mobile" type="tel" class="validate " required>
                                         <label for="icon_telephone">Telephone</label>
                                     </div>
                                     <div class="input-field col s12 m12 l6">
                                         <i class="mdi-communication-email prefix"></i>
-                                        <input id="icon_mail" type="email" class="validate">
+                                        <input id="icon_mail" name="email" type="email" class="validate" required>
                                         <label for="icon_mail">Email</label>
                                     </div>
                                     <div class="input-field col s12 m12 l6">
                                         <i class="mdi-hardware-security prefix"></i>
-                                        <input id="icon_secure" type="password" class="validate">
+                                        <input id="icon_secure" name="password" type="password" class="validate" required>
                                         <label for="icon_secure"> Password</label>
                                     </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="modal-action modal-close btn waves-effect waves-light  blue darken-4" type="submit" name="action">Sign Up</button>
                                 </div>
                             </form>
                         </div>
                    
-                    <div class="modal-footer">
-                        <button class="modal-action modal-close btn waves-effect waves-light  blue darken-4" type="submit" name="action">Sign Up</button>
-                    </div> </div>
+                     
+                    </div>
                 </li>
             </ul>
 
