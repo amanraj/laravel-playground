@@ -45,53 +45,51 @@ PICKPRIME - Your College Picker
 
 <div >
     <h3>Your College Choices ( 6 )</h3>
-    <div class="col s8 center-align">
-        <div id="owl-college" class="owl-carousel owl-theme">
-        <div class="item" style="position:fixed;left:-100px">
-                <div class="card center-align">
-                    <div class="card-image">
-                        <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
-                    </div>
-                   
-                </div>
-                <div class="card center-align">
-                    <div class="card-content ">
-                        <span class="black-text ">
-                            <table class= "bordered">
-                               
+    
+        
+        
+                <div class="row">
+                    <div class="col s3" style="position:relative;top:357px;">
+                            <table class= "bordered" style="border:1px solid grey;">
+
+                <div class="card center-align" >               
                 <tr >
-                  <td  style="height:100px;text-align:vertical">Campus Life</td>
+                  <td  style="height:105px;text-align:center"><b>Campus Life</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Hostel Life</td>
+                  <td  style="height:105px;text-align:center"><b>Hostel Life</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Location</td>
+                  <td  style="height:105px;text-align:center"><b>Location</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Facilities </td>
+                  <td  style="height:105px;text-align:center"><b>Facilities</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Fees</td>
+                  <td  style="height:105px;text-align:center"><b>Fees</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Course Content</td>
+                  <td  style="height:105px;text-align:center"><b>Course Content</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Faculty</td>
+                  <td  style="height:105px;text-align:center"><b>Faculty</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Placement </td>
+                  <td  style="height:105px;text-align:center"><b>Placement</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Future Scope  </td>
+                  <td  style="height:105px;text-align:center"><b>Future Scope</b></td>
                 </tr>
-              </table></span>
-            </div>
-          </div>
-  </div>
+                </div>
+              </table>
+              </div>
+            
+  <div id="owl-college" class="owl-carousel owl-theme col s9">        
+    
+  
 
             <div class="item">
+            
                 <div class="card center-align">
                     <div class="card-image">
                         <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
@@ -125,7 +123,7 @@ PICKPRIME - Your College Picker
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                  <td  style="height:100px;text-align:vertical">ggggggg</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">zncg vc</td>
@@ -134,34 +132,38 @@ PICKPRIME - Your College Picker
                   <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                  <td  style="height:100px;text-align:vertical">zgn</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                  <td  style="height:100px;text-align:vertical">gfy</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                  <td  style="height:100px;text-align:vertical">ngfzv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                  <td  style="height:100px;text-align:vertical">gcv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                  <td  style="height:100px;text-align:vertical">cvfcv</td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
+  
 
 
 
 
 
   
-  <div class="item">
+  
+
+            <div class="item">
+            
                 <div class="card center-align">
                     <div class="card-image">
                         <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
@@ -195,7 +197,7 @@ PICKPRIME - Your College Picker
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                  <td  style="height:100px;text-align:vertical">ggggggg</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">zncg vc</td>
@@ -204,28 +206,33 @@ PICKPRIME - Your College Picker
                   <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                  <td  style="height:100px;text-align:vertical">zgn</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                  <td  style="height:100px;text-align:vertical">gfy</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                  <td  style="height:100px;text-align:vertical">ngfzv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                  <td  style="height:100px;text-align:vertical">gcv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                  <td  style="height:100px;text-align:vertical">cvfcv</td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-<div class="item">
+  
+
+
+
+            <div class="item">
+            
                 <div class="card center-align">
                     <div class="card-image">
                         <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
@@ -259,7 +266,7 @@ PICKPRIME - Your College Picker
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                  <td  style="height:100px;text-align:vertical">ggggggg</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">zncg vc</td>
@@ -268,28 +275,33 @@ PICKPRIME - Your College Picker
                   <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                  <td  style="height:100px;text-align:vertical">zgn</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                  <td  style="height:100px;text-align:vertical">gfy</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                  <td  style="height:100px;text-align:vertical">ngfzv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                  <td  style="height:100px;text-align:vertical">gcv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                  <td  style="height:100px;text-align:vertical">cvfcv</td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
- <div class="item">
+  
+ 
+ 
+
+            <div class="item">
+            
                 <div class="card center-align">
                     <div class="card-image">
                         <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
@@ -323,7 +335,7 @@ PICKPRIME - Your College Picker
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                  <td  style="height:100px;text-align:vertical">ggggggg</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">zncg vc</td>
@@ -332,28 +344,33 @@ PICKPRIME - Your College Picker
                   <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                  <td  style="height:100px;text-align:vertical">zgn</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                  <td  style="height:100px;text-align:vertical">gfy</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                  <td  style="height:100px;text-align:vertical">ngfzv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                  <td  style="height:100px;text-align:vertical">gcv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                  <td  style="height:100px;text-align:vertical">cvfcv</td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div>
-<div class="item">
+  
+
+
+
+            <div class="item">
+            
                 <div class="card center-align">
                     <div class="card-image">
                         <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
@@ -387,7 +404,7 @@ PICKPRIME - Your College Picker
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:100px;text-align:vertical">gggggggggggggggggggggggggggggnzfgnfn z n</td>
+                  <td  style="height:100px;text-align:vertical">ggggggg</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">zncg vc</td>
@@ -396,34 +413,37 @@ PICKPRIME - Your College Picker
                   <td  style="height:100px;text-align:vertical">zznzgon</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zgn zcfgvn zfcgn zfgn ffgv ng ngn zgvnxn fgn </td>
+                  <td  style="height:100px;text-align:vertical">zgn</td>
                 </tr>
                 <tr>
                   <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gf nzfcn cfg nfcgn xcfg nfgcv </td>
+                  <td  style="height:100px;text-align:vertical">gfy</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">ngfzvcng fzcv ny</td>
+                  <td  style="height:100px;text-align:vertical">ngfzv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gcv ncgv cv vc cf </td>
+                  <td  style="height:100px;text-align:vertical">gcv</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">c vfcv nfcvn gc cf c </td>
+                  <td  style="height:100px;text-align:vertical">cvfcv</td>
                 </tr>
               </table></span>
             </div>
           </div>
+  </div>
+  
+  
   </div>
 </div>
 
-<div class="customNavigation">
+<div class="customNavigation" style="position:relative;left:70px;top:-10px;">
   <a class="btn prev light-blue darken-2">Previous</a>
   <a class="btn next light-blue darken-2">Next</a>
 </div>
-</div>
+
 
 <!--=================================================
 Course choices
@@ -439,7 +459,7 @@ Javascript files
   var owl_college = $("#owl-college");
  
   owl_college.owlCarousel({
-      items : 4, //10 items above 1000px browser width
+      items : 3, //10 items above 1000px browser width
       itemsDesktop : [1000,3], //5 items between 1000px and 901px
       itemsDesktopSmall : [900,2], // betweem 900px and 601px
       itemsTablet: [600,1], //2 items between 600 and 0
