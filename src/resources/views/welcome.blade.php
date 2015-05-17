@@ -135,29 +135,37 @@
                     <div class="modal-header blue darken-4" style=" padding:4px">
                         <h5 class="white-text" style="margin-left:20px">User Sign In</h5>
                     </div>
+                    <form action="{{ url('/login') }}" method="post">
                     <div class="modal-content" style="margin-top:-40px">
-                        <form >                         
+                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">  
+                            <div class="row" style="margin-top:30px">
+                                @if($error != '')
+                                    <span class="red-text">{{ $error }}</span>
+                                @endif
+                            </div>                 
+                            
                             <div class="row">
-                                <div class="input-field" style="margin-top:40px">
+                                <div class="input-field" style="margin-top:10px">
                                     <i class="mdi-action-account-circle prefix"></i>
-                                    <input id="icon_prefix" type="text" class="validate" required>
-                                    <label for="icon_prefix"> Name</label>
+                                    <input id="icon_prefix" name="email" type="email" class="validate" required>
+                                    <label for="icon_prefix"> Email</label>
                                 </div>
                             </div>
                             <div class="row">    
                                 <div class="input-field ">
                                     <i class="mdi-hardware-security prefix"></i>
-                                    <input id="icon_secure" type="password" class="validate" required>
+                                    <input id="icon_secure" name="password" type="password" class="validate" required>
                                     <label for="icon_secure"> Password</label>
                                 </div>
                             </div>    
-                        </form>
+                        
                     </div>  
                    <div class="modal-footer ">
                         <a href="https://www.facebook.com/"><img src="{{ asset('images/fb_log.png') }}" ></a>
                         <a href="https://twitter.com/"> <img src="{{ asset('images/twitter_log.png') }}"></a>
-                        <button class="modal-action modal-close btn waves-effect waves-light  blue darken-4" type="submit" name="action">Sign In</button>
+                        <button class="modal-action modal-close btn waves-effect waves-light blue darken-4" type="submit" name="action">Sign In</button>
                     </div>
+                    </form>
                 </li>
             </ul>
 
@@ -171,6 +179,11 @@
                             <form class="col s12" action="{{ url('/register') }}" method="post">                         
                                 <div class="row">
                                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                                    <div class="row" style="">
+                                        @if($error != '')
+                                            <span class="red-text">{{ $error }}</span>
+                                        @endif
+                                    </div> 
                                     <div class="input-field col s12 m12 l6" >
                                         <i class="mdi-action-account-circle prefix"></i>
                                         <input id="icon_prefix" name="name" type="text" class="validate" required>
@@ -287,7 +300,13 @@
                 </nav>
             </header>
             <main >
-              
+            @if($error != '')
+                <script type="text/javascript">
+                    
+                    alert('{{ $error }}') ;   
+                    
+                </script>
+            @endif
             </main>
            <footer class="footer grey darken-4">
                 <table>

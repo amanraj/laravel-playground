@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
+use Hash;
 use DB;
 class UserController extends Controller {
 
@@ -34,7 +35,12 @@ class UserController extends Controller {
 	{
 		$email = $request->input('email');
 		$password = $request->input('password');
-		echo $email, $password;
+		$hashed = DB::select('SELECT user_password FROM users WHERE user_email = ?',[$email]);
+		if(Hash::check($password,$hashed['0']->user_password)){
+			return redirect('/');
+		}else{
+			return view('welcome')->with(array('error' => '* Please Check Your Email/Password'));
+		}
 	}
 
 	public function register(Request $request)
@@ -44,8 +50,16 @@ class UserController extends Controller {
 		$name = $request->input('name');
 		$password = $request->input('password');
 		$mobile = $request->input('mobile');
-		DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number) VALUES(?,?,?,?)',[$name,$email,$password,$mobile]);
-		return redirect('/');
+		$rows = DB::select('SELECT * FROM users WHERE user_email = ?',[$email]);
+		if(count($rows) == 0){
+			$password = Hash::make($password);
+			DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number) VALUES(?,?,?,?)',[$name,$email,$password,$mobile]);
+			return redirect('/');
+		}else{
+			$error = '* User with this Email already exists';
+			return view('welcome')->with(array('error' => $error));
+		}
+		
 	}
 
 	public function notification()

@@ -34,7 +34,7 @@ class LandingController extends Controller {
 		{
 		    return Redirect::to('dashboard');
 		}
-		return view('welcome');
+		return view('welcome')->with(array('error' => ''));
 	}
 	
 
