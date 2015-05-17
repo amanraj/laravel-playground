@@ -10,8 +10,6 @@ PICKPRIME - Your College Picker
 
 
 @section('content')
-
-    <div class="container center-align">
     <div class="row">
         <div class="card col s12">
             <ul class="tabs">
@@ -130,6 +128,5 @@ PICKPRIME - Your College Picker
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @stop

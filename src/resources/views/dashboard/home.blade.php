@@ -43,7 +43,7 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-<div style="margin-left:300px;margin-right:100px">
+<div >
     <h3>Your College Choices ( 6 )</h3>
     <div class="col s8 center-align">
         <div id="owl-college" class="owl-carousel owl-theme">

@@ -51,8 +51,8 @@
             }
 
             #profile.modal{
-                max-width:230px;
-                border-radius: 5px; 
+                max-width:270px;
+                border-radius: 5px;
                 margin-bottom: 0px;
             }
 
@@ -61,8 +61,8 @@
             }
 
             #notification.modal img{
-                width:100px;
-                height:100px;
+                width:50px;
+                height:50px;
             }
 
             #notification.modal{
@@ -198,7 +198,9 @@
       	<!--===============================
 	       Including the Main Body
 	      ===============================-->
-      	@yield('content')
+        <div class="container">
+      	    @yield('content')
+        </div>
 
         <!--===============================
         Including the Profile body
@@ -214,32 +216,32 @@
                     </span>
                 </div>  
             </div>
-            <div class="row">
-                <div class="modal-footer" style="margin-bottom:0px;padding-bottom:0px;"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Cancel</a>
+        
+                <div class="modal-footer no-padding"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius-left-bottom:5px">Cancel</a>
                 <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Edit</a></div>
-            </div>
+        
         </div> 
 
         <!--===============================
         Including the Notification body
         ===============================-->
         <div id="notification" class="modal" >
-            <div class="modal-header blue darken-3" style=" padding:4px">
+            <div class="modal-header grey darken-3" style=" padding:4px;position:fixed;width:100%">
                 <h5 class="white-text" style="margin-left:20px">Notifications</h5>
             </div>
-            <div class="modal-content ">
+            <div class="modal-content no-padding" style="overflow-y:auto;border:solid 5px #424242;margin-top:40px">
                 <table class="bordered striped responsive-table">
-                    <tr >
-                        <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
-                        <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
+                    <tr class="no-padding">
+                        <td style="padding:2px 0px 2px 10px"><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
+                        <td style="padding:2px 2px 2px -10px" ><b>Candice Swanepoel</b><br><span class="grey-text text-darken-2"><small>Campus Ambassador,IIT Kgp</small></span><br>Accepted Your Invitation</td>
                     </tr>
-                    <tr>
-                        <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
-                        <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
+                    <tr class="no-padding">
+                        <td style="padding:2px 0px 2px 10px"><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
+                        <td style="padding:2px 2px 2px -10px" ><b>Candice Swanepoel</b><br><span class="grey-text text-darken-2"><small>Campus Ambassador,IIT Kgp</small></span><br>Accepted Your Invitation</td>
                     </tr>
-                    <tr>
-                        <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
-                        <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
+                     <tr class="no-padding">
+                        <td style="padding:2px 0px 2px 10px"><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
+                        <td style="padding:2px 2px 2px -10px" ><b>Candice Swanepoel</b><br><span class="grey-text text-darken-2"><small>Campus Ambassador,IIT Kgp</small></span><br>Accepted Your Invitation</td>
                     </tr>
                 </table>    
             </div>

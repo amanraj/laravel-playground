@@ -9,7 +9,6 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-<div class="container">
         <div class="row">
             <div class="col s4">
             <h5>{{ $result['0']->ambassadors_college_id }} Forum</h5>
@@ -169,6 +168,5 @@ PICKPRIME - Your College Picker
                 
             </div>
         </div>
-    </div>
 
 @stop

@@ -46,10 +46,9 @@ PICKPRIME - Your College Picker
 
 
 @section('content')
-
-<div class="container center-align">
-    <div class="row">                
-        <div class="card col s12">
+<div class="row">   
+    <div class="col s12">
+        <div class="card">
             <div class="col s3">
             <p>      
             <div class="card" style="height:545px">             
@@ -159,8 +158,8 @@ PICKPRIME - Your College Picker
                         </div>    
                         @endif
                         @endforeach                      
-            </div>
+                    </div>
+                </div>
         </div>               
     </div>
-</div>
 @stop

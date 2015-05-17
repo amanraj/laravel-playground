@@ -18,7 +18,6 @@ PICKPRIME - Your College Picker
 
 @section('content')
 
-<div class="container">
     <div class="row">
         <div class="col s12 m12 l6">
             <ul class="collapsible" data-collapsible="accordion">
@@ -85,6 +84,5 @@ PICKPRIME - Your College Picker
             </ul>
         </div>     
     </div> 
-</div>
   
 @stop

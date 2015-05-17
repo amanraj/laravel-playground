@@ -8,7 +8,6 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('content')
-	<div class="container">
         <div class="row">
             <div class="card col s12">
                 <div class="col s4">
@@ -182,7 +181,4 @@ PICKPRIME - Your College Picker
                     </div>
             </div>
         </div>
-    </div>
-
-
 @stop
