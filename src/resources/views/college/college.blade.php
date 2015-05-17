@@ -27,11 +27,11 @@ PICKPRIME - Your College Picker
      	 <div class="col s12 m12 l8">
         	<div class="card-panel grey lighten-2">          
 				<h5 class="light-blue-text text-darken-4">
-				{{ $result_2['0']->college_name }},
-				{{ $result_2['0']->college_location }}
+				{{ $college_details['0']->college_name }},
+				{{ $college_details['0']->college_location }}
 				</h5>
 				<br>
-				<img class="responsive-img" style="width:100%;height:260px;" src="{{ asset( $result_2['0']->college_image_1 ) }}">
+				<img class="responsive-img" style="width:100%;height:260px;" src="{{ asset( $college_details['0']->college_image_1 ) }}">
 	    	</div>
       	</div>
       	<!--====================================
@@ -51,46 +51,46 @@ PICKPRIME - Your College Picker
 						<td style="padding:5px 5px;">Overall Rating</td>
 						<td style="padding:5px 5px;">
 							<div class="progress">
-      							<div class="determinate light-blue darken-2" style="width: 70%"></div>
+      							<div class="determinate light-blue darken-2" style="width: {{ $college_rating['0']->college_overall_rating * 10 }}%"></div>
   							</div>
   						</td style="padding:5px 5px;">
-						<td>{{ $result_1['0']->college_overall_rating }}</td>
+						<td>{{ $college_rating['0']->college_overall_rating }}</td>
 					</tr>
 					<tr>
 						<td style="padding:5px 5px;">Campus Life</td>
 						<td style="padding:5px 5px;">
 							<div class="progress">
-      							<div class="determinate light-blue darken-2" style="width: 50%"></div>
+      							<div class="determinate light-blue darken-2" style="width: {{ $college_rating['0']->college_campuslife_rating * 10 }}%"></div>
   							</div>
   						</td>
-						<td style="padding:5px 5px;">{{ $result_1['0']->college_campuslife_rating }}</td>
+						<td style="padding:5px 5px;">{{ $college_rating['0']->college_campuslife_rating }}</td>
 					</tr>
 					<tr>
 						<td style="padding:5px 5px;">Hostel Life</td>
 						<td style="padding:5px 5px;">
 							<div class="progress">
-      							<div class="determinate light-blue darken-2" style="width: 90%"></div>
+      							<div class="determinate light-blue darken-2" style="width: {{ $college_rating['0']->college_hostel_rating * 10 }}%"></div>
   							</div>
   						</td>
-						<td style="padding:5px 5px;">{{ $result_1['0']->college_hostel_rating }}</td>
+						<td style="padding:5px 5px;">{{ $college_rating['0']->college_hostel_rating }}</td>
 					</tr>
 					<tr>
 						<td style="padding:5px 5px;">Location</td>
 						<td style="padding:5px 5px;">
 							<div class="progress">
-      							<div class="determinate light-blue darken-2" style="width: 20%"></div>
+      							<div class="determinate light-blue darken-2" style="width: {{ $college_rating['0']->college_location_rating * 10 }}%"></div>
   							</div>
   						</td>
-						<td style="padding:5px 5px;">{{ $result_1['0']->college_location_rating }}</td>
+						<td style="padding:5px 5px;">{{ $college_rating['0']->college_location_rating }}</td>
 					</tr>
 					<tr>
 						<td style="padding:5px 5px;">Facilities</td>
 						<td style="padding:5px 5px;">
 							<div class="progress">
-      							<div class="determinate light-blue darken-2" style="width: 50%"></div>
+      							<div class="determinate light-blue darken-2" style="width: {{ $college_rating['0']->college_facilities_rating * 10 }}%"></div>
   							</div>
   						</td>
-						<td style="padding:5px 5px;">{{ $result_1['0']->college_facilities_rating }}</td>
+						<td style="padding:5px 5px;">{{ $college_rating['0']->college_facilities_rating }}</td>
 					</tr>
 					<tr class="grey lighten-2">
 						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
@@ -120,31 +120,31 @@ PICKPRIME - Your College Picker
 			<ul class="collapsible" data-collapsible="expandable">
 				<li>
 					<div class="collapsible-header active"><i class="mdi-image-filter-drama"></i><b>General Information</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_overview }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_overview }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-maps-place"></i><b>Fee</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_fees }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_fees }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Exams/Admission Procedure</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_entrance_exam }}<br/>{{ $result_2['0']->college_addmision_process }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_entrance_exam }}<br/>{{ $college_details['0']->college_addmision_process }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Hostels</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_hostels }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_hostels }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Fests</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_fests }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_fests }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Other Facilites</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_other_facilities }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_other_facilities }}</p></div>
 				</li>
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Placements</b></div>
-					<div class="collapsible-body"><p>{{ $result_2['0']->college_placement }}</p></div>
+					<div class="collapsible-body"><p>{{ $college_details['0']->college_placement }}</p></div>
 				</li>
 			</ul>
 	    </div>
@@ -152,7 +152,7 @@ PICKPRIME - Your College Picker
 	    college Review Tab
 	    =====================================-->
 	    <div id="college-review" class="col s12 ">
-	    	@if ( count($result)==0 )
+	    	@if ( count($ambassadors)==0 )
 	    	<div class="card  valign-wraper medium grey lighten-2">
 		    	<div class="row">
 		    		<div class="col s3 ">
@@ -165,7 +165,7 @@ PICKPRIME - Your College Picker
 				</div>
 			</div>
 			@else	    		
-	    	@foreach ( $result_1 as $results_1 )
+	    	@foreach ( $college_reviews as $college_review )
 	    	<div class="card  valign-wraper medium grey lighten-2">
 		    	<div class="row">
 		    		<div class="col s3 ">
@@ -177,43 +177,43 @@ PICKPRIME - Your College Picker
 								#############
 							</li>
 							<li class="collection-item" style="padding: 5px 25px;">
-								Overall Rating : {{ $results_1->college_overall_rating }}
+								Overall Rating : {{ $college_review->college_overall_rating }}
 								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_overall_rating * 10 }}%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Hostel Life : {{ $results_1->college_hostel_rating }}
+			  					Hostel Life : {{ $college_review->college_hostel_rating }}
 								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_hostel_rating * 10 }}%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Campus Life : {{ $results_1->college_campuslife_rating }}
+			  					Campus Life : {{ $college_review->college_campuslife_rating }}
 								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_campuslife_rating * 10 }}%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Location : {{ $results_1->college_location_rating }}
+			  					Location : {{ $college_review->college_location_rating }}
 								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_location_rating * 10 }}%"></div>
 			  					</div>
 			  				</li>
 			  				<li class="collection-item" style="padding: 5px 25px;">
-			  					Facilities : {{ $results_1->college_facilities_rating }}
+			  					Facilities : {{ $college_review->college_facilities_rating }}
 								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_facilities_rating * 10 }}%"></div>
 			  					</div>
 			  				</li>
 	  					</ul>
 		    		</div>
 		    		<div class="col s9">
 		    			<p>
-		    				<b>{{ $results_1->reviewer_name }},<br/>{{ $results_1->reviewer_college }}</b>
+		    				<b>{{ $college_review->reviewer_name }},<br/>{{ $college_review->reviewer_college }}</b>
 		    			</p>
 		    			<p>
-		    				{{ $results_1->review }}
+		    				{{ $college_review->review }}
 		    			</p>
 		    		</div>
 	    		</div>
@@ -226,456 +226,49 @@ PICKPRIME - Your College Picker
 	    =====================================-->
 	    <div id="course-review" class="col s12">
 			<ul class="collapsible" data-collapsible="accordion">
+			@foreach ($courses as $course)
 				<li>
-					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Course Name</div>
+					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>{{ $course->course_name }}</div>
 					<div class="collapsible-body">
-						<div class="row">
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Course Content</td>
-										<td>3.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Placements</td>
-										<td>1.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Future Scope</td>
-										<td>2.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Faculty</td>
-										<td>4.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-						</div>
 						
-						<div>
-							<h4>User Reviews</h4>
-				@if ( count($result)==0 )
-		    	<div class="card  valign-wraper medium grey lighten-2">
-			    	<div class="row">
-			    		<div class="col s3 ">
-			    			<ul class="collection valign">
-			    				<li class="collection-item" style="padding: 5px 25px;">
-					    			Nothing here yet.
-					    		</li>
-					    	</ul>
-					    </div>
+                            
+						<h4>Users Review</h4>
+						@foreach ($course_reviews as $course_review)
+							@if ($course->course_id == $course_review->course_reference_id)
+								<div class="card  valign-wraper medium grey lighten-2">
+								<div class="col s12">
+								<div class="row">
+									<p class="card"><b>{{ $course_review->reviewer_name }}, {{ $course_review->reviewer_description }}</b></p>
+								</div>
+						    	<div class="row">
+						    		<div class="col s3 ">
+						    			<table>
+											<tr>
+												<td>Rating</td>
+												<td>{{ $course_review->reviewer_rating }}</td>
+											</tr>
+											<tr>	
+												<td>
+												<div class="progress">
+							      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->reviewer_rating * 10 }}%"></div>
+							  					</div>
+							  					</td>
+							  				</tr>
+							  			</table>
+							  		</div>	
+							  		<div class="col s9 card">
+						    			<p>{{ $course_review->review }}</p>
+						    		</div>
+							  	</div>		
+						    		
+					    		</div>
+					    		</div>
+					    	@endif	
+					    @endforeach						
 					</div>
-				</div>
-				@else	    					
-				<div class="card  valign-wraper medium grey lighten-2">
-				<div class="col s12">
-				<div class="row"><p><b>Reviewer Name, Description</b></p></div>
-		    	<div class="row">
-		    		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Course Content</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>	
-			  		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Placements</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>		
-			  		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Future Scope</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>		
-		    		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Faculty</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		</div>		
-		    		<div class="col s9">
-		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
-		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
-		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
-		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	@endif
-		</div>
-		</div>
 				</li>
-				<li>
-					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Course Name</div>
-					<div class="collapsible-body">
-						<div class="row">
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Course Content</td>
-										<td>3.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Placements</td>
-										<td>1.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Future Scope</td>
-										<td>2.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Faculty</td>
-										<td>4.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-						</div>
-						
-						<div>
-							<h4>User Reviews</h4>
-				@if ( count($result)==0 )
-		    	<div class="card  valign-wraper medium grey lighten-2">
-			    	<div class="row">
-			    		<div class="col s3 ">
-			    			<ul class="collection valign">
-			    				<li class="collection-item" style="padding: 5px 25px;">
-					    			Nothing here yet.
-					    		</li>
-					    	</ul>
-					    </div>
-					</div>
-				</div>
-				@else	    					
-				<div class="card  valign-wraper medium grey lighten-2">
-				<div class="col s12">
-				<div class="row"><p><b>Reviewer Name, Description</b></p></div>
-		    	<div class="row">
-		    		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Course Content</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>	
-			  		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Placements</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>		
-			  		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Future Scope</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>		
-		    		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Faculty</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		</div>		
-		    		<div class="col s9">
-		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
-		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
-		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
-		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	@endif
-		</div>
-		</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Course Name</div>
-					<div class="collapsible-body">
-						<div class="row">
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Course Content</td>
-										<td>3.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Placements</td>
-										<td>1.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Future Scope</td>
-										<td>2.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-							<div class="col s3">
-								<table>
-									<tr>
-										<td>Faculty</td>
-										<td>4.4</td>
-									</tr>
-									<tr>
-										<div class="progress">
-			      							<div class="determinate light-blue darken-2" style="width: 50%"></div>											
-										</div>
-									</tr>
-								</table>
-							</div>
-						</div>
-						
-						<div>
-							<h4>User Reviews</h4>
-				@if ( count($result)==0 )
-		    	<div class="card  valign-wraper medium grey lighten-2">
-			    	<div class="row">
-			    		<div class="col s3 ">
-			    			<ul class="collection valign">
-			    				<li class="collection-item" style="padding: 5px 25px;">
-					    			Nothing here yet.
-					    		</li>
-					    	</ul>
-					    </div>
-					</div>
-				</div>
-				@else	    					
-				<div class="card  valign-wraper medium grey lighten-2">
-				<div class="col s12">
-				<div class="row"><p><b>Reviewer Name, Description</b></p></div>
-		    	<div class="row">
-		    		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Course Content</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>	
-			  		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Placements</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>		
-			  		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Future Scope</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>		
-		    		<div class="col s3 ">
-		    			<table>
-							<tr>
-								<td>Faculty</td>
-								<td>4.5</td>
-							</tr>
-							<tr>	
-								<td>
-								<div class="progress">
-			      					<div class="determinate light-blue darken-2" style="width: 50%"></div>
-			  					</div>
-			  					</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		</div>		
-		    		<div class="col s9">
-		    			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo placeat ducimus, earum. Explicabo repudiandae ratione, tempore! Esse necessitatibus, eos consequatur laboriosam perspiciatis nostrum nulla suscipit pariatur adipisci rem, neque deserunt.<br>
-		    			<b>Pros : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, totam quisquam inventore fugiat? Dolore dolor odit laborum. Dolores tempore laudantium, aut facilis cupiditate expedita, commodi accusantium facere, aliquam veritatis numquam.<br>
-		    			<b>Cons : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae unde optio similique dolores non quis deserunt. Et nisi quod repellendus quis doloremque esse laboriosam quam numquam molestias, nemo magni!<br>
-		    			<b>Comments : </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos totam neque enim, vero, a possimus temporibus cum harum dolore officia tenetur dolorum quo sapiente voluptatem corporis distinctio ducimus ab ut!<br>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	@endif
-		</div>
-		</div>
-				</li>
+			@endforeach
+			
 			</ul>
 	    </div>
 	    <!--====================================
@@ -685,8 +278,8 @@ PICKPRIME - Your College Picker
         <div class="row">
             <div class="card s12">
                 <div class="col s4">
-                <p ><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
-                <span class="light-blue-text text-darken-4"><b>{{ $result['0']->ambassadors_name }}</b><br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
+                <p ><img class="responsive-img" src="{{ asset( $ambassadors['0']->profile_pic ) }}" width="100%"></p>
+                <span class="light-blue-text text-darken-4"><b>{{ $ambassadors['0']->ambassadors_name }}</b><br/>Campus Ambassador,<br/>{{ $ambassadors['0']->ambassadors_college_id }}</span>
                 </div>
                 <div class="card grey lighten-2" style="width:600px;">
                     <div class="col s12">
@@ -694,7 +287,7 @@ PICKPRIME - Your College Picker
                         <div class="ambs_speaks" style="height:300px;margin:10px;">
                         <p class="light-blue-text text-darken-4"><b>Campus Ambassador Speaks....</b></p>
                         <p>
-                        {{  $result['0']->ambassadors_intro }}
+                        {{  $ambassadors['0']->ambassadors_intro }}
                         </p>
                         </div>
                     </div>
