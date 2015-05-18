@@ -117,7 +117,7 @@
                 <li><a data-target="profile"  class="modal-trigger light-blue-text text-darken-4">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>
                 <li><a href="#!"  class="light-blue-text text-darken-4">Settings<span class="badge light-blue-text text-darken-4"><i class="mdi-action-settings" style="position:relative;bottom:20px"></i></span></a></li>
                 <li class="divider"></li>
-                <li><a href="home"  class="light-blue-text text-darken-4">Sign Out</a></li>
+                <li><a href="{{ action('UserController@signout') }}"  class="light-blue-text text-darken-4">Sign Out</a></li>
             </ul>
 
             <nav>
@@ -165,10 +165,10 @@
                                     <a class="collapsible-header">Browse<i class="mdi-navigation-arrow-drop-down"></i></a>
                                     <div class="collapsible-body">
                                         <ul>
-                                            <li><a href="#!">College</a></li>
-                                            <li><a href="#!">Course</a></li>
+                                            <li><a href="{{ action('CollegeController@viewColleges') }}">College</a></li>
+                                            <li><a href="{{ action('CourseController@viewCourses') }}">Course</a></li>
                                             <li><a href="#!">Appetite Hunt</a></li>
-                                            <li><a href="#!">Ambassadors</a></li>
+                                            <li><a href="{{ action('AmbassadorController@viewAmbassadors') }}">Ambassadors</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -183,7 +183,7 @@
                                             <li><a href="#!">Profile</a></li>
                                             <li><a href="#!">Notifications</a></li>
                                             <li><a href="#!">Settings</a></li>
-                                            <li><a href="#!">Sign Out</a></li>
+                                            <li><a href="{{ action('UserController@signout') }}">Sign Out</a></li>
                                         </ul>
                                     </div>
                                 </li>
