@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CollegeChoices' => $baseDir . '/database/migrations/2015_05_18_105657_college_choices.php',
+    'CollegeNotes' => $baseDir . '/database/migrations/2015_05_18_105755_college_notes.php',
+    'CourseChoices' => $baseDir . '/database/migrations/2015_05_18_105709_course_choices.php',
+    'CourseNotes' => $baseDir . '/database/migrations/2015_05_18_105801_course_notes.php',
     'CreateAmbassadorsTable' => $baseDir . '/database/migrations/2015_05_03_144302_create_ambassadors_table.php',
     'CreateCollegeForumQuestionsTable' => $baseDir . '/database/migrations/2015_05_03_144120_create_college_forum_questions_table.php',
     'CreateCollegeQuestionsReplyTable' => $baseDir . '/database/migrations/2015_05_03_144210_create_college_questions_reply_table.php',
