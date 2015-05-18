@@ -15,8 +15,8 @@ class CreateCourseCollegeReviewTable extends Migration {
 		Schema::create('course_college_review', function(Blueprint $table)
 		{
 			$table->increments('course_college_review_id');
-			$table->integer('course_refference_id');
-			$table->integer('college_refference_id');
+			$table->integer('course_reference_id');
+			$table->integer('college_reference_id');
 			$table->dateTime('review_date');
 			$table->text('course_content');
 			$table->text('top_institutes');

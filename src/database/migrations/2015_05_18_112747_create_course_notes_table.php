@@ -14,12 +14,12 @@ class CreateCourseNotesTable extends Migration {
 	{
 		Schema::create('course_notes', function(Blueprint $table)
 		{
-			$table->integer('course_notes_id')
+			$table->increments('course_notes_id');
 			$table->integer('user_reference_id');
 			$table->integer('course_reference_id');
 			$table->string('note_title');
 			$table->text('note_body');
-			$table->timestamp('created_at');		
+			$table->timestamp('created_at');
 		});
 	}
 
