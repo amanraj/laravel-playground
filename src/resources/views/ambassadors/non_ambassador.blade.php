@@ -1,4 +1,4 @@
-@extends('app')
+@extends('welcome')
 @section('title')
 PICKPRIME - Your College Picker
 @stop
@@ -44,19 +44,16 @@ PICKPRIME - Your College Picker
                     </ul>
                 </div>
                 <div id="general" class="col s12">
-                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
+                    <form class="col s12">
                         <div class="row">
-                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                            <input type="hidden" name="college" value="{{ $result['0']->ambassadors_college_id }}">
-                            <input type="hidden" name="type" value="general">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea" required></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <a class=" modal-trigger " data-target="sign_in" style="cursor:pointer"><button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button></a>
                             </div>
                         </div>
                     </form>
@@ -69,25 +66,20 @@ PICKPRIME - Your College Picker
                         @else
                             
                         @foreach ($general_question as $general)
-                            <tr>
-                                <td><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
-                            </tr>
+                            <td><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         @endforeach
                         
                         @endif
                     </table>
                 </div>
                 <div id="admission_related" class="col s12">
-                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
+                    <form class="col s12">
                         <div class="row">
-                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                            <input type="hidden" name="college" value="{{ $result['0']->ambassadors_college_id }}">
-                            <input type="hidden" name="type" value="admission">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea"  required></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
                                 <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
@@ -112,16 +104,13 @@ PICKPRIME - Your College Picker
                     </table>
                 </div>
                 <div id="campus_related" class="col s12">
-                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
-                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                        <input type="hidden" name="college" value="{{ $result['0']->ambassadors_college_id }}">
-                        <input type="hidden" name="type" value="campus">
+                    <form class="col s12">
                         <div class="row">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea" required></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
                                 <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
@@ -146,16 +135,13 @@ PICKPRIME - Your College Picker
                     </table>
                 </div>
                 <div id="placement_related" class="col s12">
-                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
+                    <form class="col s12">
                         <div class="row">
-                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                            <input type="hidden" name="college" value="{{ $result['0']->ambassadors_college_id }}">
-                            <input type="hidden" name="type" value="placement">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
+                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea" required></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
                             </div>
                             <div class="right col s3">
                                 <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>

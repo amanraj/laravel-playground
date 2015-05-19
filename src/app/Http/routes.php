@@ -43,6 +43,7 @@ Route::get('/courses/{course_id}/course-reviews','CourseController@reviews');
 
 
 Route::get('/forum','ForumController@viewForum');
+Route::post('/forum/post','ForumController@post');
 Route::get('/forum/threads/{thread_id}','ForumController@viewThread');
 Route::post('/forum/threads/{thread_id}/reply','ForumController@reply');
 Route::patch('/forum/threads/{thread_id}/{post_id}/edit','ForumController@editPost');
