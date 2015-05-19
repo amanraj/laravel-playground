@@ -11,14 +11,14 @@ PICKPRIME - Your College Picker
 
         <div class="row">
             <div class="col s4">
-            <h5>{{ $result['0']->ambassadors_college_id }} Forum</h5>
+            <h5>{{ $college }}, Forum</h5>
             </div>
         </div>
         <div class="row">
             <div class="card s12">
                 <div class="col s4">
                 <p><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
-                <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $result['0']->ambassadors_college_id }}</span>
+                <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $college }}</span>
                 </div>
                 <div class="card grey lighten-2" style="height:300px;margin:10px;">
                     <div class="col s12">
