@@ -16,7 +16,6 @@ class CreateAmbassadorsTable extends Migration {
 		{
 			$table->increments('ambassadors_id');
 			$table->string('ambassadors_name');
-			$table->string('ambassadors_type');
 			$table->string('ambassadors_email')->unique();
 			$table->string('ambassadors_password', 60);
 			$table->string('mobile_number',11);

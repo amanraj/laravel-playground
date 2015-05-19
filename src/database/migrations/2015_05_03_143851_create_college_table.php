@@ -18,7 +18,7 @@ class CreateCollegeTable extends Migration {
 			$table->string('college_name');
 			$table->string('college_type');
 			$table->string('college_location');
-			$table->string('college_accrediation');
+			$table->string('college_accreditation');
 			$table->string('college_contact_number');
 			$table->string('college_email');
 			$table->string('college_website');

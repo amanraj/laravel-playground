@@ -251,7 +251,7 @@
 	      <footer class="footer grey darken-4">
             <table >
                 <tr>
-                    <td class="grey-text text-lighten-4 left-align"><small>© 2015<br>Copyrights Reserved</small></td>
+                    <td class="grey-text text-lighten-4 left-align"><small>© 2015 Copyrights Reserved</small></td>
                     <td class="grey-text text-lighten-4 right-align">
                         <ul>
                             <li style="display:inline"><a class="grey-text text-lighten-4 r" href="{{ action('footerController@be_ambassador') }}">Be a Ambassador</a></li>

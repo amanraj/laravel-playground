@@ -15,7 +15,7 @@ class CreateCollegeChoicesTable extends Migration {
 		Schema::create('college_choices', function(Blueprint $table)
 		{
 			$table->integer('user_reference_id');
-			$table->integer('collge_reference_id');
+			$table->integer('college_reference_id');
 		});
 	}
 

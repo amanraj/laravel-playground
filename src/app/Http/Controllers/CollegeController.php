@@ -52,6 +52,7 @@ class CollegeController extends Controller {
 			$college_details = DB::select('SELECT * FROM college WHERE college_id = ?',[$college_id]);
 			$courses = DB::select('SELECT course_name,course_id FROM course INNER JOIN course_college WHERE course.course_id = course_college.course_reference_id AND course_college.college_reference_id = ?',[$college_id]);
 			$course_reviews = DB::select('SELECT * FROM course_college_review WHERE college_reference_id = ?',[$college_id]);
+			$course_rating = DB::select('SELECT * FROM course_college_rating WHERE college_reference_id = ?',[$college_id]);
 			$ambassadors = DB::select('SELECT * FROM ambassadors WHERE ambassadors_college_id = ?',[$college_id]);
 			$general_question = DB::select('SELECT * FROM college_forum_questions WHERE question_type = ? AND question_college_id = ?',['general',$college_id]);
 			$admission_question = DB::select('SELECT * FROM college_forum_questions WHERE question_type = ? AND question_college_id = ?',['admission',$college_id]);
@@ -65,6 +66,7 @@ class CollegeController extends Controller {
 				'college_details' => $college_details,
 				'courses' => $courses,
 				'course_reviews' => $course_reviews,
+				'course_rating' => $course_rating,
 				'general_question' => $general_question,
 				'admission_question' => $admission_question,
 				'campus_question' => $campus_question,

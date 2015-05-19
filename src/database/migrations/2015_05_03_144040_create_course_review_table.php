@@ -17,6 +17,7 @@ class CreateCourseReviewTable extends Migration {
 			$table->increments('course_review_id');
 			$table->integer('course_reference_id');
 			$table->string('reviewer_name');
+			$table->dateTime('course_review_date');
 			$table->string('reviewer_description');
 			$table->string('reviewer_college');
 			$table->float('reviewer_rating');

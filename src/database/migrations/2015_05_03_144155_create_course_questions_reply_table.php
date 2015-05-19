@@ -18,7 +18,7 @@ class CreateCourseQuestionsReplyTable extends Migration {
 			$table->integer('course_question_reference_id');
 			$table->integer('user_reference_id');
 			$table->text('reply');
-			$table->integer('up_vaote');
+			$table->integer('up_vote');
 			$table->dateTime('date');			
 		});
 	}

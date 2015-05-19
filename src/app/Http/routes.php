@@ -72,7 +72,7 @@ Route::get('/team','footerController@team');
 Route::get('/be_a_ambassador','footerController@be_ambassador');
 
 Route::get('/github','UserController@github');
-Route::get('/account/github','UserController@github_redirect');
+Route::get('/user/github','UserController@github_redirect');
 
 
 Route::controllers([

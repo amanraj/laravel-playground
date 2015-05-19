@@ -18,7 +18,7 @@ class CreateCourseCollegeRatingTable extends Migration {
 			$table->integer('course_reference_id');
 			$table->integer('college_reference_id');
 			$table->float('course_content_rating');
-			$table->float('course_placemet_rating');
+			$table->float('course_placement_rating');
 			$table->float('course_future_scope_rating');
 			$table->float('course_faculty_rating');			
 		});

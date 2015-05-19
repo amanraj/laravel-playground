@@ -66,12 +66,12 @@ class UserController extends Controller {
 
 	public function github_redirect()
 	{
-		return \Socialize::with('github')->redirect();
+		return \Socialize::with('facebook')->redirect();
 	}
 
 	public function github()
 	{
-		$user = \Socialize::with('github')->user();
+		$user = \Socialize::with('facebook')->user();
 
 		// OAuth Two Providers
 		$token = $user->token;
@@ -83,9 +83,20 @@ class UserController extends Controller {
 		// All Providers
 		$user->getId();
 		$user->getNickname();
-		$user->getName();
-		$user->getEmail();
+		$name = $user->getName();
+		$email = $user->getEmail();
 		$user->getAvatar();
+		$rows = DB::select('SELECT * FROM users WHERE user_email = ?',[$email]);
+		if(count($rows) == 0){
+			$password = Hash::make($password);
+			DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number) VALUES(?,?,?,?)',[$name,$email,$password,$mobile]);
+			Session::put('email',$hashed['0']->user_email);
+			return redirect('/');
+		}else{
+			$error = '* User with this Email already exists';
+			return view('welcome')->with(array('error' => $error));
+		}
+		
 	}
 
 	public function notification()
