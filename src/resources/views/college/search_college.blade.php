@@ -46,12 +46,12 @@ PICKPRIME - Your College Picker
 
 
 @section('content')
-<div class="row">   
+<div class="row center-align">   
     <div class="col s12">
-        <div class="card">
-            <div class="col s3">
+        <div class="card center-align">
+            <div class="col s3 center-align">
             <p>      
-            <div class="card" style="height:545px">             
+            <div class="card center-align" style="height:545px">             
                 <p style="margin-top:10px">
                 <b>Select Stream</b>
                     <!-- Dropdown Trigger -->
