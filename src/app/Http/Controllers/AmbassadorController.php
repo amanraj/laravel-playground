@@ -30,27 +30,35 @@ class AmbassadorController extends Controller {
 	 */
 	public function viewAmbassadors()
 	{
-		$results = DB::select('select * from ambassadors');
-		
-		return view('/ambassadors/ambassadors')->with(array(
-			'result' => $results
-			));
+		if(Session::has('email')){
+			$results = DB::select('select * from ambassadors');
+			
+			return view('/ambassadors/ambassadors')->with(array(
+				'result' => $results
+				));
+		}else{
+			return redirect('/landing');
+		}
 	}
 
 	public function ambassador($ambassador_id)
 	{
-		$results = DB::select('select * from ambassadors where ambassadors_id = ?', [$ambassador_id]);
-		$general_question = DB::select('select * from college_forum_questions where question_type = ?',['general']);
-		$admission_question = DB::select('select * from college_forum_questions where question_type = ?',['admission']);
-		$campus_question = DB::select('select * from college_forum_questions where question_type = ?',['campus']);
-		$placement_question = DB::select('select * from college_forum_questions where question_type = ?',['placement']);
-		return view('/ambassadors/ambassador')->with(array(
-			'result' => $results,
-			'general_question' => $general_question,
-			'admission_question' => $admission_question,
-			'campus_question' => $campus_question,
-			'placement_question' => $placement_question
-			));
+		if(Session::has('email')){
+			$results = DB::select('select * from ambassadors where ambassadors_id = ?', [$ambassador_id]);
+			$general_question = DB::select('select * from college_forum_questions where question_type = ?',['general']);
+			$admission_question = DB::select('select * from college_forum_questions where question_type = ?',['admission']);
+			$campus_question = DB::select('select * from college_forum_questions where question_type = ?',['campus']);
+			$placement_question = DB::select('select * from college_forum_questions where question_type = ?',['placement']);
+			return view('/ambassadors/ambassador')->with(array(
+				'result' => $results,
+				'general_question' => $general_question,
+				'admission_question' => $admission_question,
+				'campus_question' => $campus_question,
+				'placement_question' => $placement_question
+				));
+		}else{
+			return redirect('/landing');
+		}
 	}
 	
 

@@ -29,8 +29,11 @@ class DashboardController extends Controller {
 	 */
 	public function viewDashboard()
 	{
-		
-		return view('/dashboard/home');
+		if(Session::has('email')){
+			return view('/dashboard/home');
+		}else{
+			return redirect('/landing');
+		}
 	}
 	
 

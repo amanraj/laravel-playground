@@ -30,9 +30,9 @@ class LandingController extends Controller {
 	 */
 	public function index()
 	{
-		if (Session::has('id'))
+		if (Session::has('email'))
 		{
-		    return Redirect::to('dashboard');
+		    return redirect('/');
 		}
 		return view('welcome')->with(array('error' => ''));
 	}
