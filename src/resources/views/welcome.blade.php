@@ -124,10 +124,10 @@
             </ul>
 
             <ul id="browse-menu" class="dropdown-content">
-                <li><a href="{{ action('CollegeController@viewColleges') }}" class="blue-text text-darken-4">Colleges</a></li>
-                <li><a href="courses" class="blue-text text-darken-4">Courses</a></li>
-                <li><a href="#!" class="blue-text text-darken-4">Appetite Hunt</a></li>
-                <li><a href="ambassador" class="blue-text text-darken-4">Ambassadors</a></li>
+                <li><a href="{{ action('CollegeController@viewColleges') }}"  class="light-blue-text text-darken-4">Colleges<span class="badge light-blue-text text-darken-4"><i class="mdi-social-school" style="position:relative;bottom:20px"></i></span></a></li>
+                <li><a href="{{ action('CourseController@viewCourses') }}"  class="light-blue-text text-darken-4">Courses<span class="badge light-blue-text text-darken-4"><i class="mdi-av-my-library-books" style="position:relative;bottom:20px"></i></span></a></li>
+                <li><a href="#!"  class="light-blue-text text-darken-4">Appetite Hunt<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/counsel.jpg') }}" style="height:30px;width:30px;"></a></li>
+                <li><a href="{{ action('AmbassadorController@viewAmbassadors') }}"  class="light-blue-text text-darken-4">Ambassadors<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/ambs.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
 
             <ul id="sign_in" class="modal">
@@ -208,7 +208,9 @@
 
                                 <div class="modal-footer">
                                     <button class="modal-action modal-close btn waves-effect waves-light  blue darken-4" type="submit" name="action">Sign Up</button>
+                                <a href="{!!URL::to('github')!!}">Login with Facebook</a>
                                 </div>
+
                             </form>
                         </div>
                    
@@ -237,7 +239,7 @@
                                 </form>
                             </li>
            
-                            <li><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                            <li style="width:200px;"><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
 
                             <li><a class=" modal-trigger " data-target="sign_in" style="cursor:pointer"><b>Sign In</b></a></li>
     
@@ -323,7 +325,7 @@
                     <ul>
                      <li style="display:inline"><a href="{{ action('footerController@be_ambassador') }}">Be a Ambassador</a></li>
                       <li style="display:inline;margin-left:20px"><a href="#">Form for Reviews</a></li>
-                      <li style="display:inline;margin-left:20px"><a href="team">About Us</a></li>
+                      <li style="display:inline;margin-left:20px"><a href="{{ action('footerController@team') }}">About Us</a></li>
                       <li style="display:inline;margin-left:20px"><a href="#">Privacy Policy</a></li>
                       <li style="display:inline ;margin-left:20px"><a href="#">Terms & Conditions</a></li>
                     </ul>

@@ -106,10 +106,9 @@
             </ul>
 
             <ul id="browse-menu" class="dropdown-content">
-                <li><a href="{{ action('CollegeController@viewColleges') }}"  class="light-blue-text text-darken-4">Colleges</a></li>
-                <li><a href="{{ action('CourseController@viewCourses') }}"  class="light-blue-text text-darken-4">Courses</a></li>
-                <li><a href="#!"  class="light-blue-text text-darken-4">Appetite Hunt</a></li>
-                <li><a href="{{ action('AmbassadorController@viewAmbassadors') }}"  class="light-blue-text text-darken-4">Ambassadors</a></li>
+                <li><a href="{{ action('CollegeController@viewColleges') }}"  class="light-blue-text text-darken-4">Colleges<span class="badge light-blue-text text-darken-4"><i class="mdi-social-school" style="position:relative;bottom:20px"></i></span></a></li>
+                <li><a href="{{ action('CourseController@viewCourses') }}"  class="light-blue-text text-darken-4">Courses<span class="badge light-blue-text text-darken-4"><i class="mdi-av-my-library-books" style="position:relative;bottom:20px"></i></span></a></li>
+<li><a href="#!"  class="light-blue-text text-darken-4">Appetite Hunt<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/counsel.jpg') }}" style="height:30px;width:30px;"></a></li>                <li><a href="{{ action('AmbassadorController@viewAmbassadors') }}"  class="light-blue-text text-darken-4">Ambassadors<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/ambs.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
 
             <ul id="my-account" class="dropdown-content" >
@@ -117,7 +116,7 @@
                 <li><a data-target="profile"  class="modal-trigger light-blue-text text-darken-4">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>
                 <li><a href="#!"  class="light-blue-text text-darken-4">Settings<span class="badge light-blue-text text-darken-4"><i class="mdi-action-settings" style="position:relative;bottom:20px"></i></span></a></li>
                 <li class="divider"></li>
-                <li><a href="home"  class="light-blue-text text-darken-4">Sign Out</a></li>
+                <li><a href="home"  class="light-blue-text text-darken-4">Sign Out<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/logout.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
 
             <nav>
@@ -140,7 +139,7 @@
                             </form>
                         </li>
                         <li><a href="#"><i class="mdi-action-home"></i></a></li>
-                        <li><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                        <li  style="width:200px;"><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                         <li style="width:200px"><a class="dropdown-account" href="#!" data-activates="my-account"><b>My Account</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                     </ul>
                     <!--================================
