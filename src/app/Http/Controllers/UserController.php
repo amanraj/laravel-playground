@@ -55,6 +55,7 @@ class UserController extends Controller {
 		if(count($rows) == 0){
 			$password = Hash::make($password);
 			DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number) VALUES(?,?,?,?)',[$name,$email,$password,$mobile]);
+			Session::put('email',$hashed['0']->user_email);
 			return redirect('/');
 		}else{
 			$error = '* User with this Email already exists';
