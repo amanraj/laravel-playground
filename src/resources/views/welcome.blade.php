@@ -312,9 +312,9 @@
             <!--===============================
             Including the Main Body
             ===============================-->
-            <div class="container">
+            
                 @yield('content')
-            </div>
+            
             </main>
            <footer class="footer grey darken-4 white-text">
                 <table>

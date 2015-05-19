@@ -30,7 +30,7 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('content')
-
+<div class="container">
 <div id="profile" class="modal">
     <div class="modal-content center-align">
         <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
@@ -47,5 +47,5 @@ PICKPRIME - Your College Picker
         <a href="#!" class=" modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:125px; position:absolute; left:125px; border-radius:0px">Cancel</a>
     </b>
 </div>                   
-
+</div>
 @stop

@@ -44,12 +44,12 @@ PICKPRIME - Your College Picker
 @section('content')
 
 <div >
-    <h3>Your College Choices ( 6 )</h3>
+    
     
         
         
                 <div class="row">
-                    <div class="col s3" style="position:relative;top:357px;">
+                    <div class="col s3" style="position:relative;top:443px;width:250px;">
                             <table class= "bordered" style="border:1px solid grey;">
 
                 <div class="card center-align" >               
@@ -83,7 +83,7 @@ PICKPRIME - Your College Picker
                 </div>
               </table>
               </div>
-            
+            <h3>Your College Choices ( 6 )</h3>
   <div id="owl-college" class="owl-carousel owl-theme col s9">        
     
   
@@ -459,8 +459,8 @@ Javascript files
   var owl_college = $("#owl-college");
  
   owl_college.owlCarousel({
-      items : 3, //10 items above 1000px browser width
-      itemsDesktop : [1000,3], //5 items between 1000px and 901px
+      items : 4, //10 items above 1000px browser width
+      itemsDesktop : [1000,4], //5 items between 1000px and 901px
       itemsDesktopSmall : [900,2], // betweem 900px and 601px
       itemsTablet: [600,1], //2 items between 600 and 0
       itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option

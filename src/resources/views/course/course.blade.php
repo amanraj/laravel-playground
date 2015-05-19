@@ -9,6 +9,7 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('content')
+<div class="container">
         <div class="row">
             <div class="card col s12">
                 <h3 class="center-align">{{ $result_1['0']->course_name }}</h3>
@@ -171,5 +172,6 @@ PICKPRIME - Your College Picker
                         </ul>
                     </div>
             </div>
+        </div>
         </div>
 @stop

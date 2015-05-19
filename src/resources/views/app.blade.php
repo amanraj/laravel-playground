@@ -197,9 +197,9 @@
       	<!--===============================
 	       Including the Main Body
 	      ===============================-->
-        <div class="container">
+    
       	    @yield('content')
-        </div>
+    
 
         <!--===============================
         Including the Profile body

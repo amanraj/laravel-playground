@@ -21,6 +21,7 @@ PICKPRIME - Your College Picker
 @stop
 
 @section('content')
+<div class="container">
 <div class="row">
 		<!--====================================
 		College Image Name and Location
@@ -615,5 +616,6 @@ PICKPRIME - Your College Picker
             </div>
         </div>
 	    </div>
+    </div>
     </div>
 @stop
