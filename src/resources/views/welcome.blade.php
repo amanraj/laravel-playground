@@ -316,24 +316,24 @@
                 @yield('content')
             </div>
             </main>
-           <footer class="footer grey darken-4">
+           <footer class="footer grey darken-4 white-text">
                 <table>
                     <tr>
                     
                      <div style="font-size:4px">
-                    <td class="grey-text text-lighten-4 left" >
+                    <td class="grey-text text-lighten-4 left" style="font-size:14px;position:relative;bottom:-25px;" >
 
 
-                    <small>© 2015<br>Copyrights Reserved</small></td></div>
+                   <small> © 2015 Copyrights Reserved</small></td></div>
 
 
 <td class="grey-text text-lighten-4 right-align">
                     <ul>
-                     <li style="display:inline"><a href="{{ action('footerController@be_ambassador') }}">Be a Ambassador</a></li>
-                      <li style="display:inline;margin-left:20px"><a href="#">Form for Reviews</a></li>
-                      <li style="display:inline;margin-left:20px"><a href="{{ action('footerController@team') }}">About Us</a></li>
-                      <li style="display:inline;margin-left:20px"><a href="#">Privacy Policy</a></li>
-                      <li style="display:inline ;margin-left:20px"><a href="#">Terms & Conditions</a></li>
+                      <li style="display:inline"><a href="{{ action('footerController@be_ambassador') }}" class="white-text"><b>Be a Ambassador</b></a></li>
+                      <li style="display:inline;margin-left:20px"><a href="#" class="white-text"><b>Form for Reviews</b></a></li>
+                      <li style="display:inline;margin-left:20px"><a href="{{ action('footerController@team') }}" class="white-text"><b>About Us</b></a></li>
+                      <li style="display:inline;margin-left:20px"><a href="#" class="white-text"><b>Privacy Policy</b></a></li>
+                      <li style="display:inline ;margin-left:20px"><a href="#" class="white-text"><b>Terms & Conditions</b></a></li>
                     </ul>
                 </td>
               </tr></table>
