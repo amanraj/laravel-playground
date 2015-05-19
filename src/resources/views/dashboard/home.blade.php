@@ -37,6 +37,12 @@ PICKPRIME - Your College Picker
 #owl-college table td, #owl-course table td{
   padding: 3px;
 }
+
+table.heading , table.heading td{
+    border : 2px solid grey;
+
+  }
+
   </style>
 @stop
 
@@ -50,7 +56,7 @@ PICKPRIME - Your College Picker
         
                 <div class="row">
                     <div class="col s3" style="position:relative;top:443px;width:250px;">
-                            <table class= "bordered" style="border:1px solid grey;">
+                            <table class= "heading">
 
                 <div class="card center-align" >               
                 <tr >
