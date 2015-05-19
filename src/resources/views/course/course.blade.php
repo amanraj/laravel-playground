@@ -10,17 +10,7 @@ PICKPRIME - Your College Picker
 @section('content')
         <div class="row">
             <div class="card col s12">
-                <div class="col s4">
-                    <p>
-                        <img src="{{ asset( $result_1['0']->course_image_1 ) }}" alt="iit kgp" width="100%">
-                    </p>
-                    <p class="light-blue-text text-darken-4 center-align"><b>{{ $result_1['0']->course_name }}</b></p>
-                </div>
-                <div class="col s8">
-                    <p>
-                    	<img src="{{ asset( $result_1['0']->course_image_3 ) }}" alt="iit kgp lg" width="100%">                    
-                    </p>
-                </div>
+                <h3 class="center-align">Civil Engineering</h3>
             </div>
         </div>
         <div class="row">

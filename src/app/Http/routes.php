@@ -71,6 +71,10 @@ Route::get('/search_results','SearchController@search');
 Route::get('/team','footerController@team');
 Route::get('/be_a_ambassador','footerController@be_ambassador');
 
+Route::get('/github','UserController@github');
+Route::get('/account/github','UserController@github_redirect');
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

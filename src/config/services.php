@@ -34,4 +34,10 @@ return [
 		'secret' => '',
 	],
 
+	'github' => [
+    'client_id' => '64d3e73589f96b645b32',
+    'client_secret' => '73cbc8594e314c81f1f601d01a4f4ee1389c373e',
+    'redirect' => 'http://localhost/pp-laravel/src/public',
+    ],
+
 ];

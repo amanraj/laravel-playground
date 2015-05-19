@@ -64,6 +64,30 @@ class UserController extends Controller {
 		
 	}
 
+	public function github_redirect()
+	{
+		return \Socialize::with('github')->redirect();
+	}
+
+	public function github()
+	{
+		$user = \Socialize::with('github')->user();
+
+		// OAuth Two Providers
+		$token = $user->token;
+
+		// OAuth One Providers
+		$token = $user->token;
+		$tokenSecret = $user->tokenSecret;
+
+		// All Providers
+		$user->getId();
+		$user->getNickname();
+		$user->getName();
+		$user->getEmail();
+		$user->getAvatar();
+	}
+
 	public function notification()
 	{
 		
