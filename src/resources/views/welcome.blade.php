@@ -7,7 +7,7 @@
     <!--Including the title-->
     <title>@yield('title')</title>
 
-
+    
     <!--Common CSS Files-->
     
     <link rel="stylesheet/less" href="{{ asset('/materialize/css/materialize.min.css') }}">
@@ -15,7 +15,7 @@
     <script src="{{ asset('/js/less-1.6.1.min.js') }}"></script>
     <script src="{{ asset('/js/jquery-1.9.1.min.js') }}"></script> 
     <script src="{{ asset('/materialize/js/materialize.min.js') }}"></script>
-
+    @yield('head')
 
 <script type="text/javascript">
             $(document).ready(function(){
@@ -106,7 +106,7 @@
 
 
 <body>
-
+        <?php $error=''; ?>
         <!--===============================
         Including the Header body
         ===============================-->
@@ -309,6 +309,12 @@
                     
                 </script>
             @endif
+            <!--===============================
+            Including the Main Body
+            ===============================-->
+            <div class="container">
+                @yield('content')
+            </div>
             </main>
            <footer class="footer grey darken-4">
                 <table>
