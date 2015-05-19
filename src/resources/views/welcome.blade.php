@@ -330,7 +330,7 @@
 <td class="grey-text text-lighten-4 right-align">
                     <ul>
                       <li style="display:inline"><a href="{{ action('footerController@be_ambassador') }}" class="white-text"><b>Be a Ambassador</b></a></li>
-                      <li style="display:inline;margin-left:20px"><a href="#" class="white-text"><b>Form for Reviews</b></a></li>
+                      <li style="display:inline;margin-left:20px"><a href="{{ action('footerController@review') }}" class="white-text"><b>Form for Reviews</b></a></li>
                       <li style="display:inline;margin-left:20px"><a href="{{ action('footerController@team') }}" class="white-text"><b>About Us</b></a></li>
                       <li style="display:inline;margin-left:20px"><a href="#" class="white-text"><b>Privacy Policy</b></a></li>
                       <li style="display:inline ;margin-left:20px"><a href="#" class="white-text"><b>Terms & Conditions</b></a></li>

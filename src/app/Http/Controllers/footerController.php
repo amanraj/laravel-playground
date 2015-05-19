@@ -27,9 +27,15 @@ class footerController extends Controller {
 		return view('/footer/team');
 	}
 
-public function be_ambassador(){
+	public function be_ambassador()
+	{
 
 		return view('/footer/be_a_ambassador');
+	}
+
+	public function review()
+	{
+		return view('footer/review');
 	}
 
 }
