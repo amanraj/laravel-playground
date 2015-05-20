@@ -204,11 +204,11 @@
         <!--===============================
         Including the Profile body
         ===============================-->
-        <div id="profile" class="modal">
+        <div id="profile" class="modal" style="border:2px solid grey">
             <div class="modal-content center-align">
                 <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
                 <div class="center-align">
-                    <span class="blue-text text-darken-4">
+                    <span class="grey-text text-darken-3">
                         <p><b>Karan Singh Grover</b></p>
                         <p><i class="mdi-communication-email"></i> karan_grover@abc.com</p>
                         <p><i class="mdi-communication-call"></i> 0123456789</p>
@@ -216,15 +216,15 @@
                 </div>  
             </div>
         
-                <div class="modal-footer no-padding"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius-left-bottom:5px">Cancel</a>
-                <a href="#edit_profile" class="modal-trigger waves-effect waves-blue btn-large blue darken-4" style="width:50%;border-radius:0px">Edit</a></div>
+                <div class="modal-footer no-padding"><a href="#!" class="modal-action modal-close waves-effect waves-grey btn-large grey darken-2" style="width:50%;border-radius-left-bottom:5px">Cancel</a>
+                <a href="#edit_profile" class="modal-trigger waves-effect waves-grey btn-large grey darken-2" style="width:50%;border-radius:0px">Edit</a></div>
         
         </div>
-        <div id="edit_profile" class="modal">
+        <div id="edit_profile" class="modal" style="border:2px solid grey">
             <div class="modal-content center-align">
                 <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
                 <div class="center-align">
-                    <form class="blue-text text-darken-4">
+                    <form class="grey-text text-darken-3">
                         <div class="input-field col s5 offset-s1">
                             <input id="name" type="text" name="name" value="Karan Sigh Grover" class="validate">
                             <label for="name"></label>
@@ -237,7 +237,7 @@
                                 <input id="phone" type="text" name="phone" value="0123456789" class="validate">
                                 <label for="phone"><i class="mdi-communication-call right"></i></label>
                             </div>
-                            <div class="modal-footer col s3 no-padding"><a href="#!" class="modal-action modal-close waves-effect waves-blue btn-large blue darken-4" style="border-radius:5px">Save</a>
+                            <div class="modal-footer col s3 no-padding"><a href="#!" class="modal-action modal-close waves-effect waves-grey btn-large grey darken-2" style="border-radius:5px">Save</a>
                             </div>
                     </form>
                 </div>  
