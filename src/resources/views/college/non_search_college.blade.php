@@ -50,7 +50,7 @@ PICKPRIME - Your College Picker
 <div class="row">   
     <div class="col s12">
         <div class="card">
-            <div class="col s3">
+            <div class="col s3 center-align">
             <p>      
             <div class="card" style="height:545px">             
                 <p style="margin-top:10px">
