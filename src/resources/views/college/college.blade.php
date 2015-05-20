@@ -110,18 +110,19 @@ PICKPRIME - Your College Picker
 	    <div class="col s12 light-blue-text text-darken-4">
 			<ul class="tabs ">
 				<li class="tab col s3 "><a class="active indigo-text text-darken-3" href="#overview">Overview</a></li>
-				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#college-review">College Review</a></li>
-				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#course-review">Course Review</a></li>
+				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#college-review">College Review & FAQs</a></li>
+				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#course-review">Course Review & FAQs</a></li>
 				<li class="tab col s3 "><a class="indigo-text text-darken-3" href="#forum">Forum</a></li>
 			</ul>
 	    </div>
+	</div>    
 	    <!--====================================
 	    Overview Tab
 	    =====================================-->
 	    <div id="overview" class="col s12">
 			<ul class="collapsible" data-collapsible="expandable">
 				<li>
-					<div class="collapsible-header active"><i class="mdi-image-filter-drama"></i><b>General Information</b></div>
+					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>General Information</b></div>
 					<div class="collapsible-body"><p>{{ $college_details['0']->college_overview }}</p></div>
 				</li>
 				<li>
@@ -154,125 +155,65 @@ PICKPRIME - Your College Picker
 	    College Review Tab
 	    =====================================-->
 	    <div id="college-review" class="col s12 ">
-	    	@if ( count($ambassadors)==0 )
-	    	<div class="card  valign-wraper medium grey lighten-2">
-		    	<div class="row">
-		    		<div class="col s3 ">
-		    			<ul class="collection valign">
-		    				<li class="collection-item" style="padding: 5px 25px;">
-				    			Nothing here yet.
-				    		</li>
-				    	</ul>
-				    </div>
-				</div>
-			</div>
-			@else	    		
-	    	@foreach ( $college_reviews as $college_review )
-	    	<div class="card  valign-wraper medium grey lighten-2">
-		    	<div class="col s12">
-		    	<div class="row">
-			  		<div class="col s2 ">		
-			  				<table>
-							<tr>
-								<td colspan="2">{{ $college_review->college_review_date }}</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		<div class="col s2 ">		
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress" style="border-radius:5px;">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_overall_rating * 10 }}%;"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Overall</td>
-								<td>{{ $college_review->college_overall_rating }}</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		<div class="col s2">	
-			  			<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress" style="border-radius:5px;">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_campuslife_rating * 10 }}%;"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Campus Life</td>
-								<td>{{ $college_review->college_campuslife_rating }}</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  			<div class="col s2 ">	
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_hostel_rating * 10 }}%"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Hostels</td>
-								<td>{{ $college_review->college_hostel_rating }}</td>
-			  				</tr>
-			  			</table>
-			  			</div>
-			  			<div class="col s2 ">	
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_location_rating * 10 }}%"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Location</td>
-								<td>{{ $college_review->college_location_rating }}</td>
-			  				</tr>
-			  			</table>
-			  			</div>
-			  			<div class="col s2 ">	
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_facilities_rating * 10 }}%"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Facilities</td>
-								<td>{{ $college_review->college_facilities_rating }}</td>
-			  				</tr>
-			  			</table>
-			  			</div>	
-		    		</div>
-		    		<div class="row">
-		    		<div class="col s12">
-		    			<p>
-		    				<b>{{ $college_review->reviewer_name }},<br/>{{ $college_review->reviewer_college }}</b>
-		    			</p>
-		    			<p>
-		    				{{ $college_review->reviewer_description}}
-		    			</p>
-		    			<p>
-		    				{{ $college_review->review }}
-		    			</p>
-		    		</div>
-		    		</div>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	@endforeach
-	    	@endif
-	    </div>	
+	    	<ul class="collapsible" data-collapsible="expandable">
+				<li>
+					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Campus Life</b></div>
+					<div class="collapsible-body">
+					@foreach ($college_reviews as $college_review)
+					@if ( ($college_review->college_review_id)%2 == 0 )
+						<div class="card right-align">
+					@else
+						<div class="card left-align">
+					@endif
+							{{ $college_review->review }}		
+						</div>
+					@endforeach	
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Hostel Life</b></div>
+					<div class="collapsible-body">
+					@foreach ($college_reviews as $college_review)
+					@if ( ($college_review->college_review_id)%2 == 0 )
+						<div class="card right-align">
+					@else
+						<div class="card left-align">
+					@endif
+							{{ $college_review->review }}		
+						</div>
+					@endforeach	
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Facilities</b></div>
+					<div class="collapsible-body">
+					@foreach ($college_reviews as $college_review)
+					@if ( ($college_review->college_review_id)%2 == 0 )
+						<div class="card right-align">
+					@else
+						<div class="card left-align">
+					@endif
+							{{ $college_review->review }}		
+						</div>
+					@endforeach	
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Location</b></div>
+					<div class="collapsible-body">
+					@foreach ($college_reviews as $college_review)
+					@if ( ($college_review->college_review_id)%2 == 0 )
+						<div class="card right-align">
+					@else
+						<div class="card left-align">
+					@endif
+							{{ $college_review->review }}		
+						</div>
+					@endforeach	
+					</div>
+				</li>
+			</ul>		
+		</div>
 	    <!--====================================
 	    Course Review Tab
 	    =====================================-->
@@ -345,111 +286,60 @@ PICKPRIME - Your College Picker
 				</div>
 			</div>                            
 						<h4>User Reviews</h4>
-						@foreach ($course_reviews as $course_review)
-							@if ($course->course_id == $course_review->course_reference_id)
-								<div class="card  valign-wraper medium grey lighten-2">
-								<div class="col s12">
-							    	<div class="row">
-							    		<div class="col s2 ">		
-			  								<table>
-												<tr>
-													<td colspan="2">{{ $course_review->review_date }}</td>
-			  									</tr>
-			  								</table>
-			  							</div>
-			  							<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->reviewer_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Overall</td>
-													<td>{{ $course_review->reviewer_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-									    <div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_content_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Course Content</td>
-													<td>{{ $course_review->course_content_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-						  				<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_placement_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Placements</td>
-													<td>{{ $course_review->course_placement_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-						  				<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_future_scope_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Future Scope</td>
-													<td>{{ $course_review->course_future_scope_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-						  				<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_faculty_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Faculty</td>
-													<td>{{ $course_review->course_faculty_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-								  	</div>
-								  	<div class="row">
-		    		<div class="col s12">
-		    			<p>
-		    				<b>{{ $course_review->reviewer_name }},<br/>{{ $course_review->reviewer_college }}</b>
-		    			</p>
-		    			<p>
-		    				{{ $course_review->reviewer_description}}
-		    			</p>
-		    			<p>
-		    				{{ $course_review->review }}
-		    			</p>
-		    		</div>
-		    		</div>							    		
+						<ul class="collapsible" data-collapsible="expandable">
+							<li>
+								<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Future Scope</b></div>
+								<div class="collapsible-body">
+								@foreach ($course_reviews as $course_review)
+								@if ($course->course_id == $course_review->course_reference_id)
+									@if ( ($course_review->course_college_review_id)%2 == 0 )
+										<div class="card right-align">
+									@else
+										<div class="card left-align">
+									@endif
+										{{ $course_review->future_scope }}		
+									</div>
+								@endif	
+								@endforeach	
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Faculty</b></div>
+								<div class="collapsible-body">
+								@foreach ($course_reviews as $course_review)
+								@if ($course->course_id == $course_review->course_reference_id)
+									@if ( ($course_review->course_college_review_id)%2 == 0 )
+										<div class="card right-align">
+									@else
+										<div class="card left-align">
+									@endif
+										{{ $course_review->faculty }}		
+									</div>
+								@endif
+								@endforeach	
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Placements</b></div>
+								<div class="collapsible-body">
+								@foreach ($course_reviews as $course_review)
+								@if ($course->course_id == $course_review->course_reference_id)
+									@if ( ($course_review->course_college_review_id)%2 == 0 )
+										<div class="card right-align">
+									@else
+										<div class="card left-align">
+									@endif
+										{{ $course_review->placement }}		
+									</div>
+								@endif
+								@endforeach	
+								</div>
+							</li>
+						</ul>	
+			    		
 					    		</div>
 					    		</div>
-					    	@endif	
-					    @endforeach						
+					    						
 					</div>
 				</li>
 			@endforeach
