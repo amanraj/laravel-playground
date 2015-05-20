@@ -56,7 +56,7 @@ PICKPRIME - Your College Picker
                 <p style="margin-top:10px">
                 <b>Select Stream</b>
                     <!-- Dropdown Trigger -->
-                <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
+                <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
                     <!-- Dropdown Structure -->
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Engineering</small></a></li>
@@ -68,7 +68,7 @@ PICKPRIME - Your College Picker
                 <p style="margin-top:30px">
                 <b>Select Location</b>
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown2' class='dropdown-content'>
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Maharashtra</small></a></li>
@@ -82,7 +82,7 @@ PICKPRIME - Your College Picker
                 <p style="margin-top:30px">
                 <b>Select Exam</b>
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown3' class='dropdown-content'>
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>IIT Mains</small></a></li>
@@ -94,13 +94,13 @@ PICKPRIME - Your College Picker
                 <p style="margin-top:30px">
                 <b>Select Fees</b>
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown4' class='dropdown-content'>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Below Rs. 50,000 per semester</small></a></li>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 50,000 to Rs 1  Lakh per semester</small></a></li>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 1  Lakh to Rs 1.5  Lakh per semester</small></a></li>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Above Rs. 1.5  Lakh</small></a></li> 
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Below Rs 50,000</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 50,000 - 1 Lac</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 1 Lac - 1.5 Lacs</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Above Rs 1.5 Lacs</small></a></li> 
                     </ul>
                 </p>    
             </div>        </div></p>               
@@ -109,7 +109,7 @@ PICKPRIME - Your College Picker
                         <p >
                         <small><b>Sort By</b></small> 
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown5"><small>Popularity</small><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown5"><small>Popularity</small><i class="mdi-navigation-arrow-drop-down right"></i></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown5' class='dropdown-content'>
                         <li><a href="#!" class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>random1</small></a></li>
