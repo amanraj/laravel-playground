@@ -7,7 +7,7 @@ PICKPRIME - Your College Picker
 
 <style type="text/css">
      
-    img{
+    #image img{
         height: 130px;
         width: 130px;
         border-radius:50%;
@@ -25,7 +25,7 @@ PICKPRIME - Your College Picker
                     <div class="collapsible-header" style="height:200px">
                         <table>
                             <tr>
-                                <td><img  src="{{ asset('images/ambassdors/candice.jpg')}}" alt="http://www.priorlakeassociation.org/wp-content/uploads/2011/06/blank-profile.png" ></td>
+                                <td><img  id="image" src="{{ asset('images/ambassdors/candice.jpg')}}" alt="http://www.priorlakeassociation.org/wp-content/uploads/2011/06/blank-profile.png" ></td>
                                 <td><h5 class="light-blue-text text-darken-4"><strong>Sheldon Owen</strong></h5>
                                 <h6><strong>CEO & Co-Founder</strong></h6>
                                 <img src="{{ asset('images/fb_icon.png')}}" href="s#!" class="responsive-img" style="height:30px;width:30px"> 
