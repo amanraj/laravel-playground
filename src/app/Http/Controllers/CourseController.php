@@ -47,16 +47,13 @@ class CourseController extends Controller {
 	{
 		
 		$results_1 = DB::select('select * from course where course_id = ?' , [$course_id] );
-		$results_2 = DB::select('select * from course_review where course_reference_id = ?' , [$course_id] );
 		if(Session::has('email')){
 			return view('/course/course')->with (array(
-					'result_1' => $results_1 , 
-					'result_2' => $results_2
+					'result_1' => $results_1
 					));
 		}else{
 			return view('/course/non_course')->with (array(
-					'result_1' => $results_1 , 
-					'result_2' => $results_2
+					'result_1' => $results_1
 					));
 		}
 

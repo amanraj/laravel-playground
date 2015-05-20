@@ -23,8 +23,10 @@ class CreateCourseCollegeReviewTable extends Migration {
 			$table->float('course_future_scope_rating');
 			$table->float('course_faculty_rating');
 			$table->text('course_content');
+			$table->text('faculty');
 			$table->text('top_institutes');
 			$table->text('future_scope');
+			$table->text('placement')
 			$table->text('job_place_work');
 			$table->string('reviewer_name');
 			$table->string('reviewer_description');
