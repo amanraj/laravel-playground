@@ -6,10 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CollegeChoices' => $baseDir . '/database/2015_05_18_105657_college_choices.php',
-    'CollegeNotes' => $baseDir . '/database/2015_05_18_105755_college_notes.php',
-    'CourseChoices' => $baseDir . '/database/2015_05_18_105709_course_choices.php',
-    'CourseNotes' => $baseDir . '/database/2015_05_18_105801_course_notes.php',
     'CreateAmbassadorsTable' => $baseDir . '/database/migrations/2015_05_03_144302_create_ambassadors_table.php',
     'CreateCollegeChoicesTable' => $baseDir . '/database/migrations/2015_05_18_112625_create_college_choices_table.php',
     'CreateCollegeForumQuestionsTable' => $baseDir . '/database/migrations/2015_05_03_144120_create_college_forum_questions_table.php',
@@ -28,6 +24,7 @@ return array(
     'CreateCourseReviewTable' => $baseDir . '/database/migrations/2015_05_03_144040_create_course_review_table.php',
     'CreateCourseTable' => $baseDir . '/database/migrations/2015_05_03_143942_create_course_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateReviewTable' => $baseDir . '/database/migrations/2015_05_20_052711_create_review_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2015_05_03_144245_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator.php',
