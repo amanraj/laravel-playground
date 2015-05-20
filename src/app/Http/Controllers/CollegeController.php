@@ -46,7 +46,6 @@ class CollegeController extends Controller {
 
 	public function college($college_id)
 	{	
-		
 			$college_reviews = DB::select('SELECT * FROM college_review WHERE college_reference_id = ?',[$college_id]);
 			$college_rating = DB::select('SELECT * FROM college_rating WHERE college_reference_id = ?',[$college_id]);
 			$college_details = DB::select('SELECT * FROM college WHERE college_id = ?',[$college_id]);

@@ -2,6 +2,7 @@
 use Session;
 use Illuminate\Http\Request;
 use DB;
+use Redirect;
 class ForumController extends Controller {
 
 	/*
@@ -50,6 +51,8 @@ class ForumController extends Controller {
 		$body = $request->input('question_body');
 
 		DB::insert('INSERT INTO college_forum_questions (question_college_id,user_reference_id,question_type,question_title,question_description) VALUES (?,?,?,?,?)',[$college,$user_id['0']->user_id,$type,$title,$body]);
+
+		return Redirect::back();
 	}
 	public function reply()
 	{
