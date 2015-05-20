@@ -35,9 +35,13 @@ class footerController extends Controller {
 		return view('/footer/be_a_ambassador');
 	}
 
-	public function review(Request $request)
+	public function review()
 	{
+		
+		
 		return view('footer/review');
+	}
+	public function submit_review(Request $request){
 		$name = $request->input('name');
 		$college = $request->input('college');
 		$branch = $request->input('branch');
@@ -49,8 +53,7 @@ class footerController extends Controller {
 		$hostel = $request->input('hostel');
 		$location = $request->input('location');
 		$facilities = $request->input('facilities');
-
-		DB::insert('INSERT INTO review (name,college,branch,year,campuslife,hostel,location,facilities,merits,demerits,comments) VALUES(?,?,?,?,?,?,?,?,?,?,?)',[$name,$college,$branch,$year,$campuslife,$hostel,$location,$facilities,$merits,$demerits,$comments] );
+        echo $name;
+		//DB::insert('INSERT INTO review (name,college,branch,year,campuslife,hostel,location,facilities,merits,demerits,comments) VALUES(?,?,?,?,?,?,?,?,?,?,?)',[$name,$college,$branch,$year,$campuslife,$hostel,$location,$facilities,$merits,$demerits,$comments] );
 	}
-
 }

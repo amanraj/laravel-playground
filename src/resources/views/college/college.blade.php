@@ -12,9 +12,6 @@ PICKPRIME - Your College Picker
 	border-radius: 5px;
 }
 
-.determinate {
-	border-radius: 5px;
-}
 
 </style>
 
@@ -151,7 +148,7 @@ PICKPRIME - Your College Picker
 			</ul>
 	    </div>
 	    <!--====================================
-	    College Review Tab
+	    college Review Tab
 	    =====================================-->
 	    <div id="college-review" class="col s12 ">
 	    	@if ( count($ambassadors)==0 )
@@ -169,104 +166,54 @@ PICKPRIME - Your College Picker
 			@else	    		
 	    	@foreach ( $college_reviews as $college_review )
 	    	<div class="card  valign-wraper medium grey lighten-2">
-		    	<div class="col s12">
 		    	<div class="row">
-			  		<div class="col s2 ">		
-			  				<table>
-							<tr>
-								<td colspan="2">{{ $college_review->college_review_date }}</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		<div class="col s2 ">		
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress" style="border-radius:5px;">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_overall_rating * 10 }}%;"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Overall</td>
-								<td>{{ $college_review->college_overall_rating }}</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  		<div class="col s2">	
-			  			<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress" style="border-radius:5px;">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_campuslife_rating * 10 }}%;"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Campus Life</td>
-								<td>{{ $college_review->college_campuslife_rating }}</td>
-			  				</tr>
-			  			</table>
-			  		</div>
-			  			<div class="col s2 ">	
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_hostel_rating * 10 }}%"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Hostels</td>
-								<td>{{ $college_review->college_hostel_rating }}</td>
-			  				</tr>
-			  			</table>
-			  			</div>
-			  			<div class="col s2 ">	
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_location_rating * 10 }}%"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Location</td>
-								<td>{{ $college_review->college_location_rating }}</td>
-			  				</tr>
-			  			</table>
-			  			</div>
-			  			<div class="col s2 ">	
-			  				<table>
-		    				<tr>
-		    					<td colspan="2">
-			    					<div class="progress">
-				      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_facilities_rating * 10 }}%"></div>
-				  					</div>
-			  					</td>
-		    				</tr>
-							<tr>
-								<td>Facilities</td>
-								<td>{{ $college_review->college_facilities_rating }}</td>
-			  				</tr>
-			  			</table>
-			  			</div>	
+		    		<div class="col s3 ">
+		    			<ul class="collection valign">
+		    				<li class="collection-item" style="padding: 5px 25px;">
+				    			May 2, 2015
+				    		</li>
+				    		<li class="collection-item" style="padding: 5px 25px;">
+								#############
+							</li>
+							<li class="collection-item" style="padding: 5px 25px;">
+								Overall Rating : {{ $college_review->college_overall_rating }}
+								<div class="progress">
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_overall_rating * 10 }}%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Hostel Life : {{ $college_review->college_hostel_rating }}
+								<div class="progress">
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_hostel_rating * 10 }}%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Campus Life : {{ $college_review->college_campuslife_rating }}
+								<div class="progress">
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_campuslife_rating * 10 }}%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Location : {{ $college_review->college_location_rating }}
+								<div class="progress">
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_location_rating * 10 }}%"></div>
+			  					</div>
+			  				</li>
+			  				<li class="collection-item" style="padding: 5px 25px;">
+			  					Facilities : {{ $college_review->college_facilities_rating }}
+								<div class="progress">
+			      					<div class="determinate light-blue darken-2" style="width: {{ $college_review->college_facilities_rating * 10 }}%"></div>
+			  					</div>
+			  				</li>
+	  					</ul>
 		    		</div>
-		    		<div class="row">
-		    		<div class="col s12">
+		    		<div class="col s9">
 		    			<p>
 		    				<b>{{ $college_review->reviewer_name }},<br/>{{ $college_review->reviewer_college }}</b>
 		    			</p>
 		    			<p>
-		    				{{ $college_review->reviewer_description}}
-		    			</p>
-		    			<p>
 		    				{{ $college_review->review }}
 		    			</p>
-		    		</div>
-		    		</div>
 		    		</div>
 	    		</div>
 	    	</div>
@@ -282,170 +229,37 @@ PICKPRIME - Your College Picker
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>{{ $course->course_name }}</div>
 					<div class="collapsible-body">
-					<div class="row">
-	    		<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_content_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Course Content</td>
-							<td>{{ $course_rating['0']->course_content_rating }}</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_placement_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Placement</td>
-							<td>{{ $course_rating['0']->course_placement_rating }}</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_future_scope_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Future Scope</td>
-							<td>{{ $course_rating['0']->course_future_scope_rating }}</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_faculty_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Faculty</td>
-							<td>{{ $course_rating['0']->course_faculty_rating }}</td>
-						</tr>
-					</table>
-				</div>
-			</div>                            
-						<h4>User Reviews</h4>
+						
+                            
+						<h4>Users Review</h4>
 						@foreach ($course_reviews as $course_review)
 							@if ($course->course_id == $course_review->course_reference_id)
 								<div class="card  valign-wraper medium grey lighten-2">
 								<div class="col s12">
-							    	<div class="row">
-							    		<div class="col s2 ">		
-			  								<table>
-												<tr>
-													<td colspan="2">{{ $course_review->review_date }}</td>
-			  									</tr>
-			  								</table>
-			  							</div>
-			  							<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->reviewer_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Overall</td>
-													<td>{{ $course_review->reviewer_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-									    <div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_content_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Course Content</td>
-													<td>{{ $course_review->course_content_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-						  				<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_placement_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Placements</td>
-													<td>{{ $course_review->course_placement_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-						  				<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_future_scope_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Future Scope</td>
-													<td>{{ $course_review->course_future_scope_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-						  				<div class="col s2 ">	
-							  				<table>
-							    				<tr>
-							    					<td colspan="2">
-								    					<div class="progress">
-									      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->course_faculty_rating * 10 }}%"></div>
-									  					</div>
-								  					</td>
-							    				</tr>
-												<tr>
-													<td>Faculty</td>
-													<td>{{ $course_review->course_faculty_rating }}</td>
-								  				</tr>
-							  				</table>
-						  				</div>
-								  	</div>
-								  	<div class="row">
-		    		<div class="col s12">
-		    			<p>
-		    				<b>{{ $course_review->reviewer_name }},<br/>{{ $course_review->reviewer_college }}</b>
-		    			</p>
-		    			<p>
-		    				{{ $course_review->reviewer_description}}
-		    			</p>
-		    			<p>
-		    				{{ $course_review->review }}
-		    			</p>
-		    		</div>
-		    		</div>							    		
+								<div class="row">
+									<p class="card"><b>{{ $course_review->reviewer_name }}, {{ $course_review->reviewer_description }}</b></p>
+								</div>
+						    	<div class="row">
+						    		<div class="col s3 ">
+						    			<table>
+											<tr>
+												<td>Rating</td>
+												<td>{{ $course_review->reviewer_rating }}</td>
+											</tr>
+											<tr>	
+												<td>
+												<div class="progress">
+							      					<div class="determinate light-blue darken-2" style="width: {{ $course_review->reviewer_rating * 10 }}%"></div>
+							  					</div>
+							  					</td>
+							  				</tr>
+							  			</table>
+							  		</div>	
+							  		<div class="col s9 card">
+						    			<p>{{ $course_review->review }}</p>
+						    		</div>
+							  	</div>		
+						    		
 					    		</div>
 					    		</div>
 					    	@endif	
