@@ -152,7 +152,6 @@ PICKPRIME - Your College Picker
 	    college Review Tab
 	    =====================================-->
 	    <div id="college-review" class="col s12 ">
-<<<<<<< HEAD
 	    	@if ( count($ambassadors)==0 )
 	    	<div class="card  valign-wraper medium grey lighten-2">
 		    	<div class="row">
@@ -222,67 +221,7 @@ PICKPRIME - Your College Picker
 	    	@endforeach
 	    	@endif
 	    </div>	
-=======
-	    	<ul class="collapsible" data-collapsible="expandable">
-				<li>
-					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Campus Life</b></div>
-					<div class="collapsible-body">
-					@foreach ($college_reviews as $college_review)
-					@if ( ($college_review->college_review_id)%2 == 0 )
-						<div class="card right-align">
-					@else
-						<div class="card left-align">
-					@endif
-							{{ $college_review->review }}		
-						</div>
-					@endforeach	
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Hostel Life</b></div>
-					<div class="collapsible-body">
-					@foreach ($college_reviews as $college_review)
-					@if ( ($college_review->college_review_id)%2 == 0 )
-						<div class="card right-align">
-					@else
-						<div class="card left-align">
-					@endif
-							{{ $college_review->review }}		
-						</div>
-					@endforeach	
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Facilities</b></div>
-					<div class="collapsible-body">
-					@foreach ($college_reviews as $college_review)
-					@if ( ($college_review->college_review_id)%2 == 0 )
-						<div class="card right-align">
-					@else
-						<div class="card left-align">
-					@endif
-							{{ $college_review->review }}		
-						</div>
-					@endforeach	
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Location</b></div>
-					<div class="collapsible-body">
-					@foreach ($college_reviews as $college_review)
-					@if ( ($college_review->college_review_id)%2 == 0 )
-						<div class="card right-align">
-					@else
-						<div class="card left-align">
-					@endif
-							{{ $college_review->review }}		
-						</div>
-					@endforeach	
-					</div>
-				</li>
-			</ul>		
-		</div>
->>>>>>> f8f12e34110c9f34292fccd91daa4370f9b10d6d
+	    
 	    <!--====================================
 	    Course Review Tab
 	    =====================================-->
@@ -292,7 +231,6 @@ PICKPRIME - Your College Picker
 				<li>
 					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>{{ $course->course_name }}</div>
 					<div class="collapsible-body">
-<<<<<<< HEAD
 						
                             
 						<h4>Users Review</h4>
@@ -322,133 +260,18 @@ PICKPRIME - Your College Picker
 							  		<div class="col s9 card">
 						    			<p>{{ $course_review->review }}</p>
 						    		</div>
-							  	</div>		
-						    		
-=======
-					<div class="row">
-	    		<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_content_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Course Content</td>
-							<td>{{ $course_rating['0']->course_content_rating }}</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_placement_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Placement</td>
-							<td>{{ $course_rating['0']->course_placement_rating }}</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_future_scope_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Future Scope</td>
-							<td>{{ $course_rating['0']->course_future_scope_rating }}</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col s3 ">	
-					<table>
-						<tr>
-							<td colspan="2">
-								<div class="progress">
-				   					<div class="determinate light-blue darken-2" style="width: {{ $course_rating['0']->course_faculty_rating * 10 }}%"></div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Faculty</td>
-							<td>{{ $course_rating['0']->course_faculty_rating }}</td>
-						</tr>
-					</table>
-				</div>
-			</div>                            
-						<h4>User Reviews</h4>
-						<ul class="collapsible" data-collapsible="expandable">
-							<li>
-								<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Future Scope</b></div>
-								<div class="collapsible-body">
-								@foreach ($course_reviews as $course_review)
-								@if ($course->course_id == $course_review->course_reference_id)
-									@if ( ($course_review->course_college_review_id)%2 == 0 )
-										<div class="card right-align">
-									@else
-										<div class="card left-align">
-									@endif
-										{{ $course_review->future_scope }}		
-									</div>
-								@endif	
-								@endforeach	
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Faculty</b></div>
-								<div class="collapsible-body">
-								@foreach ($course_reviews as $course_review)
-								@if ($course->course_id == $course_review->course_reference_id)
-									@if ( ($course_review->course_college_review_id)%2 == 0 )
-										<div class="card right-align">
-									@else
-										<div class="card left-align">
-									@endif
-										{{ $course_review->faculty }}		
-									</div>
-								@endif
-								@endforeach	
-								</div>
-							</li>
-							<li>
-								<div class="collapsible-header"><i class="mdi-image-filter-drama"></i><b>Placements</b></div>
-								<div class="collapsible-body">
-								@foreach ($course_reviews as $course_review)
-								@if ($course->course_id == $course_review->course_reference_id)
-									@if ( ($course_review->course_college_review_id)%2 == 0 )
-										<div class="card right-align">
-									@else
-										<div class="card left-align">
-									@endif
-										{{ $course_review->placement }}		
-									</div>
-								@endif
-								@endforeach	
-								</div>
-							</li>
-						</ul>	
-			    		
->>>>>>> f8f12e34110c9f34292fccd91daa4370f9b10d6d
+							  	</div>						    		                            
 					    		</div>
-					    		</div>
-					    						
+					   			</div>
+					   		@endif
+					    @endforeach						
 					</div>
 				</li>
 			@endforeach
 			
 			</ul>
 	    </div>
+
 	    <!--====================================
 	    forum Tab
 	    =====================================-->
@@ -506,7 +329,9 @@ PICKPRIME - Your College Picker
                         @else
                             
                         @foreach ($general_question as $general)
-                            <td><div><a href="#" class="light-blue-text text-darken-4">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                        	<tr>
+                            	<td><div><a href="#" class="light-blue-text text-darken-4">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            </tr>
                         @endforeach
                         
                         @endif
@@ -610,5 +435,8 @@ PICKPRIME - Your College Picker
         </div>
 	    </div>
     </div>
-    </div>
+</div>		
+		</div>
+	    
+	    
 @stop
