@@ -19,16 +19,45 @@
 		    </div>
 		</div>
 		<div class="row">
-			<div class="input-field col s5 offset-s1">
-				<input id="college" type="text" name="college" class="validate" required>
-		        <label for="college">College</label>		        
+			<div class="col s5 offset-s1">
+    			<select class="browser-default">
+				    <option value="" disabled selected>College</option>
+				    @foreach ($results as $result)
+				    <option value="{{ $result->college_id }}">{{ $results->college_name }}</option>
+				    @endforeach
+   				</select>
 			</div>
-			<div class="input-field col s5">
-		        <input id="year" type="text" name="year" class="validate" required>
-		        <label for="year">Year of Study (<small>in 2014-2015</small>)</label>
-		    </div>
-		</div>        
+			<div class="col s5">
+    			<select class="browser-default">
+				    <option value="" disabled selected>Year of Study</option>
+				    <option value="1">First Year</option>
+				    <option value="2">Second Year</option>
+				    <option value="3">Third Year</option>
+				    <option value="4">Fourth Year</option>
+				    <option value="5">Fifth Year</option>
+   				</select>
+   			</div>	
+   		</div>     
 		<h4 class="grey-text text-darken-1">Rate Your College</h4>
+			<div class="row">
+				<div class="col s5 offset-1">
+					<p>
+					Overall
+						<p>
+							<input name="overall" type="radio" id="overall1" />
+				        	<label for="overall1">1</label>
+							<input name="overall" type="radio" id="overall2" />
+				        	<label for="overall2">2</label>
+				        	<input name="overall" type="radio" id="overall3" />
+				        	<label for="overall3">3</label>
+				        	<input name="overall" type="radio" id="overall4" />
+				        	<label for="overall4">4</label>
+				        	<input name="overall" type="radio" id="overall5" />
+				        	<label for="overall5">5</label>
+						</p>
+					</p>
+				</div>
+			</div>	
 			<div class="row">
 				<div class="col s5 offset-1">
 					<p>

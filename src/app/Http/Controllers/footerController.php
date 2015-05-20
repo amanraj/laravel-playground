@@ -36,8 +36,12 @@ class footerController extends Controller {
 	}
 
 	public function review(Request $request)
-	{
-		return view('footer/review');
+	{	
+
+		$results = DB::select('SELECT * FROM college');
+		return view('footer/review')->with(array(
+			'result' => $results
+			));
 		$name = $request->input('name');
 		$college = $request->input('college');
 		$branch = $request->input('branch');
