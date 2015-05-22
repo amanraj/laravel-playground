@@ -44,7 +44,11 @@ table.heading , table.heading td{
   }
 
 .full{
-  width:1250px;
+  width: 1250px;
+}
+
+footer{
+  width: 1349px;
 }
 
   </style>
@@ -59,7 +63,7 @@ table.heading , table.heading td{
         
         
                 <div class="row">
-                    <div class="col s3" style="position:relative;top:429px;width:250px;">
+                    <div class="col s3" style="position:relative;top:443px;width:250px;">
                             <table class= "heading">
 
                 <div class="card center-align" >               
