@@ -271,7 +271,7 @@
 
         <main>  </main>
 
-	      <footer class="footer grey darken-4">
+	      <footer class="footer grey darken-4" style="width:1349px;">
             <table >
                 <tr>
                     <td class="grey-text text-lighten-4 left-align"><small>© 2015 Copyrights Reserved</small></td>

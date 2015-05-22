@@ -43,19 +43,23 @@ table.heading , table.heading td{
 
   }
 
+.full{
+  width:1250px;
+}
+
   </style>
 @stop
 
 
 @section('content')
 
-<div >
+<div class="full">
     
     
         
         
                 <div class="row">
-                    <div class="col s3" style="position:relative;top:443px;width:250px;">
+                    <div class="col s3" style="position:relative;top:429px;width:250px;">
                             <table class= "heading">
 
                 <div class="card center-align" >               
