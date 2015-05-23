@@ -280,8 +280,8 @@
                             <li style="display:inline"><a class="grey-text text-lighten-4 r" href="{{ action('footerController@be_ambassador') }}">Be a Ambassador</a></li>
                             <li style="display:inline;margin-left:20px"><a class="grey-text text-lighten-4 " href="{{ action('footerController@review') }}">Form for Reviews</a></li>
                             <li style="display:inline;margin-left:20px"><a  class="grey-text text-lighten-4 " href="{{ action('footerController@team') }}">About Us</a></li>
-                            <li style="display:inline;margin-left:20px"><a class="grey-text text-lighten-4 " href="#">Privacy Policy</a></li>
-                            <li style="display:inline ;margin-left:20px"><a class="grey-text text-lighten-4 " href="#">Terms & Conditions</a></li>
+                            <li style="display:inline;margin-left:20px"><a class="grey-text text-lighten-4 " href="{{ action('footerController@privacy_policy') }}">Privacy Policy</a></li>
+                            <li style="display:inline ;margin-left:20px"><a class="grey-text text-lighten-4 " href="{{ action('footerController@term_condition') }}">Terms & Conditions</a></li>
                         </ul>
                     </td>
                 </tr>

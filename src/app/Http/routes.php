@@ -72,6 +72,8 @@ Route::get('/search_results','SearchController@search');
 Route::get('/team','footerController@team');
 Route::get('/be_a_ambassador','footerController@be_ambassador');
 Route::get('/review','footerController@review');
+Route::get('/privacy_policy','footerController@privacy_policy');
+Route::get('/term_condition','footerController@term_condition');
 Route::post('/submit_review','footerController@submit_review');
 
 Route::get('/github','UserController@github');

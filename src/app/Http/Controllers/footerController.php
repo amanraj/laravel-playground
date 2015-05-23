@@ -25,14 +25,36 @@ class footerController extends Controller {
 	}
 
 	public function team(){
-
-		return view('/footer/team');
+		if (Session::has('email')){
+			return view('/footer/team');
+		}else{
+			return view('/footer/non_team')
+		}
 	}
+
+	public function privacy_policy(){
+		if (Session::has('email')){
+			return view('/footer/privacy_policy');
+		}else{
+			return view('/footer/non_privacy_policy')
+		}
+	}
+
+	public function term_condition(){
+		if (Session::has('email')){
+			return view('/footer/terms_conditions');
+		}else{
+			return view('/footer/non_terms_conditions')
+		}
+	}	
 
 	public function be_ambassador()
 	{
-
-		return view('/footer/be_a_ambassador');
+		if (Session::has('email')){
+			return view('/footer/be_a_ambassador');
+		}else{
+			return view('/footer/non_be_a_ambassador')
+		}
 	}
 
 	public function submit_review(Request $request){
@@ -59,9 +81,15 @@ class footerController extends Controller {
 	{	
 
 		$results = DB::select('SELECT * FROM college');
-		return view('footer/review')->with(array(
-			'results' => $results
-			));
+		if(Session::has('email')){
+			return view('footer/review')->with(array(
+				'results' => $results
+				));
+		}else{
+			return view('footer/non_review')->with(array(
+				'results' => $results
+				));
+		}
 		
 	}
 }
