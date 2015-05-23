@@ -32,9 +32,11 @@ class CollegeController extends Controller {
 	{
 		
 		$results = DB::select( 'select * from college' );	
-		if(Session::has('email')){		
+		if(Session::has('email')){	
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/college/search_college')->with ( array (
-				'result' => $results
+				'result' => $results,
+				'user' => $user['0']
 				));
 		}else{
 			return view('/college/non_search_college')->with ( array (
@@ -57,6 +59,7 @@ class CollegeController extends Controller {
 			$campus_question = DB::select('SELECT * FROM college_forum_questions WHERE question_type = ? AND question_college_id = ?',['campus',$college_id]);
 			$placement_question = DB::select('SELECT * FROM college_forum_questions WHERE question_type = ? AND question_college_id = ?',['placement',$college_id]);
 		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/college/college')->with(array(
 				'ambassadors' => $ambassadors,
 				'college_reviews' => $college_reviews,
@@ -67,7 +70,8 @@ class CollegeController extends Controller {
 				'general_question' => $general_question,
 				'admission_question' => $admission_question,
 				'campus_question' => $campus_question,
-				'placement_question' => $placement_question
+				'placement_question' => $placement_question,
+				'user' => $user['0']
 				));
 		}else{
 			return view('/college/non_college')->with(array(

@@ -33,8 +33,10 @@ class CourseController extends Controller {
 		
 		$results = DB::select('select * from course');
 		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/course/search_course')->with (array (
-				'result' => $results
+				'result' => $results,
+				'user' => $user['0']
 				));
 		}else{
 			return view('/course/non_search_course')->with (array (
@@ -48,8 +50,10 @@ class CourseController extends Controller {
 		
 		$results_1 = DB::select('select * from course where course_id = ?' , [$course_id] );
 		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/course/course')->with (array(
-					'result_1' => $results_1
+					'result_1' => $results_1,
+					'user' => $user['0']
 					));
 		}else{
 			return view('/course/non_course')->with (array(

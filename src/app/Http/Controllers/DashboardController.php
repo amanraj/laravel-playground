@@ -30,7 +30,10 @@ class DashboardController extends Controller {
 	public function viewDashboard()
 	{
 		if(Session::has('email')){
-			return view('/dashboard/home');
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+			return view('/dashboard/home')->with(array(
+				'user' => $user['0']
+				));
 		}else{
 			return redirect('/landing');
 		}

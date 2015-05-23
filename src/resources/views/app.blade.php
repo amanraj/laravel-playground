@@ -209,9 +209,9 @@
                 <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
                 <div class="center-align">
                     <span class="grey-text text-darken-3">
-                        <p><b>Karan Singh Grover</b></p>
-                        <p><i class="mdi-communication-email"></i> karan_grover@abc.com</p>
-                        <p><i class="mdi-communication-call"></i> 0123456789</p>
+                        <p><b>{{ $user->user_name }}</b></p>
+                        <p><i class="mdi-communication-email"></i> {{ $user->user_email }}</p>
+                        <p><i class="mdi-communication-call"></i> {{ $user->mobile_number }}</p>
                     </span>
                 </div>  
             </div>
@@ -224,20 +224,21 @@
             <div class="modal-content center-align">
                 <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
                 <div class="center-align">
-                    <form class="grey-text text-darken-3">
+                    <form class="grey-text text-darken-3" action="{{ url('profile/edit') }}" method="post">
+                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div class="input-field col s5 offset-s1">
-                            <input id="name" type="text" name="name" value="Karan Sigh Grover" class="validate">
+                            <input id="name" type="text" name="name" value="{{ $user->user_name }}" class="validate">
                             <label for="name"></label>
                         </div>
                             <div class="input-field col s5 offset-s1">
-                                <input id="email" type="email" name="email" value="karan_grover@abc.com" class="validate">
+                                <input id="email" type="email" name="email" value="{{ $user->user_email }}" class="validate">
                                 <label for="email"><i class="mdi-communication-email right"></i></label>
                             </div>
                             <div class="input-field col s5 offset-s1">
-                                <input id="phone" type="text" name="phone" value="0123456789" class="validate">
+                                <input id="mobile" type="text" name="mobile" value="{{ $user->mobile_number }}" class="validate">
                                 <label for="phone"><i class="mdi-communication-call right"></i></label>
                             </div>
-                            <div class="modal-footer col s3 no-padding"><a href="#!" class="modal-action modal-close waves-effect waves-grey btn-large grey darken-2" style="border-radius:5px">Save</a>
+                            <div class="modal-footer col s3 no-padding"><button type="submit" class="modal-action modal-close waves-effect waves-grey btn-large grey darken-2" style="border-radius:5px">Save</button>
                             </div>
                     </form>
                 </div>  

@@ -111,10 +111,14 @@ class UserController extends Controller {
 		return view('user/profile');
 	}
 
-	public function editProfile()
+	public function editProfile(Request $request)
 	{
-		
-		return view('user/profile');
+		$name = $request->input('name');
+		$email = $request->input('email');
+		$mobile = $request->input('mobile');
+
+		DB::update('UPDATE users SET user_name = ?, user_email = ?, mobile_number = ? WHERE user_email = ?',[$name,$email,$mobile,Session::get('email')]);
+		return redirect()->back();
 	}
 
 	public function settings()

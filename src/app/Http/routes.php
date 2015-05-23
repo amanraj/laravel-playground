@@ -60,7 +60,7 @@ Route::post('/login','UserController@login');
 Route::post('/register','UserController@register');
 Route::get('/notifications','UserController@notification');
 Route::get('/profile','UserController@profile');
-Route::patch('profile/edit','UserController@editProfile');
+Route::post('profile/edit','UserController@editProfile');
 Route::get('/settings','UserController@settings');
 Route::patch('/settings/edit','UserController@editSettings');
 Route::get('signout','UserController@signout');
