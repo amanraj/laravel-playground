@@ -135,7 +135,8 @@
                     <div class="modal-header header grey darken-3" style=" padding:4px">
                         <h5 class="white-text" style="margin-left:20px">User Sign In</h5>
                     </div>
-                    <form action="{{ url('/login') }}" method="post">
+                    <div class="row">
+                    <form  class="col s12" action="{{ url('/login') }}" method="post">
                     <div class="modal-content" style="margin-top:-40px">
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">  
                             <div class="row" style="margin-top:30px">
@@ -145,14 +146,14 @@
                             </div>                 
                             
                             <div class="row">
-                                <div class="input-field" style="margin-top:10px">
+                                <div class="input-field s12 m12 l12" style="margin-top:10px">
                                     <i class="mdi-action-account-circle prefix"></i>
                                     <input id="icon_prefix" name="email" type="email" class="validate" required>
                                     <label for="icon_prefix"> Email</label>
                                 </div>
                             </div>
                             <div class="row">    
-                                <div class="input-field ">
+                                <div class="input-field s12 m12 l12">
                                     <i class="mdi-hardware-security prefix"></i>
                                     <input id="icon_secure" name="password" type="password" class="validate" required>
                                     <label for="icon_secure"> Password</label>
@@ -166,6 +167,7 @@
                         <button class="modal-action modal-close btn waves-effect waves-light header grey darken-1" type="submit" name="action">Sign In</button>
                     </div>
                     </form>
+                    </div>
                 </li>
             </ul>
 
