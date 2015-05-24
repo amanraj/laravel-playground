@@ -10,7 +10,7 @@ PICKPRIME - Your College Picker
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="card col s6 m6 l12">
+        <div class="card col s12">
             <div class="card-content">
                 <h4 class=" light-blue-text text-darken-4 ">Web Site Terms and Conditions of Use</h4> <br>
                 <p>             
