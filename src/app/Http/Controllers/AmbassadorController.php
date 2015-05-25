@@ -32,9 +32,11 @@ class AmbassadorController extends Controller {
 	{
 		
 			$results = DB::select('select * from ambassadors');
-		if(Session::has('email')){	
+		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);		
 			return view('/ambassadors/ambassadors')->with(array(
-				'result' => $results
+				'result' => $results,
+				'user' => $user['0']
 				));
 		}else{
 			return view('/ambassadors/non_ambassadors')->with(array(
@@ -53,13 +55,15 @@ class AmbassadorController extends Controller {
 		$campus_question = DB::select('select * from college_forum_questions where question_type = ?',['campus']);
 		$placement_question = DB::select('select * from college_forum_questions where question_type = ?',['placement']);
 		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/ambassadors/ambassador')->with(array(
 				'result' => $results,
 				'college' => $ambs_college['0']->college_name,
 				'general_question' => $general_question,
 				'admission_question' => $admission_question,
 				'campus_question' => $campus_question,
-				'placement_question' => $placement_question
+				'placement_question' => $placement_question,
+				'user' => $user['0']
 				));
 		}else{
 			return view('/ambassadors/non_ambassador')->with(array(

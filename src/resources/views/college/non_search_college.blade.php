@@ -50,11 +50,11 @@ PICKPRIME - Your College Picker
 <div class="row">   
     <div class="col s12">
         <div class="card">
-            <div class="col s3 center-align">
+            <div class="col l3 s12 m6 center-align">
             <p>      
             <div class="card" style="height:545px">             
                 <p style="margin-top:10px">
-                <b>Select Stream</b>
+                <b>Stream</b>
                     <!-- Dropdown Trigger -->
                 <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
                     <!-- Dropdown Structure -->
@@ -66,7 +66,7 @@ PICKPRIME - Your College Picker
                     </ul> 
                 </p>                                
                 <p style="margin-top:30px">
-                <b>Select Location</b>
+                <b>Location</b>
                         <!-- Dropdown Trigger -->
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
@@ -80,7 +80,7 @@ PICKPRIME - Your College Picker
                     </ul>
                 </p>                                    
                 <p style="margin-top:30px">
-                <b>Select Exam</b>
+                <b>Exam</b>
                         <!-- Dropdown Trigger -->
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
@@ -92,7 +92,7 @@ PICKPRIME - Your College Picker
                     </ul>
                 </p>                                 
                 <p style="margin-top:30px">
-                <b>Select Fees</b>
+                <b>Fees</b>
                         <!-- Dropdown Trigger -->
                         <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
@@ -121,7 +121,7 @@ PICKPRIME - Your College Picker
                         @if ( ($results->college_id)%3 == 1 )
                         <div class="row">
                         @endif
-                            <div class="col s4">
+                            <div class="col l4 s12 m6">
                             <div class="card" id="college">
                                 <div class="card-image">
                                     <img src="{{ asset( $results->college_image_1 ) }}" alt="college image">
