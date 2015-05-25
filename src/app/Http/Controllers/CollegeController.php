@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use Session;
 use DB;
+use Illuminate\Http\Request;
 class CollegeController extends Controller {
 
 	/*
@@ -88,6 +89,14 @@ class CollegeController extends Controller {
 				));
 		} 
 
+	}
+
+	public function add(Request $request)
+	{
+		$college = $request->input('college_id');
+		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+		DB::insert('INSERT INTO college_choices (college_reference_id,user_reference_id) VALUES(?,?)',[$college,$user['0']->user_id]);
+		return redirect('/');
 	}
 
 	public function overview($college_id)

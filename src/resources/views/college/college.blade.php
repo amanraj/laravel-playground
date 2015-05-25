@@ -94,9 +94,19 @@ PICKPRIME - Your College Picker
 					<tr class="grey lighten-2">
 						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
 						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
-						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a onclick="add()" class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
 					</tr>	
 				</table>
+				<form id="add_college" action="{{ url('colleges/add') }}" method="post">
+                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+					
+					<input type="hidden" name="college_id" value="{{ $college_rating['0']->college_reference_id }}" >
+				</form>
+				<script type="text/javascript">
+					function add(){
+						document.getElementById('add_college').submit();
+					}
+				</script>
         	</div>
       	</div>
     </div>       
@@ -307,13 +317,16 @@ PICKPRIME - Your College Picker
                     </ul>
                 </div>
                 <div id="general" class="col s12">
-                    <form class="col s12">
+                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
                         <div class="row">
+                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                            <input type="hidden" name="college" value="{{ $ambassadors['0']->ambassadors_college_id }}">
+                            <input type="hidden" name="type" value="general">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea" required></textarea>
                             </div>
                             <div class="right col s3">
                                 <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
@@ -329,8 +342,8 @@ PICKPRIME - Your College Picker
                         @else
                             
                         @foreach ($general_question as $general)
-                        	<tr>
-                            	<td><div><a href="#" class="light-blue-text text-darken-4">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            <tr>
+                                <td><div><a href="#" class="blue-text">{{ $general->question_title }}</a><br/><span class="grey-text"><small>{{ $general->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $general->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                             </tr>
                         @endforeach
                         
@@ -338,13 +351,16 @@ PICKPRIME - Your College Picker
                     </table>
                 </div>
                 <div id="admission_related" class="col s12">
-                    <form class="col s12">
+                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
                         <div class="row">
+                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                            <input type="hidden" name="college" value="{{ $ambassadors['0']->ambassadors_college_id }}">
+                            <input type="hidden" name="type" value="admission">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea"  required></textarea>
                             </div>
                             <div class="right col s3">
                                 <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
@@ -361,7 +377,7 @@ PICKPRIME - Your College Picker
                             
                         @foreach ($admission_question as $admission)
                         <tr>
-                            <td><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text"><small>{{ $admission->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            <td><div><a href="#" class="blue-text">{{ $admission->question_title }}</a><br/><span class="grey-text"><small>{{ $admission->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $admission->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         </tr>
                         @endforeach
 
@@ -369,13 +385,16 @@ PICKPRIME - Your College Picker
                     </table>
                 </div>
                 <div id="campus_related" class="col s12">
-                    <form class="col s12">
+                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
+                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                        <input type="hidden" name="college" value="{{ $ambassadors['0']->ambassadors_college_id }}">
+                        <input type="hidden" name="type" value="campus">
                         <div class="row">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea" required></textarea>
                             </div>
                             <div class="right col s3">
                                 <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
@@ -392,7 +411,7 @@ PICKPRIME - Your College Picker
                             
                         @foreach ($campus_question as $campus)
                         <tr>
-                            <td><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text"><small>{{ $campus->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            <td><div><a href="#" class="blue-text">{{ $campus->question_title }}</a><br/><span class="grey-text"><small>{{ $campus->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $campus->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         </tr>
                         @endforeach
 
@@ -400,16 +419,19 @@ PICKPRIME - Your College Picker
                     </table>
                 </div>
                 <div id="placement_related" class="col s12">
-                    <form class="col s12">
+                    <form class="col s12" action="{{ url('forum/post') }}" method="post">
                         <div class="row">
+                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                            <input type="hidden" name="college" value="{{ $ambassadors['0']->ambassadors_college_id }}">
+                            <input type="hidden" name="type" value="placement">
                             <div class="input-field col s6">
-                            <input placeholder="Got any question? Please ask" id="ques" type="text" class="validate">
+                            <input placeholder="Got any question? Please ask" id="ques" name="question_title" type="text" class="validate" required>
                             </div>
                             <div class="input-field col s9">
-                            <textarea placeholder="Please enter your question's description." id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea placeholder="Please enter your question's description." id="textarea1" name="question_body" class="materialize-textarea" required></textarea>
                             </div>
                             <div class="right col s3">
-                                <button class="btn light-blue darken-2  waves-effect waves-light" type="submit" name="action">Ask</button>
+                                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit" name="action">Ask</button>
                             </div>
                         </div>
                     </form>
@@ -418,19 +440,18 @@ PICKPRIME - Your College Picker
                         @if ( count($placement_question) == 0 )
                         <tr>
                             <td><div><a href="#" class="blue-text">No questions here yet.</a></div></td>
-                        </tr>
+                        </tr>>
                         @else
                             
                         @foreach ($placement_question as $placement)
                         <tr>
-                            <td><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text"><small>{{ $placement->date }}</small></span><a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
+                            <td><div><a href="#" class="blue-text">{{ $placement->question_title }}</a><br/><span class="grey-text"><small>{{ $placement->date }}</small></span><br/><i class="mdi-action-thumb-up blue-text"></i> 54<a href="#!" class="secondary-content grey-text">by {{ $placement->user_reference_id }} <i class="mdi-social-person"></i></a></div></td>
                         </tr>
                         @endforeach
 
                         @endif
                     </table>
                 </div>
-                
             </div>
         </div>
 	    </div>

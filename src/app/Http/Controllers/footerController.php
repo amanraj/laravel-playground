@@ -26,34 +26,44 @@ class footerController extends Controller {
 
 	public function team(){
 		if (Session::has('email')){
-			return view('/footer/team');
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+			return view('/footer/team')->with(array(
+				'user' => $user['0'], 
+				));
 		}else{
-			return view('/footer/non_team')
+			return view('/footer/non_team');
 		}
 	}
 
 	public function privacy_policy(){
 		if (Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/footer/privacy_policy');
 		}else{
-			return view('/footer/non_privacy_policy')
+			return view('/footer/non_privacy_policy');
 		}
 	}
 
 	public function term_condition(){
 		if (Session::has('email')){
-			return view('/footer/terms_conditions');
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+			return view('/footer/terms_conditions')->with(array(
+				'user' => $user['0'], 
+				));
 		}else{
-			return view('/footer/non_terms_conditions')
+			return view('/footer/non_terms_conditions');
 		}
 	}	
 
 	public function be_ambassador()
 	{
 		if (Session::has('email')){
-			return view('/footer/be_a_ambassador');
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+			return view('/footer/be_a_ambassador')->with(array(
+				'user' => $user['0'], 
+				));
 		}else{
-			return view('/footer/non_be_a_ambassador')
+			return view('/footer/non_be_a_ambassador');
 		}
 	}
 
@@ -82,8 +92,10 @@ class footerController extends Controller {
 
 		$results = DB::select('SELECT * FROM college');
 		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('footer/review')->with(array(
-				'results' => $results
+				'results' => $results,
+				'user' => $user['0']
 				));
 		}else{
 			return view('footer/non_review')->with(array(

@@ -30,6 +30,7 @@ Route::get('/courses/{course_id}/add-notes', 'NotesController@addCourseNotes');
 
 
 Route::get('/colleges','CollegeController@viewColleges');
+Route::post('/colleges/add','CollegeController@add');
 Route::get('/colleges/{college_id}','CollegeController@college');
 Route::get('/colleges/{college_id}/overview','CollegeController@overview');
 Route::get('/colleges/{college_id}/college-reviews','CollegeController@collegeReviews');
