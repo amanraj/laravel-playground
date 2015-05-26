@@ -48,8 +48,9 @@ class ForumController extends Controller {
 				'replies' => $replies,
 				));
 		}else{
-			return view('/forum/thread')->with('thread_id', $thread_id)->with(array(
+			return view('/forum/non_thread')->with('thread_id', $thread_id)->with(array(
 				'replies' => $replies,
+				'question' => $question['0'],
 				));
 		}
 	}
