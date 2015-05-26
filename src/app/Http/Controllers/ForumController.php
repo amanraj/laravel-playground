@@ -38,8 +38,20 @@ class ForumController extends Controller {
 
 	public function viewThread($thread_id)
 	{
-		
-		return view('/forum/thread')->with('thread_id', $thread_id);
+		$question = DB::select('SELECT * FROM college_forum_questions WHERE question_id = ?',[$thread_id]);
+		$replies = DB::select('SELECT * FROM college_questions_reply INNER JOIN users WHERE user_reference_id = user_id and college_question_reference_id = ?',[$thread_id]);
+		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+			return view('/forum/thread')->with(array(
+				'user' => $user['0'],
+				'question' => $question['0'],
+				'replies' => $replies,
+				));
+		}else{
+			return view('/forum/thread')->with('thread_id', $thread_id)->with(array(
+				'replies' => $replies,
+				));
+		}
 	}
 
 	public function post(Request $request){
@@ -54,10 +66,13 @@ class ForumController extends Controller {
 
 		return Redirect::back();
 	}
-	public function reply()
+	public function reply($thread_id,Request $request)
 	{
-		
-		return view('/forum/forum');
+		$reply = $request->input('reply');
+		$user_id = DB::select('SELECT user_id FROM users WHERE user_email = ?',[Session::get('email')]);
+		$user_id = $user_id['0']->user_id;
+		DB::insert('INSERT INTO college_questions_reply (college_question_reference_id,user_reference_id,reply) VALUES(?,?,?)',[$thread_id,$user_id,$reply]);
+		return redirect()->back();
 	}
 
 	public function editPost()
@@ -72,10 +87,12 @@ class ForumController extends Controller {
 		return view('/forum/forum');
 	}
 
-	public function upVote()
+	public function upVote($post_id)
 	{
-		
-		return view('/forum/forum');
+		$up = DB::select('SELECT up_vote FROM college_questions_reply WHERE college_question_reply_id = ?',[$post_id]);
+		$upvote = $up['0']->up_vote + 1;
+		DB::update('UPDATE college_questions_reply SET up_vote = ? WHERE college_question_reply_id = ?',[$upvote,$post_id]);
+		return redirect()->back();
 	}
 
 	public function downVote()

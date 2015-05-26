@@ -31,6 +31,7 @@ class DashboardController extends Controller {
 	public function viewDashboard()
 	{
 		if(Session::has('email')){
+			
 			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 			return view('/dashboard/home')->with(array(
 				'user' => $user['0']
