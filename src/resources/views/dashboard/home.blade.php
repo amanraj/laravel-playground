@@ -63,37 +63,42 @@ footer{
         
         
                 <div class="row">
-                    <div class="col s3" style="position:relative;top:443px;width:250px;">
-                            <table class= "heading">
-
+                    <div class="col s3" style="position:relative;top:428px;width:250px;">
+                      <table class= "heading">
                 <div class="card center-align" >               
                 <tr >
-                  <td  style="height:105px;text-align:center"><b>Campus Life</b></td>
+                  <td  style="height:85px;text-align:center"><b>Website</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Hostel Life</b></td>
+                  <td  style="height:85px;text-align:center"><b>Exam</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Location</b></td>
+                  <td  style="height:85px;text-align:center"><b>Rank Predictor</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Facilities</b></td>
+                  <td  style="height:85px;text-align:center"><b>Location</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Fees</b></td>
+                  <td  style="height:85px;text-align:center"><b>Fees</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Course Content</b></td>
+                  <td  style="height:85px;text-align:center"><b>Comments</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Faculty</b></td>
+                  <td  style="height:85px;text-align:center"><b>Course Duration</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Placement</b></td>
+                  <td  style="height:85px;text-align:center"><b>Course Content</b></td>
                 </tr>
                 <tr>
-                  <td  style="height:105px;text-align:center"><b>Future Scope</b></td>
+                  <td  style="height:85px;text-align:center"><b>Future Scope</b></td>
                 </tr>
+                <tr>
+                  <td  style="height:85px;text-align:center"><b>Placements</b></td>
+                </tr>
+                <tr>
+                  <td  style="height:85px;text-align:center"><b>Mode of Study</b></td>
+                </tr>                
                 </div>
               </table>
               </div>
