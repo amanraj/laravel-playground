@@ -94,8 +94,23 @@ class CollegeController extends Controller {
 	public function add(Request $request)
 	{
 		$college = $request->input('college_id');
-		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
-		DB::insert('INSERT INTO college_choices (college_reference_id,user_reference_id) VALUES(?,?)',[$college,$user['0']->user_id]);
+		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);
+
+		if (isset($_POST['submit']))
+		{
+			if (!empty($_POST['course_list']))
+				{
+				foreach($_POST['course_list'] as $selected) 
+					{
+					DB::insert('INSERT INTO course_choices (course_reference_id,college_reference_id,user_reference_id) VALUES(?,?,?)',[$selected,$college,$user['0']->user_id]);
+					}
+				}
+			else
+				{
+				alert("Please Select Atleast One Option.");
+				}
+		}
+
 		return redirect('/');
 	}
 

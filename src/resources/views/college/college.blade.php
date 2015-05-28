@@ -94,7 +94,7 @@ PICKPRIME - Your College Picker
 					<tr class="grey lighten-2">
 						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
 						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
-						<td style="padding:5px 5px;"><br/><a onclick="add()" class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a onclick="add()" class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add courses to dashboard" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
 					</tr>	
 				</table>
 				<form id="add_college" action="{{ url('colleges/add') }}" method="post">
@@ -102,11 +102,6 @@ PICKPRIME - Your College Picker
 					
 					<input type="hidden" name="college_id" value="{{ $college_rating['0']->college_reference_id }}" >
 				</form>
-				<script type="text/javascript">
-					function add(){
-						document.getElementById('add_college').submit();
-					}
-				</script>
         	</div>
       	</div>
     </div>       
@@ -239,11 +234,14 @@ PICKPRIME - Your College Picker
 			<ul class="collapsible" data-collapsible="accordion">
 			@foreach ($courses as $course)
 				<li>
-					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>{{ $course->course_name }}</div>
-					<div class="collapsible-body">
-						
-                            
-						<h4>Users Review</h4>
+					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>
+					<form id="add_college" action="{{ url('colleges/add') }}" method="post">
+				        <input type="checkbox" id="{{ $course->course_id }}" name="course_list[]" value="{{ $course->course_id }}"/>
+				        <label for="{{ $course->course_id }}" style="margin-top:15px;"> </label>{{ $course->course_name }}
+				    </form>
+				    </div>
+					<div class="collapsible-body">					
+      						<h4>Users Review</h4>
 						@foreach ($course_reviews as $course_review)
 							@if ($course->course_id == $course_review->course_reference_id)
 								<div class="card  valign-wraper medium grey lighten-2">
@@ -458,6 +456,11 @@ PICKPRIME - Your College Picker
     </div>
 </div>		
 		</div>
+		<script type="text/javascript">
+					function add(){
+						document.getElementById('add_college').submit();
+					}
+				</script>
 	    
 	    
 @stop
