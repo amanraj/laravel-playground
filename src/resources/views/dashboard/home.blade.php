@@ -154,7 +154,7 @@ footer{
                   <td  style="height:85px;text-align:vertical">{{ $choices->college_comments }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:85px;text-align:vertical">{{ $choices->course_duration }}</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->course_duration }} years</td>
                 </tr>
                 <tr>
                   <td  style="height:85px;text-align:vertical">{{ $choices->course_content }}</td>

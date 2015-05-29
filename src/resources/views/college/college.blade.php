@@ -101,6 +101,9 @@ PICKPRIME - Your College Picker
       	</div>
     </div>
     <div id="courses" class="modal" style="border:2px solid grey">
+    	<div class="modal-header grey darken-3" style=" padding:4px;width:100%">
+            <h5 class="white-text" style="margin-left:20px">Courses Available</h5>
+        </div>
         <div class="modal-content s12 m12">
 	        <form id="add_college" method="post" action="{{ url('colleges/add') }}">
 	        	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">					
@@ -110,7 +113,7 @@ PICKPRIME - Your College Picker
 	        		<label for="{{ $course->course_id }}">{{ $course->course_name }}</label>
 	        	@endforeach
 	        	<div class="modal-footer">
-	        	    <button class="btn waves-effect waves-light" type="submit" name="submit" onclick="add()">Submit</button>
+	        	    <button class="btn waves-effect waves-light grey darken 1" type="submit" name="submit" onclick="add()">Add to Dashboard</button>
 	        	</div>        	
 	        </form>
         </div>

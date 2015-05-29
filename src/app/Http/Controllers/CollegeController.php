@@ -102,16 +102,16 @@ class CollegeController extends Controller {
 				{
 				foreach($_POST['course_list'] as $selected) 
 					{
+					$rows = DB::select('SELECT * FROM course_choices WHERE course_reference_id=? AND college_reference_id=? AND user_reference_id=?',[$selected,$college,$user['0']->user_id]);
+					if (count($rows) == 0)
 					DB::insert('INSERT INTO course_choices (course_reference_id,college_reference_id,user_reference_id) VALUES(?,?,?)',[$selected,$college,$user['0']->user_id]);
 					}
+				return redirect('/');	
 				}
 			else
-				{
-				alert("Please Select Atleast One Option.");
-				}
+				redirect('/college/{college_id}');
 		}
 
-		return redirect('/');
 	}
 
 	public function overview($college_id)
