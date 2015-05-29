@@ -73,6 +73,9 @@ footer{
                   <td  style="height:85px;text-align:center"><b>Exam</b></td>
                 </tr>
                 <tr>
+                  <td  style="height:85px;text-align:center"><b>Last year rank range</b></td>
+                </tr>
+                <tr>
                   <td  style="height:85px;text-align:center"><b>Location</b></td>
                 </tr>
                 <tr>
@@ -143,6 +146,9 @@ footer{
                 </tr>
                 <tr>
                   <td  style="height:85px;text-align:vertical">{{ $choices->college_entrance_exam }}</td>
+                </tr>
+                <tr >
+                  <td  style="height:85px;text-align:vertical">{{ $choices->last_year_stats }}</td>
                 </tr>
                 <tr>
                   <td  style="height:85px;text-align:vertical">{{ $choices->college_location }}</td>

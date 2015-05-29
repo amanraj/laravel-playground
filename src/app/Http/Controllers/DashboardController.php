@@ -33,7 +33,7 @@ class DashboardController extends Controller {
 		if(Session::has('email')){
 			
 			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);
-			$choices = DB::select('SELECT * FROM course_choices LEFT JOIN college ON course_choices.college_reference_id = college.college_id LEFT JOIN course ON course_choices.course_reference_id = course.course_id WHERE user_reference_id=?',[$user['0']->user_id]);
+			$choices = DB::select('SELECT * FROM course_choices LEFT JOIN college ON course_choices.college_reference_id = college.college_id LEFT JOIN course ON course_choices.course_reference_id = course.course_id LEFT JOIN course_college ON course_choices.course_reference_id = course_college.course_reference_id AND course_choices.college_reference_id = course_college.college_reference_id WHERE user_reference_id=?',[$user['0']->user_id]);
 			return view('/dashboard/home')->with(array(
 				'user' => $user['0'],
 				'choice' => $choices
