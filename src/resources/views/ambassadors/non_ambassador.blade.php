@@ -11,7 +11,7 @@ PICKPRIME - Your College Picker
 <div class="container">
         <div class="row">
             <div class="col s4">
-            <h5>{{ $college }}, Forum</h5>
+            <h5>{{ $college }} Forum</h5>
             </div>
         </div>
         <div class="row">
