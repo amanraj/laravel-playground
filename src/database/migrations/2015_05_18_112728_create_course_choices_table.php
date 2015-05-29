@@ -16,6 +16,7 @@ class CreateCourseChoicesTable extends Migration {
 		{
 			$table->integer('user_reference_id');
 			$table->integer('course_reference_id');
+			$table->integer('college_reference_id');
 		});
 	}
 
