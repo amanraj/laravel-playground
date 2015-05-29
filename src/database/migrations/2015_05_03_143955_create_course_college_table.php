@@ -16,6 +16,7 @@ class CreateCourseCollegeTable extends Migration {
 		{
 			$table->integer('course_reference_id');
 			$table->integer('college_reference_id');
+			$table->mediumText('last_year_stats');
 			
 		});
 	}
