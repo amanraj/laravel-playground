@@ -17,8 +17,10 @@ class CreateCourseTable extends Migration {
 			$table->increments('course_id');
 			$table->string('course_name');
 			$table->string('course_stream');
+			$table->int('course_duration');
 			$table->mediumText('course_content');
 			$table->mediumText('future_scope');
+			$table->mediumText('course_placement');
 			$table->mediumText('job_place_work');
 			$table->string('top_institute');
 			$table->string('course_image_1');
