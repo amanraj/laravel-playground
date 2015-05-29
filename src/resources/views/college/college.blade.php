@@ -92,19 +92,34 @@ PICKPRIME - Your College Picker
 						<td style="padding:5px 5px;">{{ $college_rating['0']->college_facilities_rating }}</td>
 					</tr>
 					<tr class="grey lighten-2">
-						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Notes" btn- waves-effect waves-light"><i class="mdi-action-note-add"></i></a></td>
-						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Take Test" btn- waves-effect waves-light"><i class="mdi-editor-border-color"></i></a></td>
-						<td style="padding:5px 5px;"><br/><a onclick="add()" class="btn-floating btn tooltipped light-blue darken-2 data-position="bottom" data-delay="25" data-tooltip="Add courses to dashboard" btn- waves-effect waves-light" ><i class="mdi-content-add"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped btn- waves-effect waves-light light-blue darken-2" data-position="bottom" data-delay="25" data-tooltip="Notes"><i class="mdi-action-note-add"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped btn- waves-effect waves-light light-blue darken-2" data-position="bottom" data-delay="25" data-tooltip="Take Test"><i class="mdi-editor-border-color"></i></a></td>
+						<td style="padding:5px 5px;"><br/><a class="btn-floating btn tooltipped modal-trigger btn- waves-effect waves-light light-blue darken-2" data-target="courses" data-position="bottom" data-delay="25" data-tooltip="Add courses to dashboard"><i class="mdi-content-add"></i></a></td>
 					</tr>	
 				</table>
-				<form id="add_college" action="{{ url('colleges/add') }}" method="post">
-                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-					
-					<input type="hidden" name="college_id" value="{{ $college_rating['0']->college_reference_id }}" >
-				</form>
         	</div>
       	</div>
-    </div>       
+    </div>
+    <div id="courses" class="modal" style="border:2px solid grey">
+        <div class="modal-content s12 m12">
+	        <form id="add_college" method="post" action="{{ url('colleges/add') }}">
+	        	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">					
+				<input type="hidden" name="college_id" value="{{ $college_rating['0']->college_reference_id }}" >
+	        	@foreach ($courses as $course)
+	        		<input type="checkbox" name="course_list[]" value="{{ $course->course_id }}" id="{{ $course->course_id }}" />
+	        		<label for="{{ $course->course_id }}">{{ $course->course_name }}</label>
+	        	@endforeach
+	        	<div class="modal-footer">
+	        	    <button class="btn waves-effect waves-light" type="submit" name="submit" onclick="add()">Submit</button>
+	        	</div>        	
+	        </form>
+        </div>
+    </div> 
+    <script type="text/javascript">
+					function add(){
+						document.getElementById('add_college').submit();
+					}
+				</script>    
     <div class="row">
     	<!--====================================
     	Tabs
@@ -234,12 +249,7 @@ PICKPRIME - Your College Picker
 			<ul class="collapsible" data-collapsible="accordion">
 			@foreach ($courses as $course)
 				<li>
-					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>
-					<form id="add_college" action="{{ url('colleges/add') }}" method="post">
-				        <input type="checkbox" id="{{ $course->course_id }}" name="course_list[]" value="{{ $course->course_id }}"/>
-				        <label for="{{ $course->course_id }}" style="margin-top:15px;"> </label>{{ $course->course_name }}
-				    </form>
-				    </div>
+					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>{{ $course->course_name }}</div>
 					<div class="collapsible-body">					
       						<h4>Users Review</h4>
 						@foreach ($course_reviews as $course_review)
@@ -456,11 +466,6 @@ PICKPRIME - Your College Picker
     </div>
 </div>		
 		</div>
-		<script type="text/javascript">
-					function add(){
-						document.getElementById('add_college').submit();
-					}
-				</script>
 	    
 	    
 @stop
