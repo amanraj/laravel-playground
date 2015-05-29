@@ -63,17 +63,14 @@ footer{
         
         
                 <div class="row">
-                    <div class="col s3" style="position:relative;top:428px;width:250px;">
+                    <div class="col s3" style="position:relative;top:457px;width:250px;">
                       <table class= "heading">
                 <div class="card center-align" >               
                 <tr >
-                  <td  style="height:85px;text-align:center"><b>Website</b></td>
+                  <td  style="height:107px;text-align:center"><b>Website</b></td>
                 </tr>
                 <tr>
                   <td  style="height:85px;text-align:center"><b>Exam</b></td>
-                </tr>
-                <tr>
-                  <td  style="height:85px;text-align:center"><b>Rank Predictor</b></td>
                 </tr>
                 <tr>
                   <td  style="height:85px;text-align:center"><b>Location</b></td>
@@ -105,11 +102,11 @@ footer{
             <h3>Your College Choices ( 6 )</h3>
   <div id="owl-college" class="owl-carousel owl-theme col s9">        
     
-  $i=0;
+
 @foreach ($choice as $choices)
             <div class="item">
             
-                <div class="card center-align">
+                <div class="card center-align" style="height:375px;">
                     <div class="card-image">
                         <img src="{{ asset('/images/colleges/iit_kgp.jpg') }}">
                     </div>
@@ -142,37 +139,39 @@ footer{
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:100px;text-align:vertical">ggggggg</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->college_website }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zncg vc</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->college_entrance_exam }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zznzgon</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->college_location }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">zgn</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->college_fees }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">Fzn zfgcn zfcgv n</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->college_comments }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gfy</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->course_duration }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">ngfzv</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->course_content }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">gcv</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->future_scope }}</td>
                 </tr>
                 <tr>
-                  <td  style="height:100px;text-align:vertical">cvfcv</td>
+                  <td  style="height:85px;text-align:vertical">{{ $choices->course_placement }}</td>
+                </tr>
+                <tr>
+                  <td  style="height:85px;text-align:vertical">yet to develop</td>
                 </tr>
               </table></span>
             </div>
           </div>
   </div> 
-  $i++;
   @endforeach
   </div>
 </div>
