@@ -128,7 +128,7 @@ p{
                               </tr>  
                           @endforeach
                         @else
-                          <h3>No replies yet. Be the first one to reply.</h3>
+                          <h5>No replies yet, Be the first one to reply.</h5>
                         @endif
                         </table>
                     

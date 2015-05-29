@@ -47,13 +47,10 @@ p{
 
         <div class="container">
             <div class="row">
-                <div class="card s12" style="padding:5px">
-                    <div class="card grey lighten-2">
+                <div class="card col s12" style="padding:5px">
+                    <div class="card grey lighten-2" style="padding:10px;">
                         <p>
-                            <b>Question Title :-</b> <b>{{ $question->question_title }}</b>
-                        </p>
-                        <p>
-                            <b>Question Description :-</b> {{ $question->question_description }}
+                            {{ $question->question_description }}
                         </p>
                     </div>
                     <div class="card grey lighten-2">
@@ -64,13 +61,13 @@ p{
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="textarea1" name="reply" class="materialize-textarea" length="200" required></textarea>
-                                    <label for="textarea1">Reply</label>
+                                    <textarea id="reply" name="reply" class="materialize-textarea" required></textarea>
+                                    <label for="reply">Reply</label>
                                 </div>
                             </div>
                         
-                            <div class="col offset-s8">
-                                 <button type="submit" class="waves-effect waves-light blue btn">Send</button>
+                            <div class="col offset-s10">
+                              <button type="submit" class="waves-effect waves-light blue btn">Reply</button>
                                     <html xmlns="http://www.w3.org/1999/xhtml"
                                       xmlns:fb="https://www.facebook.com/2008/fbml">
                                      <span id="fb-root"></span>
@@ -128,11 +125,13 @@ p{
                               </tr>  
                           @endforeach
                         @else
-                          <h3>No replies yet. Be the first one to reply.</h3>
+                          <h5>No replies yet, Be the first one to reply.</h5>
                         @endif
                         </table>
                     
                 </div>
+           </div>
+           </div>
            </div>
 
 @stop
