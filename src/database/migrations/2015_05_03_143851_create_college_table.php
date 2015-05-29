@@ -30,6 +30,7 @@ class CreateCollegeTable extends Migration {
 			$table->mediumText('college_fests');
 			$table->mediumText('college_other_facilities');
 			$table->mediumText('college_placement');
+			$table->Text('college_comments');
 			$table->string('college_image_1');
 			$table->string('college_image_2');
 			$table->string('college_image_3');
