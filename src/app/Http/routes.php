@@ -59,6 +59,10 @@ Route::get('/ambassador/{ambassador_id}','AmbassadorController@ambassador');
 
 Route::post('/login','UserController@login');
 Route::post('/register','UserController@register');
+Route::get('/register/verify/{confirmationCode}', [
+    'as' => 'confirmation_path',
+    'uses' => 'RegistrationController@confirm'
+]);
 Route::get('/notifications','UserController@notification');
 Route::get('/profile','UserController@profile');
 Route::post('profile/edit','UserController@editProfile');

@@ -51,18 +51,49 @@ class UserController extends Controller {
 		$name = $request->input('name');
 		$password = $request->input('password');
 		$mobile = $request->input('mobile');
+		$confirmation_code = str_random(30);
 		$rows = DB::select('SELECT * FROM users WHERE user_email = ?',[$email]);
 		if(count($rows) == 0){
 			$password = Hash::make($password);
-			DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number) VALUES(?,?,?,?)',[$name,$email,$password,$mobile]);
+			DB::insert('INSERT INTO users (user_name,user_email,user_password,mobile_number,confirmation_code) VALUES(?,?,?,?,?)',[$name,$email,$password,$mobile,$confirmation_code]);
 			Session::put('email',$hashed['0']->user_email);
+			Mail::send('email.verify', $confirmation_code, function($message) {
+            $message->to(Input::get('user_email'), Input::get('user_name'))
+                ->subject('Verify your email address');
+        	});
+
+        	Flash::message('Thanks for signing up! Please check your email.');
 			return redirect('/');
-		}else{
+		}
+		else{
 			$error = '* User with this Email already exists';
 			return view('welcome')->with(array('error' => $error));
 		}
 		
 	}
+
+	public function confirm($confirmation_code)
+    {
+        if( ! $confirmation_code)
+        {
+            throw new InvalidConfirmationCodeException;
+        }
+
+        $user = User::whereConfirmationCode($confirmation_code)->first();
+
+        if ( ! $user)
+        {
+            throw new InvalidConfirmationCodeException;
+        }
+
+        $user->confirmed = 1;
+        $user->confirmation_code = null;
+        $user->save();
+
+        Flash::message('You have successfully verified your account.');
+
+        return Redirect::route('login_path');
+    }
 
 	public function github_redirect()
 	{

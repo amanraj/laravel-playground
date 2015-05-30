@@ -102,7 +102,7 @@ footer{
                 </div>
               </table>
               </div>
-            <h3>Your College Choices ( 6 )</h3>
+            <h3>Your College Choices ( {{ count($choice) }} )</h3>
   <div id="owl-college" class="owl-carousel owl-theme col s9">        
     
 
