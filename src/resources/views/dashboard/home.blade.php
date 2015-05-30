@@ -142,7 +142,7 @@ footer{
                             <table class= "bordered">
                                
                 <tr >
-                  <td  style="height:85px;text-align:vertical">{{ $choices->college_website }}</td>
+                  <td  style="height:85px;text-align:vertical"><a href="http://{{ $choices->college_website }}" target="_blank">{{ $choices->college_website }}</td>
                 </tr>
                 <tr>
                   <td  style="height:85px;text-align:vertical">{{ $choices->college_entrance_exam }}</td>

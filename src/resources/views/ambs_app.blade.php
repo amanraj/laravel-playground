@@ -97,6 +97,7 @@
         <header>
            <ul id="my-account" class="dropdown-content">
                 <li><a data-target="notification"  class="modal-trigger light-blue-text text-darken-4">Notifications<span class="new badge light-blue darken-4">1</span></a></li>
+                <li><a data-target="profile"  class="modal-trigger light-blue-text text-darken-4">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>               
                 <li><a href="#!"  class="light-blue-text text-darken-4">Settings<span class="badge light-blue-text text-darken-4"><i class="mdi-action-settings" style="position:relative;bottom:20px"></i></span></a></li>
                 <li><a href="home"  class="light-blue-text text-darken-4">Sign Out<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/logout.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
@@ -126,6 +127,7 @@
                                     <div class="collapsible-body">
                                     <ul>
                                         <li><a data-target="notification" class=" modal-trigger black-text">Notification<span class="new badge">4</span></a></li>
+                                        <li><a data-target="profile" class=" modal-trigger black-text">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>                                    
                                         <li><a href="#!">Settings</a></li>
                                         <li><a href="#!">Sign Out</a></li>
                                     </ul>
