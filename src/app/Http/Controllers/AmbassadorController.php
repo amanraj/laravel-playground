@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use Session;
 use DB;
+use Illuminate\Http\Request;
 class AmbassadorController extends Controller {
 
 	/*
@@ -79,14 +80,14 @@ class AmbassadorController extends Controller {
 
 	public function ambs_home()
 	{	
-		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
-		$ambs_college = DB::select('SELECT college_name FROM college WHERE college_id = ?',[$ambassador['0']->ambassadors_college_id]);
 		$general_question = DB::select('select * from college_forum_questions where question_type = ?',['general']);
 		$admission_question = DB::select('select * from college_forum_questions where question_type = ?',['admission']);
 		$campus_question = DB::select('select * from college_forum_questions where question_type = ?',['campus']);
 		$placement_question = DB::select('select * from college_forum_questions where question_type = ?',['placement']);
 		if(Session::has('email'))
-		{		
+		{	
+			$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
+			$ambs_college = DB::select('SELECT college_name FROM college WHERE college_id = ?',[$ambassador['0']->ambassadors_college_id]);	
 			return view('/ambassadors/ambassador_home')->with(array(
 				'college' => $ambs_college['0']->college_name,
 				'general_question' => $general_question,
@@ -123,8 +124,19 @@ class AmbassadorController extends Controller {
 
 	public function settings()
 	{
-		
-		return view('ambassadors/settings');
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
+		return view('ambassadors/settings')->with(array(
+			'ambassador' => $ambassador['0']
+			));
+	}
+
+	public function saveSettings(Request $request)
+	{
+		$intro = $request->input('ambs_intro');
+
+		DB::update('UPDATE ambassadors SET ambassadors_intro = ?',[$intro]);
+
+		return redirect('ambs/settings');
 	}
 	
 
