@@ -17,7 +17,7 @@ PICKPRIME - Your College Picker
 	        {{  $result['0']->ambassadors_intro }}
 	        </p>
 	    </textarea> 
-	       
+		<button type="submit" class="modal-action modal-close waves-effect waves-grey btn-large grey darken-2" style="border-radius:5px" name="submit">Save</button>
 	</form>
 </div>
 @stop
