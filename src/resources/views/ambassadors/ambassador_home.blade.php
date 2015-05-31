@@ -17,8 +17,8 @@ PICKPRIME - Your College Picker
         <div class="row">
             <div class="card s12">
                 <div class="col s4">
-                <p><img class="responsive-img" src="{{ asset( $result['0']->profile_pic ) }}" width="100%"></p>
-                <span >{{ $result['0']->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $college }}</span>
+                <p><img class="responsive-img" src="{{ asset( $ambassador->profile_pic ) }}" width="100%"></p>
+                <span >{{ $ambassador->ambassadors_name }}<br/>Campus Ambassador,<br/>{{ $college }}</span>
                 </div>
                 <div class="card grey lighten-2" style="height:300px;margin:10px;">
                     <div class="col s12">
@@ -26,7 +26,7 @@ PICKPRIME - Your College Picker
                         <div class="ambs_speaks">
                         <p><b>Campus Ambassador Speaks....</b></p>
                         <p>
-                        {{  $result['0']->ambassadors_intro }}
+                        {{  $ambassador->ambassadors_intro }}
                         </p>
                         </div>
                     </div>

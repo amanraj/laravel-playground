@@ -159,7 +159,12 @@
                                     <label for="icon_secure"> Password</label>
                                 </div>
                             </div>    
-                        
+                            <div class="row">    
+                                <div class="input-field s12 m12 l12">
+                                    <input type="checkbox" name="ambassador" id="ambassador" value="ambassador" />
+                                    <label for="ambassador">I am a Ambassador</label>
+                                </div>
+                            </div>    
                     </div>  
                    <div class="modal-footer ">
                         <a href="https://www.facebook.com/"><img src="{{ asset('images/fb_log.png') }}" ></a>

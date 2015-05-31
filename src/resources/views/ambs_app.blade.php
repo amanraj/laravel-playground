@@ -113,7 +113,7 @@
                     =================================-->
                     <ul class="right hide-on-med-and-down">
             
-                        <li><a class="dropdown-account" href="#!" data-activates="my-account"><b>Candice Swanepoel</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                        <li><a class="dropdown-account" href="#!" data-activates="my-account" style="width:200px;"><b>{{ $ambassador->ambassadors_name }}</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                     </ul>
                     <!--================================
                     Menu for Mobile and Tablets
@@ -123,7 +123,7 @@
                         <li class="no-padding">
                             <ul class="collapsible collapsible-accordion">
                                 <li>
-                                    <a class="collapsible-header">Candice Swanepoel<i class="mdi-navigation-arrow-drop-down"></i></a>
+                                    <a class="collapsible-header" style="width:300px;">{{ $ambassador->ambassadors_name }}<i class="mdi-navigation-arrow-drop-down"></i></a>
                                     <div class="collapsible-body">
                                     <ul>
                                         <li><a data-target="notification" class=" modal-trigger black-text">Notification<span class="new badge">4</span></a></li>
@@ -156,9 +156,9 @@
                 <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
                 <div class="center-align">
                     <span class="grey-text text-darken-3">
-                        <p><b>{{ $user->user_name }}</b></p>
-                        <p><i class="mdi-communication-email"></i> {{ $user->user_email }}</p>
-                        <p><i class="mdi-communication-call"></i> {{ $user->mobile_number }}</p>
+                        <p><b>{{ $ambassador->ambassadors_name }}</b></p>
+                        <p><i class="mdi-communication-email"></i> {{ $ambassador->ambassadors_email }}</p>
+                        <p><i class="mdi-communication-call"></i> {{ $ambassador->mobile_number }}</p>
                     </span>
                 </div>  
             </div>
@@ -171,18 +171,18 @@
             <div class="modal-content center-align">
                 <img src="http://1.bp.blogspot.com/_rZNj4rQyCn8/SBeGRWDecbI/AAAAAAAAKLc/SXD7W2UZuCI/s400/snap049.jpg" class="responsive-img">
                 <div class="center-align">
-                    <form class="grey-text text-darken-3" action="{{ url('profile/edit') }}" method="post">
+                    <form class="grey-text text-darken-3" action="{{ url('ambs/profile/edit') }}" method="post">
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div class="input-field col s5 offset-s1">
-                            <input id="name" type="text" name="name" value="{{ $user->user_name }}" class="validate">
+                            <input id="name" type="text" name="name" value="{{ $ambassador->ambassadors_name }}" class="validate">
                             <label for="name"></label>
                         </div>
                             <div class="input-field col s5 offset-s1">
-                                <input id="email" type="email" name="email" value="{{ $user->user_email }}" class="validate">
+                                <input id="email" type="email" name="email" value="{{ $ambassador->ambassadors_email }}" class="validate">
                                 <label for="email"><i class="mdi-communication-email right"></i></label>
                             </div>
                             <div class="input-field col s5 offset-s1">
-                                <input id="mobile" type="text" name="mobile" value="{{ $user->mobile_number }}" class="validate">
+                                <input id="mobile" type="text" name="mobile" value="{{ $ambassador->mobile_number }}" class="validate">
                                 <label for="phone"><i class="mdi-communication-call right"></i></label>
                             </div>
                             <div class="modal-footer col s3 no-padding"><button type="submit" class="modal-action modal-close waves-effect waves-grey btn-large grey darken-2" style="border-radius:5px">Save</button>

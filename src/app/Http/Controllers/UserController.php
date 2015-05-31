@@ -35,12 +35,31 @@ class UserController extends Controller {
 	{
 		$email = $request->input('email');
 		$password = $request->input('password');
-		$hashed = DB::select('SELECT user_password,user_email FROM users WHERE user_email = ?',[$email]);
-		if(Hash::check($password,$hashed['0']->user_password)){
-			Session::put('email',$hashed['0']->user_email);
-			return redirect('/');
-		}else{
-			return view('welcome')->with(array('error' => '* Please Check Your Email/Password'));
+		if(isset($_POST['ambassador']))
+		{
+			$hashed = DB::select('SELECT ambassadors_password,ambassadors_email FROM ambassadors WHERE ambassadors_email = ?',[$email]);
+			if($password==$hashed['0']->ambassadors_password)
+			{
+				Session::put('email',$hashed['0']->ambassadors_email);
+				return redirect('ambs/home');
+			}
+			else
+			{
+				return view('welcome')->with(array('error' => '* Please Check Your Email/Password'));
+			}
+		}
+		else
+		{
+			$hashed = DB::select('SELECT user_password,user_email FROM users WHERE user_email = ?',[$email]);
+			if(Hash::check($password,$hashed['0']->user_password))
+			{
+				Session::put('email',$hashed['0']->user_email);
+				return redirect('/');
+			}
+			else
+			{
+				return view('welcome')->with(array('error' => '* Please Check Your Email/Password'));
+			}
 		}
 	}
 

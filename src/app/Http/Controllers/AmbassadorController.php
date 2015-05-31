@@ -76,6 +76,56 @@ class AmbassadorController extends Controller {
 				));
 		}
 	}
+
+	public function ambs_home()
+	{	
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
+		$ambs_college = DB::select('SELECT college_name FROM college WHERE college_id = ?',[$ambassador['0']->ambassadors_college_id]);
+		$general_question = DB::select('select * from college_forum_questions where question_type = ?',['general']);
+		$admission_question = DB::select('select * from college_forum_questions where question_type = ?',['admission']);
+		$campus_question = DB::select('select * from college_forum_questions where question_type = ?',['campus']);
+		$placement_question = DB::select('select * from college_forum_questions where question_type = ?',['placement']);
+		if(Session::has('email'))
+		{		
+			return view('/ambassadors/ambassador_home')->with(array(
+				'college' => $ambs_college['0']->college_name,
+				'general_question' => $general_question,
+				'admission_question' => $admission_question,
+				'campus_question' => $campus_question,
+				'placement_question' => $placement_question,
+				'ambassador' => $ambassador['0']
+				));
+		}
+
+	}
+
+	public function notification()
+	{
+		
+		return view('ambassadors/notification');
+	}
+
+	public function profile()
+	{
+		
+		return view('ambassadors/profile');
+	}
+
+	public function editProfile(Request $request)
+	{
+		$name = $request->input('name');
+		$email = $request->input('email');
+		$mobile = $request->input('mobile');
+
+		DB::update('UPDATE ambassadors SET ambassadors_name = ?, ambassadors_email = ?, mobile_number = ? WHERE ambassadors_email = ?',[$name,$email,$mobile,Session::get('email')]);
+		return redirect()->back();
+	}
+
+	public function settings()
+	{
+		
+		return view('ambassadors/settings');
+	}
 	
 
 }

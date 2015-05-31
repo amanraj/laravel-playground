@@ -56,6 +56,11 @@ Route::post('/forum/threads/{thread_id}/{post_id}/downvote','ForumController@dow
 Route::get('/ambassador','AmbassadorController@viewAmbassadors');
 Route::get('/ambassador/{ambassador_id}','AmbassadorController@ambassador');
 
+Route::get('/ambs/home','AmbassadorController@ambs_home');
+Route::get('/ambs/settings','AmbassadorController@settings');
+Route::get('/ambs/profile','AmbassadorController@profile');
+Route::post('/ambs/profile/edit','AmbassadorController@editProfile');
+Route::get('/ambs/notifications','AmbassadorController@notifications');
 
 Route::post('/login','UserController@login');
 Route::post('/register','UserController@register');
