@@ -99,7 +99,7 @@
                 <li><a data-target="notification"  class="modal-trigger light-blue-text text-darken-4">Notifications<span class="new badge light-blue darken-4">1</span></a></li>
                 <li><a data-target="profile"  class="modal-trigger light-blue-text text-darken-4">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>               
                 <li><a href="{{ action('AmbassadorController@settings') }}"  class="light-blue-text text-darken-4">Settings<span class="badge light-blue-text text-darken-4"><i class="mdi-action-settings" style="position:relative;bottom:20px"></i></span></a></li>
-                <li><a href="home"  class="light-blue-text text-darken-4">Sign Out<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/logout.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
+                <li><a href="{{ action('AmbassadorController@signout') }}"  class="light-blue-text text-darken-4">Sign Out<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/logout.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
 
             <nav>
@@ -112,7 +112,7 @@
                     Menu for Desktops purple
                     =================================-->
                     <ul class="right hide-on-med-and-down">
-            
+                        <li><a href="{{ url('/ambs/home') }}"><i class="mdi-action-home"></i></a></li>            
                         <li><a class="dropdown-account" href="#!" data-activates="my-account" style="width:200px;"><b>{{ $ambassador->ambassadors_name }}</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                     </ul>
                     <!--================================
@@ -129,7 +129,7 @@
                                         <li><a data-target="notification" class=" modal-trigger black-text">Notification<span class="new badge">4</span></a></li>
                                         <li><a data-target="profile" class=" modal-trigger black-text">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>                                    
                                         <li><a href="#!">Settings</a></li>
-                                        <li><a href="#!">Sign Out</a></li>
+                                        <li><a href="{{ action('AmbassadorController@signout') }}">Sign Out</a></li>
                                     </ul>
                                     </div>
                                 </li>

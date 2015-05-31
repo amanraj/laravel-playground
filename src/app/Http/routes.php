@@ -62,6 +62,7 @@ Route::post('ambs/settings/save','AmbassadorController@saveSettings');
 Route::get('/ambs/profile','AmbassadorController@profile');
 Route::post('/ambs/profile/edit','AmbassadorController@editProfile');
 Route::get('/ambs/notifications','AmbassadorController@notifications');
+Route::get('signout','AmbassadorController@signout');
 
 Route::post('/login','UserController@login');
 Route::post('/register','UserController@register');

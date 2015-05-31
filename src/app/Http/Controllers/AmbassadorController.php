@@ -138,6 +138,12 @@ class AmbassadorController extends Controller {
 
 		return redirect('ambs/settings');
 	}
+
+	public function signout()
+	{
+		Session::forget('email');
+		return redirect('signout');
+	}
 	
 
 }

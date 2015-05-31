@@ -54,7 +54,10 @@ class UserController extends Controller {
 			if(Hash::check($password,$hashed['0']->user_password))
 			{
 				Session::put('email',$hashed['0']->user_email);
-				return redirect('/');
+				$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);
+				return redirect('/')->with(array(
+					'user' => $user
+					));
 			}
 			else
 			{
@@ -186,6 +189,6 @@ class UserController extends Controller {
 	public function signout()
 	{
 		Session::forget('email');
-		return redirect('/landing');
+		return redirect('signout');
 	}
 }

@@ -31,8 +31,11 @@ class LandingController extends Controller {
 	public function index()
 	{
 		if (Session::has('email'))
-		{
-		    return redirect('/');
+		{	
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);					
+		    return redirect('/')->with(array(
+		    	'user' => $user
+		    	));
 		}
 		return view('welcome')->with(array('error' => ''));
 	}

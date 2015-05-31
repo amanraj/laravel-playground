@@ -130,7 +130,7 @@
                     =================================-->
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <form>
+                            <form class="col s12">
                                 <div class="input-field">
                                     <input id="search" type="search" placeholder="Search..." required>
                                     <label for="search"><i class="mdi-action-search right"></i></label>
@@ -138,7 +138,7 @@
                                 </div>
                             </form>
                         </li>
-                        <li><a href="#"><i class="mdi-action-home"></i></a></li>
+                        <li><a href="{{ url('/') }}"><i class="mdi-action-home"></i> </a></li>
                         <li  style="width:200px;"><a class="dropdown-browse" href="#!" data-activates="browse-menu"><b>Browse Site</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                         <li style="width:200px"><a class="dropdown-account" href="#!" data-activates="my-account"><b>My Account</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                     </ul>
@@ -146,7 +146,7 @@
                     Menu for Mobile and Tablets
                     =================================-->
                     <ul class="side-nav" id="mobile-menu">
-                        <li><a href="#"><b>Home</b></a></li>
+                        <li><a href="{{ url('/') }}"><b>Home</b></a></li>
                         <li class="divider"></li>
                         <li>
                             <form>
