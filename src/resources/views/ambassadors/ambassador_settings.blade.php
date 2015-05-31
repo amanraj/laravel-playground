@@ -11,12 +11,13 @@ PICKPRIME - Your College Picker
 
 @section('content')
 <div class="container">
-	<form>
+	<form action="{{ url('ambassador/{ambassador_id}/settings') }}" method="post"> <!--url to be changed acc. to the path !-->
 		<textarea id="ambs_intro" name="ambs_intro" class="materialize-textarea">
 			<p>
 	        {{  $result['0']->ambassadors_intro }}
 	        </p>
-	    </textarea>    
+	    </textarea> 
+	       
 	</form>
 </div>
 @stop
