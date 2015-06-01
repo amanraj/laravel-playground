@@ -160,18 +160,32 @@ class UserController extends Controller {
 
 	public function profile()
 	{
-		
-		return view('user/profile');
+		if(Session::has('email')){
+			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
+		}
+		return view('user/profile')->with(array(
+			'user' => $user
+			));
 	}
 
 	public function editProfile(Request $request)
 	{
+		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
 		$name = $request->input('name');
 		$email = $request->input('email');
 		$mobile = $request->input('mobile');
-
-		DB::update('UPDATE users SET user_name = ?, user_email = ?, mobile_number = ? WHERE user_email = ?',[$name,$email,$mobile,Session::get('email')]);
-		return redirect()->back();
+		if ($email == $user['0']->user_email)
+		{
+			DB::update('UPDATE users SET user_name = ?, user_email = ?, mobile_number = ? WHERE user_email = ?',[$name,$email,$mobile,Session::get('email')]);
+			return redirect()->back();
+		}
+		else
+		{
+			DB::update('UPDATE users SET user_name = ?, user_email = ?, mobile_number = ? WHERE user_email = ?',[$name,$email,$mobile,Session::get('email')]);
+			Session::forget('email');
+			return redirect('signout');
+		}
+		
 	}
 
 	public function settings()

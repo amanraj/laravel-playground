@@ -114,12 +114,21 @@ class AmbassadorController extends Controller {
 
 	public function editProfile(Request $request)
 	{
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);	
 		$name = $request->input('name');
 		$email = $request->input('email');
 		$mobile = $request->input('mobile');
-
-		DB::update('UPDATE ambassadors SET ambassadors_name = ?, ambassadors_email = ?, mobile_number = ? WHERE ambassadors_email = ?',[$name,$email,$mobile,Session::get('email')]);
-		return redirect()->back();
+		if ($email == $ambassador['0']->ambassadors_email)
+		{
+			DB::update('UPDATE ambassadors SET ambassadors_name = ?, ambassadors_email = ?, mobile_number = ? WHERE ambassadors_email = ?',[$name,$email,$mobile,Session::get('email')]);
+			return redirect()->back();
+		}
+		else
+		{
+			DB::update('UPDATE ambassadors SET ambassadors_name = ?, ambassadors_email = ?, mobile_number = ? WHERE ambassadors_email = ?',[$name,$email,$mobile,Session::get('email')]);
+			Session::forget('email');
+			return redirect('signout');
+		}	
 	}
 
 	public function settings()
