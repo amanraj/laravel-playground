@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use Session;
 use DB;
+use Hash;
 use Illuminate\Http\Request;
 class AmbassadorController extends Controller {
 
@@ -143,8 +144,22 @@ class AmbassadorController extends Controller {
 	{
 		$intro = $request->input('ambs_intro');
 
-		DB::update('UPDATE ambassadors SET ambassadors_intro = ?',[$intro]);
+		DB::update('UPDATE ambassadors SET ambassadors_intro = ? WHERE ambassadors_email = ?',[$intro,Session::get('email')]);
 
+		return redirect('ambs/settings');
+	}
+
+	public function password(Request $request)
+	{
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
+		$old_password = $request->input('old_password');
+		$new_password = $request->input('new_password');
+		$confirm_password = $request->input('confirm_password');
+		if ((Hash::check($old_password,$ambassador['0']->ambassadors_password)) && $new_password == $confirm_password )
+		{	
+			$password = Hash::make($new_password);	
+			DB::update('UPDATE ambassadors SET ambassadors_password	= ? WHERE ambassadors_email = ?',[$password,Session::get('email')]);
+		}
 		return redirect('ambs/settings');
 	}
 

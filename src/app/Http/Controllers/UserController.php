@@ -38,7 +38,7 @@ class UserController extends Controller {
 		if(isset($_POST['ambassador']))
 		{
 			$hashed = DB::select('SELECT ambassadors_password,ambassadors_email FROM ambassadors WHERE ambassadors_email = ?',[$email]);
-			if($password==$hashed['0']->ambassadors_password)
+			if(Hash::check($password,$hashed['0']->ambassadors_password))
 			{
 				Session::put('email',$hashed['0']->ambassadors_email);
 				return redirect('ambs/home');
