@@ -32,106 +32,6 @@ p{
 
 
 @section('content')
-
-	<header>
-
-            <ul id="my-account" class="dropdown-content">
-                <li><a data-target="notification"  class="modal-trigger light-blue-text text-darken-4">Notifications</a></li>
-                <li><a href="#!"  class="light-blue-text text-darken-4">Settings</a></li>
-                <li><a href="home"  class="light-blue-text text-darken-4">Sign Out</a></li>
-            </ul>
-
-            <nav>
-                <div class="nav-wrapper   grey darken-3">
-
-                    <a href="#!" class="brand-logo"><img class="responsive-img" src="{{ asset('/images/logo.png') }}"></a>
-                    <!--Mobile Sidebar button-->
-                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-                    <!--================================
-                    Menu for Desktops purple
-                    =================================-->
-                    <ul class="right hide-on-med-and-down">
-            
-                        <li><a class="dropdown-account" href="#!" data-activates="my-account"><b>Candice Swanepoel</b><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-                    </ul>
-                    <!--================================
-                    Menu for Mobile and Tablets
-                    =================================-->
-                   <ul class="side-nav" id="mobile-menu">
-                        
-                        <li class="no-padding">
-                            <ul class="collapsible collapsible-accordion">
-                                <li>
-                                    <a class="collapsible-header">Candice Swanepoel<i class="mdi-navigation-arrow-drop-down"></i></a>
-                                    <div class="collapsible-body">
-                                    <ul>
-                                        <li><a data-target="notification" class=" modal-trigger black-text">Notification<span class="new badge">4</span></a></li>
-                                        <li><a href="#!">Settings</a></li>
-                                        <li><a href="#!">Sign Out</a></li>
-                                    </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-<script type="text/javascript">
-
-    $(document).ready(function(){
-        //dropdown code
-        
-        $(".dropdown-account").dropdown({ hover: false });
-        $(".button-collapse").sideNav({
-            menuWidth: 300, // Default is 240
-            edge: 'left', // Choose the horizontal origin
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        });
-    });
-
-</script>
-
-<script>
-            $(document).ready(function() {
-            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-            $('.modal-trigger').leanModal();
-            });
-</script>
-
-</header>
-    
-
-    <!--===============================
-    Including the Main Body
-    ===============================-->
-
-<!--===============================
-Including the Notification body
-===============================-->
-<div id="notification" class="modal ">
-    <div class="modal-header blue darken-3" style=" padding:4px">
-        <h5 class="white-text" style="margin-left:20px">Notifications</h5>
-    </div>
-    <div class="modal-content ">
-        <table class="bordered striped responsive-table">
-            <tr >
-                <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
-                <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
-            </tr>
-            <tr>
-                <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
-                <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
-            </tr>
-            <tr>
-                <td><img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" class="responsive-img"></td>
-                <td class="blue-text text-darken-4"><b>Candice Swanepoel</b><br><span class="blue-text text-darken-4">Campus Ambassador,IIT Kgp</span><br>Accepted Your Invitation</td>
-            </tr>
-        </table>    
-    </div>
-</div>
-
-
         <div class="container">
             <div class="row">
                 <div class="card s12">
@@ -147,13 +47,9 @@ Including the Notification body
                                 <p><b>Campus Ambassador Speaks....</b></p>
                                 <p>gnzxcfnvfcxzn</p>
                                 <br><br>
-                                <p>cdsdc </p>
-                                 <div style="position:relative;top:50px";>
-                                <p>candice--awn@abc.com</p>
-                                <p>012356789 </p></div>
-                                    <a class="btn-floating btn tooltipped blue darken-3  btn waves-effect waves-light" data-position="left" data-delay="25" data-tooltip="Edit" style="position:relative;left:490px;top:75px"><i class="mdi-content-create"></i></a>
-                              
-                            </div></div>
+                                <p>cdsdc </p>                       
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>

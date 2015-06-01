@@ -142,7 +142,7 @@ class AmbassadorController extends Controller {
 	public function signout()
 	{
 		Session::forget('email');
-		return redirect('signout');
+		return view('signout');
 	}
 	
 

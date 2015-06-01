@@ -32,8 +32,10 @@ class ForumController extends Controller {
 	 */
 	public function viewForum()
 	{
-		
-		return view('/forum/forum');
+		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);		
+		return view('/forum/forum')->with(array(
+			'user' => $user['0']
+			));
 	}
 
 	public function viewThread($thread_id)
