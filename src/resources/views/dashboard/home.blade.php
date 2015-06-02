@@ -60,7 +60,13 @@ footer{
 <div class="full">
     
     
-        
+            @if(Session::has('message'))
+            <div class="row">  
+        <div class="flash" style="padding:10px;border:1px solid grey">
+            {{ Session::get('message') }}
+        </div>
+    </div>
+    @endif
         
                 <div class="row">
                     <div class="col s3" style="position:relative;top:457px;width:250px;">

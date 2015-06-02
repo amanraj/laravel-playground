@@ -9,6 +9,13 @@ PICKPRIME - Your College Picker
 
 @section('content')
 <div class="container">
+    @if(Session::has('message'))
+    <div class="row">
+        <div class="flash" style="padding:10px;border:1px solid grey">
+            {{ Session::get('message') }}
+        </div>
+    </div>
+    @endif
         <div class="row">
             <div class="col s4">
             <h5>{{ $college }} Forum</h5>

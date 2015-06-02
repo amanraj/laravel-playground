@@ -38,30 +38,46 @@ class UserController extends Controller {
 		if(isset($_POST['ambassador']))
 		{
 			$hashed = DB::select('SELECT ambassadors_password,ambassadors_email FROM ambassadors WHERE ambassadors_email = ?',[$email]);
+			if (count($hashed) == 0)
+			{
+				\Session::Flash('message','There is no account with this email.Please try again.');				
+				return redirect('/landing');
+			}
+			else
 			if(Hash::check($password,$hashed['0']->ambassadors_password))
 			{
 				Session::put('email',$hashed['0']->ambassadors_email);
+				\Session::Flash('message','You are successfully logged in');
 				return redirect('ambs/home');
 			}
 			else
 			{
-				return view('welcome')->with(array('error' => '* Please Check Your Email/Password'));
+				\Session::Flash('message','Incorrect password and try again.');				
+				return redirect('/landing');
 			}
 		}
 		else
 		{
 			$hashed = DB::select('SELECT user_password,user_email FROM users WHERE user_email = ?',[$email]);
+			if (count($hashed) == 0)
+			{
+				\Session::Flash('message','There is no account with this email.Please try again.');				
+				return redirect('/landing');
+			}
+			else
 			if(Hash::check($password,$hashed['0']->user_password))
 			{
 				Session::put('email',$hashed['0']->user_email);
 				$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);
+				\Session::Flash('message','You are successfully logged in');				
 				return redirect('/')->with(array(
 					'user' => $user
 					));
 			}
 			else
 			{
-				return view('welcome')->with(array('error' => '* Please Check Your Email/Password'));
+				\Session::Flash('message','Incorrect password and try again');				
+				return redirect('/landing');				
 			}
 		}
 	}

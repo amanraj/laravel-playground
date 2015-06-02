@@ -319,7 +319,13 @@
             <!--===============================
             Including the Main Body
             ===============================-->
-            
+                    @if(Session::has('message'))
+                    <div class="row">
+        <div class="flash" style="padding:10px;border:1px solid grey">
+            {{ Session::get('message') }}
+        </div>
+    </div>
+    @endif
                 @yield('content')
             
             </main>
