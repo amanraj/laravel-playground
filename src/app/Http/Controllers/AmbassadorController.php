@@ -155,11 +155,21 @@ class AmbassadorController extends Controller {
 		$old_password = $request->input('old_password');
 		$new_password = $request->input('new_password');
 		$confirm_password = $request->input('confirm_password');
-		if ((Hash::check($old_password,$ambassador['0']->ambassadors_password)) && $new_password == $confirm_password )
+		if (!(Hash::check($old_password,$ambassador['0']->ambassadors_password))) 
+		{
+			\Session::Flash('message','Incorrect password.Please try Again.');			
+		}
+		else if ($new_password != $confirm_password)
+		{
+			\Session::Flash('message','New passwords do not match.Please try again.' );			
+		}
+		else if ((Hash::check($old_password,$ambassador['0']->ambassadors_password) && ($new_password == $confirm_password)))
 		{	
 			$password = Hash::make($new_password);	
 			DB::update('UPDATE ambassadors SET ambassadors_password	= ? WHERE ambassadors_email = ?',[$password,Session::get('email')]);
+			\Session::Flash('message','Your Password has been changed successfully.');
 		}
+
 		return redirect('ambs/settings');
 	}
 

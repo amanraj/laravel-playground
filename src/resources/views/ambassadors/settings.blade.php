@@ -24,7 +24,13 @@ PICKPRIME - Your College Picker
 	</div>
 	<div class="row">
 		<div class="col s12">
-			<div class="card card grey lighten-2">
+			<div class="card card grey lighten-2" style="padding:10px;">
+			@if(Session::has('message'))
+				<div class="flash" style="padding:10px;border:1px solid grey">
+					{{ Session::get('message') }}
+
+				</div>
+			@endif	
 				<h3>Change Password</h3>
 				<form action="{{ url('ambs/settings/password') }}" method="post" class="col s12" style="padding:10px;">
 					<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
