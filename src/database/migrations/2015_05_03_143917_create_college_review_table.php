@@ -20,9 +20,7 @@ class CreateCollegeReviewTable extends Migration {
 			$table->string('reviewer_college');
 			$table->string('reviewer_description');
 			$table->dateTime('college_review_date');
-			$table->text('college_pros');
-			$table->text('college_cons');
-			$table->text('comments');
+			$table->text('review');
 			$table->float('college_overall_rating');
 			$table->float('college_campuslife_rating');
 			$table->float('college_hostel_rating');

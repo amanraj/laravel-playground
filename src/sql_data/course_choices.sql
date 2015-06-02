@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2015 at 03:11 PM
+-- Generation Time: Jun 02, 2015 at 03:09 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -23,18 +23,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course_questions_reply`
+-- Table structure for table `course_choices`
 --
 
-CREATE TABLE IF NOT EXISTS `course_questions_reply` (
-  `course_question_reply_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `course_question_reference_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `course_choices` (
   `user_reference_id` int(11) NOT NULL,
-  `reply` text COLLATE utf8_unicode_ci NOT NULL,
-  `up_vote` int(11) NOT NULL,
-  `date` datetime NOT NULL,
-  PRIMARY KEY (`course_question_reply_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+  `course_reference_id` int(11) NOT NULL,
+  `college_reference_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `course_choices`
+--
+
+INSERT INTO `course_choices` (`user_reference_id`, `course_reference_id`, `college_reference_id`) VALUES
+(1, 1, 1),
+(1, 1, 1),
+(2, 1, 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

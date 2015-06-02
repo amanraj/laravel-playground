@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 06:42 AM
+-- Generation Time: Jun 02, 2015 at 03:07 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `college_forum_questions` (
   `want_answer` int(11) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`question_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `college_forum_questions`
@@ -47,7 +47,9 @@ INSERT INTO `college_forum_questions` (`question_id`, `question_college_id`, `us
 (2, 2, 2, 'admission', 'admission related', 'this is an admission related question', 52, '2015-03-11 10:00:00'),
 (3, 3, 3, 'campus', 'campus related', 'this is a campus related question', 0, '2015-06-08 00:00:00'),
 (4, 4, 4, 'placement', 'placement related', 'this is a placement related question', 32, '2015-02-01 00:00:00'),
-(5, 5, 5, 'admission', 'admission related', 'this is another question  related to admission', 0, '2015-05-02 00:00:00');
+(5, 5, 5, 'admission', 'admission related', 'this is another question  related to admission', 0, '2015-05-02 00:00:00'),
+(6, 1, 1, 'general', 'general question', 'hi i am shubham', 0, '0000-00-00 00:00:00'),
+(7, 1, 1, 'general', 'general', 'hello what all can we do?', 0, '0000-00-00 00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 06:44 AM
+-- Generation Time: Jun 02, 2015 at 03:28 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -50,7 +50,12 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2015_05_03_144155_create_course_questions_reply_table', 1),
 ('2015_05_03_144210_create_college_questions_reply_table', 1),
 ('2015_05_03_144245_create_users_table', 1),
-('2015_05_03_144302_create_ambassadors_table', 1);
+('2015_05_03_144302_create_ambassadors_table', 1),
+('2015_05_18_112625_create_college_choices_table', 1),
+('2015_05_18_112728_create_course_choices_table', 1),
+('2015_05_18_112747_create_course_notes_table', 1),
+('2015_05_18_112802_create_college_notes_table', 1),
+('2015_05_20_052711_create_review_table', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
