@@ -68,7 +68,7 @@ p{
                         
                             <div class="col offset-s10">
                               <button type="submit" class="waves-effect waves-light blue btn">Reply</button>
-                                    <html xmlns="http://www.w3.org/1999/xhtml"
+                              <!--   <html xmlns="http://www.w3.org/1999/xhtml"
                                       xmlns:fb="https://www.facebook.com/2008/fbml">
                                      <span id="fb-root"></span>
                                      <script src="http://connect.facebook.net/en_US/all.js"></script>
@@ -99,7 +99,7 @@ p{
                                         function requestCallback(response) {
                                        // Handle callback here
                                        }
-                                  </script>
+                                  </script> !-->
                             </div>
                         </form>
                     </div>

@@ -63,6 +63,11 @@ Route::post('/ambs/settings/password','AmbassadorController@password');
 Route::get('/ambs/profile','AmbassadorController@profile');
 Route::post('/ambs/profile/edit','AmbassadorController@editProfile');
 Route::get('/ambs/notifications','AmbassadorController@notifications');
+Route::get('/ambs/forum/threads/{thread_id}','ForumController@viewThread');
+Route::post('/ambs/forum/threads/reply/{thread_id}/','ForumController@reply');
+Route::patch('/ambs/forum/threads/{thread_id}/{post_id}/edit','ForumController@editPost');
+Route::delete('/ambs/forum/threads/{thread_id}/{post_id}/delete','ForumController@deletePost');
+Route::get('/ambs/forum/threads/upvote/{post_id}/','ForumController@upVote');
 Route::get('signout','AmbassadorController@signout');
 
 Route::post('/login','UserController@login');

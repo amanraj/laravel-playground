@@ -32,23 +32,44 @@ class ForumController extends Controller {
 	 */
 	public function viewForum()
 	{
-		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);		
+		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
 		return view('/forum/forum')->with(array(
-			'user' => $user['0']
+			'user' => $user['0'],
+			'ambassador' => $ambassador['0'],
 			));
 	}
 
 	public function viewThread($thread_id)
 	{
 		$question = DB::select('SELECT * FROM college_forum_questions WHERE question_id = ?',[$thread_id]);
+		$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);
+		if (count($user) > 0)
+		{
 		$replies = DB::select('SELECT * FROM college_questions_reply INNER JOIN users WHERE user_reference_id = user_id and college_question_reference_id = ?',[$thread_id]);
+		}
+		else
+		{
+		$replies = DB::select('SELECT * FROM college_questions_reply INNER JOIN ambassadors WHERE user_reference_id = ambassadors_id and college_question_reference_id = ?',[$thread_id]);			
+		}
 		if(Session::has('email')){
-			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);	
-			return view('/forum/thread')->with(array(
-				'user' => $user['0'],
-				'question' => $question['0'],
-				'replies' => $replies,
+			if(count($user) > 0)
+			{
+				return view('/forum/thread')->with(array(
+					'user' => $user['0'],
+					'question' => $question['0'],
+					'replies' => $replies,
 				));
+			}
+			else
+			{
+				return view('/ambassadors/thread')->with(array(
+					'ambassador' => $ambassador['0'],
+					'question' => $question['0'],
+					'replies' => $replies,
+				));
+			}
 		}else{
 			return view('/forum/non_thread')->with('thread_id', $thread_id)->with(array(
 				'replies' => $replies,
@@ -59,21 +80,31 @@ class ForumController extends Controller {
 
 	public function post(Request $request){
 
-		$user_id = DB::select('SELECT user_id FROM users WHERE user_email = ?',[Session::get('email')]);
+		$user = DB::select('SELECT user_id FROM users WHERE user_email = ?',[Session::get('email')]);
+		$user_id = $user['0']->user_id;
 		$college = $request->input('college');
 		$type = $request->input('type');
 		$title = $request->input('question_title');
 		$body = $request->input('question_body');
 
-		DB::insert('INSERT INTO college_forum_questions (question_college_id,user_reference_id,question_type,question_title,question_description) VALUES (?,?,?,?,?)',[$college,$user_id['0']->user_id,$type,$title,$body]);
+		DB::insert('INSERT INTO college_forum_questions (question_college_id,user_reference_id,question_type,question_title,question_description) VALUES (?,?,?,?,?)',[$college,$user_id,$type,$title,$body]);
 
 		return Redirect::back();
 	}
+
 	public function reply($thread_id,Request $request)
 	{
 		$reply = $request->input('reply');
-		$user_id = DB::select('SELECT user_id FROM users WHERE user_email = ?',[Session::get('email')]);
-		$user_id = $user_id['0']->user_id;
+		$user = DB::select('SELECT user_id FROM users WHERE user_email = ?',[Session::get('email')]);
+		$ambassador = DB::select('SELECT * FROM ambassadors WHERE ambassadors_email = ?',[Session::get('email')]);		
+		if (count($user) > 0)
+		{
+			$user_id = $user['0']->user_id;
+		}
+		else
+		{
+			$user_id = $ambassador['0']->ambassadors_id;
+		}
 		DB::insert('INSERT INTO college_questions_reply (college_question_reference_id,user_reference_id,reply) VALUES(?,?,?)',[$thread_id,$user_id,$reply]);
 		return redirect()->back();
 	}

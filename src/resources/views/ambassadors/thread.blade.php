@@ -116,7 +116,7 @@ p{
                                            <img src="{{ asset('images/avatar-lg.png') }}" class="responsive-img" style="margin-top:10px">
                                     </div>    
                                     <div class="col s11">
-                                           <p>Posted by, <b>{{ $reply->user_name }}</b> on <b>{{ $reply->date }}</b></p>
+                                           <p>Posted by, <b>{{ $reply->ambassadors_name }}</b> on <b>{{ $reply->date }}</b></p>
                                           <p>{{ $reply->reply }}</p>
                                           <p>
                                             <a href="{{ url('forum/threads/upvote') }}/{{ $reply->college_question_reply_id }}" class="waves-effect waves-light blue btn">Up Vote</a> Up Vote - <b>{{ $reply->up_vote }}</b>
