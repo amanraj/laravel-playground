@@ -124,10 +124,10 @@
             </ul>
 
             <ul id="browse-menu" class="dropdown-content">
-                <li><a href="{{ action('CollegeController@viewColleges') }}"  class="light-blue-text text-darken-4">Colleges<span class="badge light-blue-text text-darken-4"><i class="mdi-social-school" style="position:relative;bottom:20px"></i></span></a></li>
-                <li><a href="{{ action('CourseController@viewCourses') }}"  class="light-blue-text text-darken-4">Courses<span class="badge light-blue-text text-darken-4"><i class="mdi-av-my-library-books" style="position:relative;bottom:20px"></i></span></a></li>
-                <li><a href="#!"  class="light-blue-text text-darken-4">Appetite Hunt<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/counsel.jpg') }}" style="height:30px;width:30px;"></a></li>
-                <li><a href="{{ action('AmbassadorController@viewAmbassadors') }}"  class="light-blue-text text-darken-4">Ambassadors<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/ambs.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
+                <li><a href="{{ action('CollegeController@viewColleges') }}"  class="black-text">Colleges<span class="badge black-text"><img src="{{ asset('images/college.jpg') }}" style="position:relative;height:25px;width:25px;"></span></a></li>
+                <li><a href="{{ action('CourseController@viewCourses') }}"  class="black-text">Courses<span class="badge black-text"><img src="{{ asset('images/course.jpg') }}" style="position:relative;height:25px;width:25px;"></span></a></li>
+                <li><a href="#!"  class="black-text">Appetite Hunt<span class="badge black-text"><img src="{{ asset('images/appetite.jpg') }}" style="height:25px;width:25px;"></a></li>
+                <li><a href="{{ action('AmbassadorController@viewAmbassadors') }}"  class="black-text">Ambassadors<span class="badge black-text"><img src="{{ asset('images/ambs.jpg') }}" style="height:25px;width:25px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
 
             <ul id="sign_in" class="modal">

@@ -95,11 +95,12 @@
         Including the Header body
         ===============================-->
         <header>
-           <ul id="my-account" class="dropdown-content">
-                <li><a data-target="notification"  class="modal-trigger light-blue-text text-darken-4">Notifications<span class="new badge light-blue darken-4">1</span></a></li>
-                <li><a data-target="profile"  class="modal-trigger light-blue-text text-darken-4">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>               
-                <li><a href="{{ action('AmbassadorController@settings') }}"  class="light-blue-text text-darken-4">Settings<span class="badge light-blue-text text-darken-4"><i class="mdi-action-settings" style="position:relative;bottom:20px"></i></span></a></li>
-                <li><a href="{{ action('AmbassadorController@signout') }}"  class="light-blue-text text-darken-4">Sign Out<span class="badge light-blue-text text-darken-4"><img src="{{ asset('images/logout.png') }}" style="width:30px;height:30px;position:relative;bottom:5px;right:-3px;"></span></a></li>
+            <ul id="my-account" class="dropdown-content" >
+                <li><a data-target="notification"  class="modal-trigger black-text">Notifications<span class="new badge black">1</span></a></li>
+                <li><a data-target="profile"  class="modal-trigger black-text">Profile<span class="badge black-text"><img src ="{{ asset('images/profile.jpg') }}" style="position:relative;height:22px;width:22px;"></span></a></li>
+                <li><a href="{{ action('AmbassadorController@settings') }}"  class="black-text">Settings<span class="badge black-text"><img src="{{ asset('images/settings.jpg') }}" style="position:relative;height:25px;width:25px;"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="{{ action('UserController@signout') }}"  class="black-text">Sign Out<span class="badge black-text"><img src="{{ asset('images/logout.jpg') }}" style="height:25px;width:25px;position:relative;bottom:5px;right:-3px;"></span></a></li>
             </ul>
 
             <nav>
@@ -127,7 +128,7 @@
                                     <div class="collapsible-body">
                                     <ul>
                                         <li><a data-target="notification" class=" modal-trigger black-text">Notification<span class="new badge">4</span></a></li>
-                                        <li><a data-target="profile" class=" modal-trigger black-text">Profile<span class="badge light-blue-text text-darken-4"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>                                    
+                                        <li><a data-target="profile" class=" modal-trigger black-text">Profile<span class="badge black-text"><i class="mdi-action-account-circle" style="position:relative;bottom:20px"></i></span></a></li>                                    
                                         <li><a href="#!">Settings</a></li>
                                         <li><a href="{{ action('AmbassadorController@signout') }}">Sign Out</a></li>
                                     </ul>
