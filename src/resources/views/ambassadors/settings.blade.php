@@ -28,7 +28,6 @@ PICKPRIME - Your College Picker
 			@if(Session::has('message'))
 				<div class="flash" style="padding:10px;border:1px solid grey">
 					{{ Session::get('message') }}
-
 				</div>
 			@endif	
 				<h3>Change Password</h3>
