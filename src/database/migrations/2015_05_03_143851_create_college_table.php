@@ -23,7 +23,8 @@ class CreateCollegeTable extends Migration {
 			$table->string('college_email');
 			$table->string('college_website');
 			$table->string('college_entrance_exam');
-			$table->mediumText('college_fees');
+			$table->tinyText('college_fees');
+			$table->mediumText('college_fees_details');
 			$table->mediumText('college_addmision_process');
 			$table->mediumText('college_overview');
 			$table->mediumText('college_hostels');

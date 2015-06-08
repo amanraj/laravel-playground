@@ -127,7 +127,7 @@ PICKPRIME - Your College Picker
                                     <img src="{{ asset( $results->college_image_1 ) }}" alt="college image">
                                 </div>
                                 <li class="divider"></li>
-                                <div class="card-content" style="height:280px">
+                                <div class="card-content" style="height:350px">
                                     <table class="bordered">
                                         <tr>
                                             <td class="center-align" colspan="2"><a href="{{ action('CollegeController@college' , [ $results->college_id ]) }}" class="light-blue-text text-darken-4"><b>{{ $results->college_name }}</b></a></td>
@@ -155,8 +155,10 @@ PICKPRIME - Your College Picker
                                 </div>
                             </div>
                             </div>    
-                        @if ( ($results->college_id)%3 == 0 )    
+                        @if ( ($results->college_id)%3 == 0 )   
                         </div>    
+                        @elseif( (count($result)%3 != 0) && (($results->college_id) == count($result)) )
+                        </div>
                         @endif
                         @endforeach                      
                     </div>

@@ -47,16 +47,16 @@ PICKPRIME - Your College Picker
 
 @section('content')
 <div class="container">
-<div class="row">   
+<div class="row center-align">   
     <div class="col s12">
-        <div class="card">
-            <div class="col l3 s12 m6 center-align">
+        <div class="card center-align">
+            <div class="col s3 center-align">
             <p>      
-            <div class="card" style="height:545px">             
+            <div class="card center-align" style="height:545px">             
                 <p style="margin-top:10px">
-                <b>Stream</b>
+                <b>Select Stream</b>
                     <!-- Dropdown Trigger -->
-                <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
+                <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown1"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</a></small>
                     <!-- Dropdown Structure -->
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Engineering</small></a></li>
@@ -66,9 +66,9 @@ PICKPRIME - Your College Picker
                     </ul> 
                 </p>                                
                 <p style="margin-top:30px">
-                <b>Location</b>
+                <b>Select Location</b>
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown2"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown2' class='dropdown-content'>
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Maharashtra</small></a></li>
@@ -80,9 +80,9 @@ PICKPRIME - Your College Picker
                     </ul>
                 </p>                                    
                 <p style="margin-top:30px">
-                <b>Exam</b>
+                <b>Select Exam</b>
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown3"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown3' class='dropdown-content'>
                         <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>IIT Mains</small></a></li>
@@ -92,15 +92,15 @@ PICKPRIME - Your College Picker
                     </ul>
                 </p>                                 
                 <p style="margin-top:30px">
-                <b>Fees</b>
+                <b>Select Fees</b>
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown4"><small><i class="mdi-navigation-arrow-drop-down right"></i>Select</small></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown4' class='dropdown-content'>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Below Rs. 50,000 per semester</small></a></li>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 50,000 to Rs 1  Lakh per semester</small></a></li>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 1  Lakh to Rs 1.5  Lakh per semester</small></a></li>
-                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Above Rs. 1.5  Lakh</small></a></li> 
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Below Rs 50,000</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 50,000 - 1 Lac</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Rs 1 Lac - 1.5 Lacs</small></a></li>
+                        <li><a href="#!"  class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>Above Rs 1.5 Lacs</small></a></li> 
                     </ul>
                 </p>    
             </div>        </div></p>               
@@ -109,7 +109,7 @@ PICKPRIME - Your College Picker
                         <p >
                         <small><b>Sort By</b></small> 
                         <!-- Dropdown Trigger -->
-                        <a class="btn dropdown-button light-blue darken-2" href="#!" data-activates="dropdown5"><small>Popularity</small><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <a class="btn dropdown-button light-blue darken-3" href="#!" data-activates="dropdown5"><small>Popularity</small><i class="mdi-navigation-arrow-drop-down right"></i></a>
                         <!-- Dropdown Structure -->
                     <ul id='dropdown5' class='dropdown-content'>
                         <li><a href="#!" class="light-blue-text text-darken-4" style="padding: 5px 15px;"><small>random1</small></a></li>
@@ -121,13 +121,13 @@ PICKPRIME - Your College Picker
                         @if ( ($results->college_id)%3 == 1 )
                         <div class="row">
                         @endif
-                            <div class="col l4 s12 m6">
+                            <div class="col s4">
                             <div class="card" id="college">
                                 <div class="card-image">
                                     <img src="{{ asset( $results->college_image_1 ) }}" alt="college image">
                                 </div>
                                 <li class="divider"></li>
-                                <div class="card-content" style="height:280px">
+                                <div class="card-content" style="height:350px">
                                     <table class="bordered">
                                         <tr>
                                             <td class="center-align" colspan="2"><a href="{{ action('CollegeController@college' , [ $results->college_id ]) }}" class="light-blue-text text-darken-4"><b>{{ $results->college_name }}</b></a></td>
@@ -155,8 +155,10 @@ PICKPRIME - Your College Picker
                                 </div>
                             </div>
                             </div>    
-                        @if ( ($results->college_id)%3 == 0 )    
+                        @if ( ($results->college_id)%3 == 0 )   
                         </div>    
+                        @elseif( (count($result)%3 != 0) && (($results->college_id) == count($result)) )
+                        </div>
                         @endif
                         @endforeach                      
                     </div>

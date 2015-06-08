@@ -123,8 +123,8 @@ PICKPRIME - Your College Picker
                     <div class="collapsible-body"><p>{{ $college_details['0']->college_overview }}</p></div>
                 </li>
                 <li>
-                    <div class="collapsible-header"><i class="mdi-maps-place"></i><b>Fee</b></div>
-                    <div class="collapsible-body"><p>{{ $college_details['0']->college_fees }}</p></div>
+                    <div class="collapsible-header"><i class="mdi-maps-place"></i><b>Fees</b></div>
+                    <div class="collapsible-body"><p>{{ $college_details['0']->college_fees_details }}</p></div>
                 </li>
                 <li>
                     <div class="collapsible-header"><i class="mdi-social-whatshot"></i><b>Exams/Admission Procedure</b></div>
