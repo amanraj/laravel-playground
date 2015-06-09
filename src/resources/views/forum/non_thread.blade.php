@@ -50,9 +50,6 @@ p{
                 <div class="card s12" style="padding:5px">
                     <div class="card grey lighten-2">
                         <p>
-                            <b>Question Title :-</b> <b>{{ $question->question_title }}</b>
-                        </p>
-                        <p>
                             <b>Question Description :-</b> {{ $question->question_description }}
                         </p>
                     </div>
