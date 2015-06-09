@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2015 at 03:09 PM
+-- Generation Time: Jun 09, 2015 at 04:55 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -30,14 +30,67 @@ CREATE TABLE IF NOT EXISTS `course_college` (
   `course_reference_id` int(11) NOT NULL,
   `college_reference_id` int(11) NOT NULL,
   `last_year_stats` mediumtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `course_college`
 --
 
 INSERT INTO `course_college` (`course_reference_id`, `college_reference_id`, `last_year_stats`) VALUES
-(1, 1, '');
+(1, 1, ''),
+(1, 5, ''),
+(1, 7, ''),
+(2, 3, ''),
+(2, 5, ''),
+(2, 10, ''),
+(3, 1, ''),
+(4, 1, ''),
+(4, 2, ''),
+(4, 3, ''),
+(4, 4, ''),
+(4, 5, ''),
+(4, 7, ''),
+(4, 8, ''),
+(4, 9, ''),
+(4, 10, ''),
+(5, 5, ''),
+(5, 10, ''),
+(6, 1, ''),
+(6, 2, ''),
+(6, 3, ''),
+(6, 4, ''),
+(6, 5, ''),
+(6, 7, ''),
+(6, 8, ''),
+(6, 9, ''),
+(6, 10, ''),
+(7, 1, ''),
+(7, 2, ''),
+(7, 3, ''),
+(7, 4, ''),
+(7, 5, ''),
+(7, 7, ''),
+(7, 8, ''),
+(7, 9, ''),
+(7, 10, ''),
+(8, 5, ''),
+(9, 1, ''),
+(9, 2, ''),
+(9, 3, ''),
+(9, 4, ''),
+(9, 5, ''),
+(9, 6, ''),
+(9, 7, ''),
+(9, 8, ''),
+(9, 9, ''),
+(9, 10, ''),
+(10, 1, ''),
+(11, 8, ''),
+(11, 10, ''),
+(12, 8, ''),
+(12, 10, ''),
+(13, 8, ''),
+(13, 10, '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

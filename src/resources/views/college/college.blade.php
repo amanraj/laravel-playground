@@ -109,8 +109,10 @@ PICKPRIME - Your College Picker
 	        	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">					
 				<input type="hidden" name="college_id" value="{{ $college_rating['0']->college_reference_id }}" >
 	        	@foreach ($courses as $course)
-	        		<input type="checkbox" name="course_list[]" value="{{ $course->course_id }}" id="{{ $course->course_id }}" />
-	        		<label for="{{ $course->course_id }}">{{ $course->course_name }}</label>
+	        		<div class="input">
+		        		<input type="checkbox" name="course_list[]" value="{{ $course->course_id }}" id="{{ $course->course_id }}" />
+		        		<label for="{{ $course->course_id }}">{{ $course->course_name }}</label>
+		        	</div>	
 	        	@endforeach
 	        	<div class="modal-footer">
 	        	    <button class="btn waves-effect waves-light grey darken 1" type="submit" name="submit" onclick="add()">Add to Dashboard</button>
