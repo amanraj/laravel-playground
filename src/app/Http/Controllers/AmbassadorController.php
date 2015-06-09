@@ -33,7 +33,7 @@ class AmbassadorController extends Controller {
 	public function viewAmbassadors()
 	{
 		
-			$results = DB::select('select * from ambassadors');
+			$results = DB::select('SELECT * FROM ambassadors INNER JOIN college ON ambassadors.ambassadors_college_id = college.college_id');
 		if(Session::has('email')){
 			$user = DB::select('SELECT * FROM users WHERE user_email = ?',[Session::get('email')]);		
 			return view('/ambassadors/ambassadors')->with(array(
