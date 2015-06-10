@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Session;
+use DB;
 class LandingController extends Controller {
 
 	/*
